@@ -1,5 +1,6 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router";
+import ScrollToTop from "react-scroll-to-top";
 
 import FrontPage from "./Pages/FrontPage/Frontpage";
 import About from "./Pages/About/About";
@@ -23,6 +24,9 @@ function App() {
           <Route path="/AddEvent" element={<AddEvent />} />
         </Routes>
         <p>This is the main content</p>
+            <div>
+      <ScrollToTop smooth />
+    </div>
       </main>
 
       <Footer />

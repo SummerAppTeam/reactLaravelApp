@@ -6,8 +6,8 @@ import About from "./Pages/About/About";
 import EventList from "./Pages/EventList/EventList";
 import AddEvent from "./Pages/AddEvent/AddEvent";
 
-import Header from "./Header/Header";
-import Footer from "./Footer/Footer";
+import Header from "./Components/Header/Header";
+import Footer from "./Components/Footer/Footer";
 import "./App.css";
 
 function App() {

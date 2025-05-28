@@ -1,0 +1,26 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer h3 {
+  color: rgb(0, 0, 0);
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  footer {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  footer nav ul {
+    display: none;
+  }
+
+  footer h3 {
+    font-size: 1.2rem;
+  }
+}

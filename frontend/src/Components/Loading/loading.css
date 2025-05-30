@@ -1,0 +1,22 @@
+.pageLoading {
+  text-align: center;
+}
+
+.spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(57, 57, 57, 0.676);
+  color: white;
+}
+
+.loadingText {
+  margin-top: 5rem;
+  font-size: 1.5rem;
+}

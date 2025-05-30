@@ -1,0 +1,137 @@
+Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem 2rem;
+}
+#menuToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background-color: #fff0;
+  box-shadow: none;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo:hover {
+  background-color: #222222de;
+  transform: scale(0.9);
+}
+
+nav ul {
+  margin-top: 1rem;
+  display: flex;
+  align-items: end;
+  gap: 1rem;
+  list-style: none;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.5rem 0.75rem;
+  transition: background-color 0.7s ease, transform 0.2s ease;
+  border-radius: 0.5rem;
+}
+nav a:hover {
+  background-color: #004f9edf;
+  border-radius: 2rem;
+}
+nav a.active {
+  background-color: #00cc7e;
+  border-radius: 1rem;
+  color: #fff;
+}
+.desktopMenu {
+  display: none;
+}
+.material-icons {
+  font-size: 33px;
+}
+#closeIcon {
+  color: #202122;
+  color: #00cc7e;
+}
+a {
+  color: #00cc7e;
+}
+.mobileMenu {
+  position: fixed;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 1rem;
+  color: #00cc7e;
+  width: 270px;
+  height: 100vh;
+  box-shadow: -2px 0 5px rgb(0 0 0 / 0.3);
+  transition: right 0.4s ease;
+  top: 0;
+  right: -100%;
+  background: #373a47;
+}
+.mobileMenu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 1rem;
+}
+.mobileMenu ul li {
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+.mobileMenu a {
+  color: #e9e9e9;
+  padding: 1rem;
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+  font-family: "roboto", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  transition: background-color 1.1s ease, transform 0.4s ease;
+}
+.mobileMenu a:hover {
+  border-radius: 2rem;
+  background-color: #004f9ecb;
+  color: #fff;
+}
+#closeMenu {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: none;
+  border: none;
+  font-size: 40px;
+  padding: 0;
+  box-shadow: none;
+  color: #1f1f20;
+}
+#closeIcon:hover {
+  color: #10512c;
+}
+.mobileMenu.open {
+  right: 0;
+}
+@media (min-width: 768px) {
+  #menuToggle {
+    display: none;
+  }
+  .desktopMenu {
+    display: block;
+  }
+  .mobileMenu {
+    display: none;
+  }
+  .logo {
+    margin: 0;
+    margin-bottom: 1rem;
+    padding: 0;
+  }
+}

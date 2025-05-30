@@ -3,7 +3,7 @@ import DotLoader from "react-spinners/DotLoader";
 import "./about.css";
 import "./loading.css";
 
-const About = () => {
+const Loading = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -26,4 +26,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Loading;

@@ -1,0 +1,236 @@
+/* src/components/AboutUs.css */
+
+.about-container {
+  background: white;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+.hero {
+  text-align: center;
+  padding: 1rem 1rem;
+  background-color: #f3f3f3;
+}
+
+.hero-section {
+  width: 100wv;
+  height: 400px;
+  margin: 0;
+  padding: 0;
+  background-image: url("../AboutImages/heroimage.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-overlay {
+  background-color: rgba(112, 110, 110, 0.5);
+  width: 100%;
+  height: 400px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.mission-grid {
+  display: flex;
+  width: 100vw;
+  height: 910px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Left side (image) */
+.mission-image {
+  width: 50%;
+  height: 910px;
+  background-image: url("../AboutImages/mission-image.jpg"); /* update to your actual image path */
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Right side (text section) */
+.mission-section {
+  width: 50%;
+
+  background-color: white;
+  margin: 0;
+  padding-bottom: 80px;
+  padding-left: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mission-section h2 {
+  font-size: 1rem;
+  color: #0066cc;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.mission-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 80%;
+}
+
+.mission-section h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.team-section {
+  background-color: rgb(232, 249, 255);
+  margin: 0;
+  padding: 0;
+}
+
+.team-content {
+  padding-top: 80px;
+  text-align: center;
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 64px 100px;
+}
+
+/* Card container */
+.team-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Image box */
+.team-image {
+  width: 277.33px;
+  height: 320px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.team-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text block below */
+.team-text {
+  text-align: center;
+  margin-top: 8px;
+}
+
+.team-text h3 {
+  margin: 6px 0 2px;
+  font-size: 1rem;
+}
+
+.team-text p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.tools-section {
+  background-color: white;
+  padding: 64px 0;
+}
+
+.tools-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Text box (Left) */
+.tools-box {
+  flex: 1;
+  background: linear-gradient(135deg, #004e92, #000428);
+  color: white;
+  padding: 64px 48px;
+  box-sizing: border-box;
+}
+
+.tools-box h1 {
+  font-size: 2rem;
+  margin-bottom: 24px;
+}
+
+.tools-box ul {
+  list-style: disc;
+  padding-left: 20px;
+  font-size: 1.1rem;
+}
+
+.tools-box li {
+  margin-bottom: 12px;
+}
+
+/* Image box (Right) */
+.tools-image {
+  flex: 1;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.tools-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive: Stack on phone*/
+@media (max-width: 768px) {
+  .team-grid {
+    flex-direction: column;
+    padding: 32px;
+  }
+
+  .team-member {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .tools-wrapper {
+    flex-direction: column;
+    border-radius: 0;
+  }
+
+  .tools-box,
+  .tools-image {
+    width: 100%;
+  }
+
+  .tools-box {
+    padding: 32px 24px;
+  }
+}

@@ -2,6 +2,10 @@
 
 return [
 
+'openweather' => [
+'key' => env('OPENWEATHER_API_KEY'), //API KEY!
+
+],
     /*
     |--------------------------------------------------------------------------
     | Third Party Services

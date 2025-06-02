@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";  // <-- import useNavigate
+import { useNavigate } from "react-router";  // <-- import useNavigate
 import "./FrontPage.css";
 
 const Frontpage = () => {
@@ -56,7 +56,7 @@ const Frontpage = () => {
             </p>
             <button
               className="btn-main"
-              onClick={() => navigate("/events")}  // <-- navigate to events page
+              onClick={() => navigate("/EventList")}  // <-- navigate to events page
             >
               Explore Event
             </button>
@@ -85,7 +85,7 @@ const Frontpage = () => {
               </p>
               <button
                 className="btn-main"
-                onClick={() => navigate("/events")}  // <-- navigate here as well
+                onClick={() => navigate("/EventsPage")}  // <-- navigate here as well
               >
                 Explore Event ➜
               </button>

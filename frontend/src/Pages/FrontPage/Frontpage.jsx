@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";  // <-- import useNavigate
+import { useNavigate } from "react-router-dom";  
 import "./FrontPage.css";
 
 const Frontpage = () => {
-  const navigate = useNavigate();  // <-- initialize navigate
+  const navigate = useNavigate();  
   const [showChat, setShowChat] = useState(false);
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([
@@ -30,15 +30,15 @@ const Frontpage = () => {
   };
 
   const handleSend = () => {
-    if (!input.trim()) return; // ignore empty
+    if (!input.trim()) return; 
 
-    // Add user's message
+   
     setMessages((prev) => [...prev, { from: "user", text: input }]);
 
-    // Clear input immediately
+  
     setInput("");
 
-    // Add AI reply with small delay to simulate typing
+
     setTimeout(() => {
       setMessages((prev) => [...prev, { from: "ai", text: getAIResponse(input) }]);
     }, 700);
@@ -56,7 +56,7 @@ const Frontpage = () => {
             </p>
             <button
               className="btn-main"
-              onClick={() => navigate("/events")}  // <-- navigate to events page
+              onClick={() => navigate("/events")} 
             >
               Explore Event
             </button>
@@ -85,7 +85,7 @@ const Frontpage = () => {
               </p>
               <button
                 className="btn-main"
-                onClick={() => navigate("/events")}  // <-- navigate here as well
+                onClick={() => navigate("/events")}  
               >
                 Explore Event ➜
               </button>

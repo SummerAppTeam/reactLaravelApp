@@ -11,11 +11,11 @@ export default defineConfig({
     react(),
   ],
   server: {
-    host: "events.test",  
+    host: "localhost",  
     port: 5199,
     strictPort: true,
     hmr: {
-      host: "events.test",
+      host: "localhost",
       protocol: "http",
       port: 5199,
     },

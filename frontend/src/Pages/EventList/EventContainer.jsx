@@ -12,7 +12,7 @@ import "./eventList.css";
 
   const fetchEvents = async () => {
     try {
-      const response = await axios.get("http://127.0.0.1:8003/events"); //check your own url. It's php url + /events. Add something to database too se if it works. 
+      const response = await axios.get("http://127.0.0.1:8009/api/events"); //check your own url. It's php url + /events. Add something to database too se if it works. 
       setEvents(response.data || []);
     } catch (error) {
       setError("Failed to fetch events");

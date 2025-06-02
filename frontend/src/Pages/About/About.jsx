@@ -1,3 +1,4 @@
+
 import React from "react";
 import "./About.css";
 import grid1 from "../AboutImages/grid1.jpg";
@@ -133,6 +134,7 @@ const About = () => {
           </div>
         </div>
       </section>
+
     </div>
   );
 };

@@ -1,34 +1,32 @@
-import events from "../../Components/Events/EventData";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import EventList from "./EventList";
 import GetEventEmoji from "./eventEmoji";
-import "./eventList.css"
 import GetEventImage from "../../Components/Events/EventImages";
-// import axios
+import "./eventList.css";
 
 
-const EventContainer = ({}) => {
-
-
-/* const EventContainer = ({}) => {
+ const EventContainer = ({}) => {
   const [events, setEvents] = useState([]);
   const [error, setError] = useState(null);
 
   const fetchEvents = async () => {
     try {
-      const response = await axios.get("/api/words");
-      setEvents(response.data.events);
+      const response = await axios.get("http://127.0.0.1:8001/events"); //check your own url. It's php url + /events. Add something to database too se if it works. 
+      setEvents(response.data || []);
     } catch (error) {
-      setError("Failed to fetch words");
+      setError("Failed to fetch events");
     }
   };
 
   useEffect(() => {
     fetchEvents();
-  }, []);*/
+  }, []); //Makes sure the tickets are only fecthed once 
 
 
   return (
     <div>
+    <div>{error}</div>
       <div className="tickets">
         {events.map((event) => {
           const eventEmoji = GetEventEmoji(event.type);

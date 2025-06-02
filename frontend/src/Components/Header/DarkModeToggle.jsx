@@ -6,13 +6,13 @@ import "../../App.css";
 function DarkModeToggle() {
   const [isDarkMode, setDarkMode] = useState(false);
 
-  useEffect (() =>{ 
-    const savedTheme = localStorage.getItem("theme") 
-    if (savedTheme === "dark"){
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
       setDarkMode(true);
-       document.body.classList.add("darkMode");
+      document.body.classList.add("darkMode");
     }
-  },[]) //dependency array, only runs once, runs instantly and only on first load
+  }, []); //dependency array, only runs once, runs instantly and only on first load
 
   const toggleDarkMode = (checked) => {
     setDarkMode(checked);
@@ -20,26 +20,23 @@ function DarkModeToggle() {
     const theme = checked ? "dark" : "light";
     if (checked) {
       document.body.classList.add("darkMode");
-     
     } else {
       document.body.classList.remove("darkMode");
-
     }
 
-    localStorage.setItem("theme", theme)
-  
+    localStorage.setItem("theme", theme);
   };
 
   return (
-     <>
-    {/*Remember to install darkmodeswith from react for this to work*/}
-    <DarkModeSwitch 
-      checked={isDarkMode}
-      onChange={toggleDarkMode}
-      size={30}
-      sunColor="yellow"
-      moonColor="black"
-    />
+    <>
+      {/*Remember to install darkmodeswith from react for this to work*/}
+      <DarkModeSwitch
+        checked={isDarkMode}
+        onChange={toggleDarkMode}
+        size={30}
+        sunColor="yellow"
+        moonColor="black"
+      />
     </>
   );
 }

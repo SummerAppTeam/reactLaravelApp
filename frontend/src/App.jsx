@@ -1,40 +1,42 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router";
-import DarkModeSwitch from "./Components/Header/darkModeToggle";
 
+import EventContainer from "./Pages/EventList/EventContainer";
 import ScrollToTop from "react-scroll-to-top";
 import FrontPage from "./Pages/FrontPage/Frontpage";
 import About from "./Pages/About/About";
 import EventList from "./Pages/EventList/EventList";
 import AddEvent from "./Pages/AddEvent/AddEvent";
-
+import DarkModeToggle from "./Components/Header/darkModeToggle";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import "./App.css";
 
 function App() {
   return (
+    
     <BrowserRouter>
       <div className="App">
-        <DarkModeSwitch />
+        <DarkModeToggle /> {/*Remember to install DarkModeSwitch from react for this to work*/}
         <Header />
-
-        <main>
+         <main>
           <Routes>
             <Route path="/" element={<FrontPage />} />
             <Route path="/about" element={<About />} />
-            <Route path="/EventList" element={<EventList />} />
+            <Route path="/EventList" element={ <EventContainer />} />
             <Route path="/AddEvent" element={<AddEvent />} />
           </Routes>
-          <p>This is the main content</p>
+          
+            
           <div>
-            <ScrollToTop smooth />
+            <ScrollToTop smooth /> {/*Remember to install scrolltotop from react for this to work*/}
           </div>
         </main>
-
-        <Footer />
+       
       </div>
+       <Footer />
     </BrowserRouter>
+    
   );
 }
 

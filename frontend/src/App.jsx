@@ -1,8 +1,5 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router";
-import EventManager from "./components/EventManager";
-
-
 import EventContainer from "./Pages/EventList/EventContainer";
 import ScrollToTop from "react-scroll-to-top";
 import FrontPage from "./Pages/FrontPage/Frontpage";
@@ -27,7 +24,6 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/EventList" element={<EventContainer />} />
             <Route path="/AddEvent" element={<AddEvent />} />
-             <Route path="/EventManager" element={<EventManager />} />
           </Routes>
 
           <div>
@@ -37,7 +33,6 @@ function App() {
         </main>
       </div>
       <Footer />
-     
     </BrowserRouter>
   );
 }

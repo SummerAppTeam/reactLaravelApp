@@ -1,14 +1,18 @@
 import { useState } from "react";
 import { NavLink } from "react-router";
-
 import "./header.css";
+
+//mobile and desktop menu
 
 function Header(props) {
   const [menuOpen, setMenuOpen] = useState(!1);
   return (
     <header className="header">
-      <NavLink to="/">
-        <h2>Logo</h2>
+    
+      <NavLink to="/"> {/*'Logo takes back to frontpage*/}
+         <h2>Events</h2>
+        
+         
       </NavLink>
       {!menuOpen && (
         <button
@@ -68,7 +72,9 @@ function Header(props) {
           </li>
         </ul>
       </nav>
+      
     </header>
+    
   );
 }
 export default Header;

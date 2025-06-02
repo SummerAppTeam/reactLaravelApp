@@ -2,13 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\EventController;
-use Illuminate\Http\Request;
 
 Route::apiResource('events', EventController::class);
+Route::get('/events', [EventController::class, 'index'])->name('event.index'); 
+Route::post('/store', [EventController::class, 'store']);
+Route::get('/show/{id}', [EventController::class, 'show']);
+Route::delete('/delete/{id}', [EventController::class, 'destroy']);
 
-Route::get(
-    uri: '/user',
-    action: function (Request $request) {
-        return $request->user();
-    }
-)->middleware('auth:sanctum'); // Is this needed for anything? 
+

@@ -8,7 +8,7 @@ return [
     'allowed_headers' => ['*'],
     'exposed_headers' => [],
     'max_age' => 0,
-    'supports_credentials' => false, //Can be true if needed. 
+    'supports_credentials' => false, // Can be true if needed. 
 ];
 
-//To fic cous problem with React
+//To fix cors problem with React

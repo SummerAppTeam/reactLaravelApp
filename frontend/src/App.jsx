@@ -22,8 +22,9 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/EventList" element={<EventList />} />
           <Route path="/AddEvent" element={<AddEvent />} />
+          {/* <Route path="/Events" element={<Events />} /> */}
         </Routes>
-        <p>This is the main content</p>
+        
             <div>
       <ScrollToTop smooth />
     </div>

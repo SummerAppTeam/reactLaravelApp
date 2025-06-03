@@ -12,22 +12,22 @@ const EventDetails = () => {
 
   useEffect(() => {
     axios
-      .get(`http://127.0.0.1:8000/api/events/${id}`)
+      .get(`http://127.0.0.1:8007/api/events/${id}`)
       .then((res) => {
         setEvent(res.data);
         setLoading(false);
       })
-      .catch((err) => {
-        console.error("Failed to fetch book:", err);
+      .catch((error) => {
+        console.error("Failed to fetch event:", error);
         setLoading(false);
       });
   }, [id]);
 
   if (loading) return <DotLoader />;
-  if (!event) return <p>Event not found.</p>;
+  if (!event) return <p>Event not found</p>;
 
   return (
-    <div className="book-detail">
+    <div className="eventDetail">
       <h2>{event.name}</h2>
       <p>Date:{event.date}</p>
       <p>Location: {event.location}</p>

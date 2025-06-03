@@ -9,6 +9,7 @@ import AddEvent from "./Pages/AddEvent/AddEvent";
 import DarkModeToggle from "./Components/Header/darkModeToggle";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
+import EventDetails from "./Pages/EventList/EventDetails";
 import "./App.css";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/EventList" element={<EventContainer />} />
             <Route path="/AddEvent" element={<AddEvent />} />
+            <Route path="/events/:id" element={<EventDetails />} />
           </Routes>
 
           <div>

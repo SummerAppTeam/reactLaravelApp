@@ -4,7 +4,7 @@ return [
     'paths' => ['api/*', 'events', 'store', 'update/*', 'delete/*'], // I changed this too. Paths. * = matches anything that starts with __/*! 
     'allowed_methods' => ['*'],
     'allowed_origins' => [
-        'http://localhost:5173/'
+        'http://localhost:5184'
     ],
     //From online. This is only thing I changed.
     'allowed_origins_patterns' => [],

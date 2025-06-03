@@ -1,5 +1,6 @@
 import { NavLink } from "react-router";
 import "./footer.css";
+import Newsletter from "./NewsLetter";
 
 function Footer(props) {
   return (
@@ -15,12 +16,12 @@ function Footer(props) {
           <li>
             <NavLink to="/AddEvent">Add Event</NavLink>
           </li>
-           <li>
+          <li>
             <NavLink to="/EventList">Events</NavLink>
           </li>
         </ul>
       </nav>
-
+      <Newsletter />
       <h3>Copyright {props.className}</h3>
     </footer>
   );

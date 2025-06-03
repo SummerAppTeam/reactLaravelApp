@@ -26,6 +26,8 @@ class EventController extends Controller
             'location' => 'required|string|max:255',
             'type' => 'required|string|max:50',
             'price' => 'required|numeric',
+              'image' => 'required|string',
+                  'long_description' => 'required|string|max:2000',
 
         ]);
 
@@ -53,6 +55,8 @@ class EventController extends Controller
             'type' => 'required|string|max:50',
             'price' => 'required|numeric',
             'description' => 'required|string|max:420',
+             'image' => 'required|string',
+             'long_description' => 'required|string|max:2000',
         ]);
 
         $eventData->update($validated);

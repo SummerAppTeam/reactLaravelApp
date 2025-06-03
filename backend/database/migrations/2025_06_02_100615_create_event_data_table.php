@@ -20,6 +20,8 @@ return new class extends Migration
             $table->string('location');
             $table->string('type');
             $table->decimal('price', 8, 2); //two decimals max, 8 numbers max in total
+            $table->string('image');
+             $table->text('long_description');
         });
     }
 

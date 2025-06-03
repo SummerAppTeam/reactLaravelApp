@@ -14,5 +14,7 @@ class EventData extends Model
         'location',
         'type',
         'price',
+        'image',
+        'long_description'
     ];
 }

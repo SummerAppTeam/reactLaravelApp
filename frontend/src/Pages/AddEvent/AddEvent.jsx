@@ -4,7 +4,7 @@ import "./AddEvent.css";
 import useAxios from "../../hooks/useAxios";
 import { DotLoader } from "react-spinners";
 
-
+const currentDate = new Date().toISOString().split('T', 1)[0]
 
 const AddEvent = ({ onEventAdded }) => {
   const { post } = useAxios();
@@ -31,6 +31,7 @@ const AddEvent = ({ onEventAdded }) => {
     e.preventDefault();
 
 setLoading(true);
+
 
 
     try {
@@ -73,9 +74,9 @@ setLoading(true);
   return (
       <>
       {loading ? (
-      <div style={{ marginTop: "20px" }}>
+
         <DotLoader size={60} />
-      </div>
+    
     ) : (
     <form onSubmit={handleSubmit} className="addEventForm">
     <h2 className="formHeader">Add New Event</h2>

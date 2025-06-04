@@ -44,9 +44,7 @@ const EventContainer = () => {
    //  if (error) return <p>{error}</p>;
 
 
-  const filteredEvents = type
-    ? events.filter((event) => event.type === type)
-    : []; // make sure default is no events
+const filteredEvents = type ? events.filter(event => event.type === type) : events;
   const eventsDisplay = type ? filteredEvents : events;
 
  return (

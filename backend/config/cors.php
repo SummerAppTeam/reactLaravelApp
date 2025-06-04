@@ -2,11 +2,15 @@
 
 return [
 
-    'paths' => ['api/*'],
+
+    'paths' => ['api/*', 'events', 'store', 'update/*', 'delete/*'], // Combined all routes
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['http://localhost:3000'],
+    'allowed_origins' => [
+        'http://localhost:3000',
+        'http://localhost:5180'
+    ],
 
     'allowed_origins_patterns' => [],
 
@@ -16,6 +20,8 @@ return [
 
     'max_age' => 0,
 
-    'supports_credentials' => false,
+    'supports_credentials' => true, 
 
 ];
+
+

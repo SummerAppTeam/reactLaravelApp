@@ -1,3 +1,4 @@
+
 import React from "react";
 import "./About.css";
 import grid1 from "../AboutImages/teams.png";
@@ -136,6 +137,7 @@ const About = () => {
           <ContactSection />
         </div>
       </section>
+
     </div>
   );
 };

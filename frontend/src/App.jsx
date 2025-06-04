@@ -4,6 +4,7 @@ import ScrollToTop from "react-scroll-to-top";
 
 import FrontPage from "./Pages/FrontPage/Frontpage";
 import About from "./Pages/About/About";
+import ContactSection from "./Pages/About/ContactSection";
 import EventList from "./Pages/EventList/EventList";
 import AddEvent from "./Pages/AddEvent/AddEvent";
 
@@ -24,9 +25,9 @@ function App() {
           <Route path="/AddEvent" element={<AddEvent />} />
         </Routes>
         <p>This is the main content</p>
-            <div>
-      <ScrollToTop smooth />
-    </div>
+        <div>
+          <ScrollToTop smooth />
+        </div>
       </main>
 
       <Footer />

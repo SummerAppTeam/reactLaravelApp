@@ -42,16 +42,16 @@ function Header(props) {
         <div className="mobileNav">
           <ul>
             <li>
-              <NavLink to="/">Frontpage</NavLink>
+              <NavLink to="/" onClick={() => setMenuOpen(false)}>Frontpage</NavLink>
             </li>
             <li>
-              <NavLink to="/About">About us</NavLink>
+              <NavLink to="/About"onClick={() => setMenuOpen(false)}>About us</NavLink>
             </li>
             <li>
-              <NavLink to="/AddEvent">Add Event</NavLink>
+              <NavLink to="/AddEvent"onClick={() => setMenuOpen(false)}>Add Event</NavLink>
             </li>
             <li>
-              <NavLink to="/EventList">Events</NavLink>
+              <NavLink to="/EventList"onClick={() => setMenuOpen(false)}>Events</NavLink>
             </li>
           </ul>
         </div>

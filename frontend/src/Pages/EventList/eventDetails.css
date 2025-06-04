@@ -1,0 +1,213 @@
+/*This is fully from ChatGPT and won't be in the final app. I just wanted a nicer page to look at while working*/
+
+:root {
+  --primary-color: #3366ff;
+  --secondary-color: #2a2a2a;
+  --bg-color: #f5f7ff;
+  --text-color: #444;
+  --accent-color: #ff6f61;
+  --font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --border-radius: 12px;
+  --transition-speed: 0.35s;
+}
+
+.eventDetailContainer {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem 3rem;
+  background-color: var(--bg-color);
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 25px rgba(50, 50, 93, 0.1), 0 6px 12px rgba(0, 0, 0, 0.07);
+  font-family: var(--font-family);
+  color: var(--text-color);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 2rem;
+  position: relative;
+}
+
+.eventDetailContainer button {
+  grid-column: 1 / -1;
+  justify-self: start;
+  padding: 0.6rem 1.3rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: var(--border-radius);
+  background: var(--primary-color);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 4px 15px var(--primary-color);
+  transition: background-color var(--transition-speed) ease,
+              box-shadow var(--transition-speed) ease,
+              transform var(--transition-speed) ease;
+}
+
+ .eventDetailContainer button:hover {
+  background: var(--accent-color);
+  box-shadow: 0 6px 20px var(--accent-color);
+  transform: translateY(-2px);
+}
+
+.eventHeader {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 150px auto 60px;
+  gap: 1rem;
+  align-items: center;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.eventImage {
+  width: 150px;
+  height: 150px;
+  border-radius: var(--border-radius);
+  object-fit: cover;
+  box-shadow: 0 0 20px rgba(51, 102, 255, 0.3);
+  transition: transform 0.4s ease;
+}
+
+.eventImage:hover {
+  transform: scale(1.05) rotate(2deg);
+}
+
+.eventName {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--secondary-color);
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.eventEmoji {
+  font-size: 3rem;
+  user-select: none;
+  justify-self: center;
+  color: var(--primary-color);
+  filter: drop-shadow(0 0 2px var(--accent-color));
+}
+
+.eventInfo {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin-bottom: 2rem;
+}
+
+.eventInfo p {
+  background: white;
+  padding: 1rem 1.2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.eventInfo p:hover {
+  box-shadow: 0 6px 18px rgba(51, 102, 255, 0.2);
+}
+
+.eventDescription {
+  grid-column: 1 / -1;
+  background: white;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  color: var(--secondary-color);
+  line-height: 1.7;
+}
+
+.eventDescription h3,
+.eventDescription h4 {
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  border-left: 4px solid var(--accent-color);
+  padding-left: 0.6rem;
+}
+
+.eventExtra,
+.eventReviews {
+  grid-column: 1 / -1;
+  margin-top: 3rem;
+  background: white;
+  padding: 1.5rem 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.eventExtra h4,
+.eventReviews h4 {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.eventExtra ul,
+.eventReviews ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.eventExtra li,
+.eventReviews li {
+  background: var(--bg-color);
+  border-radius: var(--border-radius);
+  padding: 0.8rem 1.2rem;
+  box-shadow: inset 0 0 7px rgba(0,0,0,0.05);
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  cursor: default;
+}
+
+.eventExtra li:hover,
+.eventReviews li:hover {
+  background-color: var(--primary-color);
+  color: white;
+  box-shadow: 0 6px 18px rgba(51, 102, 255, 0.3);
+}
+
+@media (max-width: 800px) {
+  .eventDetailContainer {
+    grid-template-columns: 1fr;
+    padding: 1.5rem 1.5rem;
+  }
+
+  .eventHeader {
+    grid-template-columns: 1fr auto auto;
+    gap: 0.6rem;
+  }
+
+  .eventImage {
+    width: 100px;
+    height: 100px;
+  }
+
+  .eventName {
+    font-size: 2rem;
+  }
+
+  .eventEmoji {
+    font-size: 2rem;
+  }
+
+  .eventInfo {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .eventExtra ul,
+  .eventReviews ul {
+    grid-template-columns: 1fr;
+  }
+}

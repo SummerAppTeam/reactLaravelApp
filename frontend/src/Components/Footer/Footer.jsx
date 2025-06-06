@@ -1,28 +1,20 @@
-import { NavLink } from "react-router";
+import { NavLink } from "react-router"; 
 import "./footer.css";
 
-function Footer(props) {
+function Footer() {
   return (
     <footer>
       <nav>
         <ul>
-          <li>
-            <NavLink to="/">Frontpage</NavLink>
-          </li>
-          <li>
-            <NavLink to="/About">About us</NavLink>
-          </li>
-          <li>
-            <NavLink to="/AddEvent">Add Event</NavLink>
-          </li>
-           <li>
-            <NavLink to="/EventList">Events</NavLink>
-          </li>
+          <li><NavLink to="/">Event Guide</NavLink></li>
+          <li><NavLink to="/about">About Us</NavLink></li>
+          <li><NavLink to="/privacy">Privacy</NavLink></li>
+          <li><NavLink to="/contact">Contact Us</NavLink></li>
+          <li><NavLink to="/policy">Service & Policy</NavLink></li>
         </ul>
       </nav>
-
-      <h3>Copyright {props.className}</h3>
     </footer>
   );
 }
+
 export default Footer;

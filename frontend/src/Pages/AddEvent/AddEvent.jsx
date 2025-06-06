@@ -1,6 +1,4 @@
 
-
-
 const AddEvent =() => {
 return ( 
  <div><main>

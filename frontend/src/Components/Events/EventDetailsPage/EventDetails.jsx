@@ -8,7 +8,7 @@ import "./eventDetails.css";
 const EventDetails = () => {
   const { id } = useParams();
   const [event, setEvent] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const { get } = useAxios();

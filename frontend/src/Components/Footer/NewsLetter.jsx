@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { DotLoader } from "react-spinners";
-import Loading from "../Loading/Loading";
+
 
 function Newsletter() {
   const [loading, setLoading] = useState(false);

@@ -88,7 +88,7 @@ const EventList = ({
 
   const handleDelete = () => {
     if (window.confirm("Are you sure you want to delete this event?")) {
-      del(`http://127.0.0.1:8000/api/events/${id}`)
+      del(`api/events/${id}`)
         .then(() => {
           onDelete();
         })

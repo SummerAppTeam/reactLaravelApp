@@ -9,7 +9,7 @@ export function EventCalendar({ events }) {
 
   
   const calendarEvents = events.map((event) => ({
-    name: event.name,
+    title: event.name,
     date: event.date,
     extendedProps: {
       description: event.description,
@@ -31,7 +31,7 @@ export function EventCalendar({ events }) {
         height="auto"
         eventClick={({ event }) => {
           setModal({
-            name: event.name,
+            titlw: event.name,
             date: event.startStr,
             description: event.extendedProps.description,
             type: event.extendedProps.type,

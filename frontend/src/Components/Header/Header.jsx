@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router";
 import "./header.css";
-import DarkModeToggle from "./darkModeToggle";
+import DarkModeToggle from "./DarkModeToggle"
 
 //mobile and desktop menu
 
@@ -15,7 +15,7 @@ function Header(props) {
         
          
       </NavLink>
-      <DarkModeToggle />
+       <DarkModeToggle />
       {!menuOpen && (
         <button
           id="menuToggle"
@@ -25,13 +25,11 @@ function Header(props) {
           <span className="material-icons">menu</span>
         </button>
       )}
-      
       <nav
         id="mobileMenu"
         className={menuOpen ? "mobileMenu open" : "mobileMenu"}
         aria-label="Mobile menu"
       >
-        
         {menuOpen && (
           <button
             id="closeMenu"
@@ -43,25 +41,23 @@ function Header(props) {
             </span>
           </button>
         )}
-        
         <div className="mobileNav">
           <ul>
             <li>
-              <NavLink to="/" onClick={() => setMenuOpen(false)}>Frontpage</NavLink>
+              <NavLink to="/">Frontpage</NavLink>
             </li>
             <li>
-              <NavLink to="/About"onClick={() => setMenuOpen(false)}>About us</NavLink>
+              <NavLink to="/About">About us</NavLink>
             </li>
             <li>
-              <NavLink to="/addEvent"onClick={() => setMenuOpen(false)}>Add Event</NavLink>
+              <NavLink to="/AddEvent">Add Event</NavLink>
             </li>
             <li>
-              <NavLink to="/events"onClick={() => setMenuOpen(false)}>Events</NavLink>
+              <NavLink to="/events">Events</NavLink>
             </li>
           </ul>
         </div>
       </nav>
-      
       <nav className="desktopMenu">
         <ul>
           <li>
@@ -74,15 +70,13 @@ function Header(props) {
             <NavLink to="/AddEvent">Add Event</NavLink>
           </li>
           <li>
-            <NavLink to="/Events">Events</NavLink>
+            <NavLink to="/events">Events</NavLink>
           </li>
         </ul>
       </nav>
-       
+      
     </header>
     
   );
 }
 export default Header;
-
-

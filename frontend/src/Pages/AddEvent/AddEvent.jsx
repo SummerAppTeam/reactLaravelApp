@@ -54,7 +54,7 @@ const AddEvent = ({ onEventAdded }) => {
       onEventAdded?.(response.data);
 
       setTimeout(() => {
-        navigate("/EventList");
+        navigate("/events");
       }, 1000);
 
       setForm({

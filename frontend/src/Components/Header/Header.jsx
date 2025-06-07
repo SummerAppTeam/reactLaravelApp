@@ -48,10 +48,10 @@ function Header(props) {
               <NavLink to="/About"onClick={() => setMenuOpen(false)}>About us</NavLink>
             </li>
             <li>
-              <NavLink to="/AddEvent"onClick={() => setMenuOpen(false)}>Add Event</NavLink>
+              <NavLink to="/addEvent"onClick={() => setMenuOpen(false)}>Add Event</NavLink>
             </li>
             <li>
-              <NavLink to="/EventList"onClick={() => setMenuOpen(false)}>Events</NavLink>
+              <NavLink to="/events"onClick={() => setMenuOpen(false)}>Events</NavLink>
             </li>
           </ul>
         </div>
@@ -68,7 +68,7 @@ function Header(props) {
             <NavLink to="/AddEvent">Add Event</NavLink>
           </li>
           <li>
-            <NavLink to="/EventList">Events</NavLink>
+            <NavLink to="/Events">Events</NavLink>
           </li>
         </ul>
       </nav>

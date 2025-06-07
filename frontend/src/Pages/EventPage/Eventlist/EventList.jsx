@@ -1,7 +1,8 @@
-import axios from "axios";
 import { useState, useEffect } from "react";
-import useAxios from "../../hooks/useAxios";
+import useAxios from "../../../hooks/useAxios";
 import { DotLoader } from "react-spinners";
+import EditEvent from "../EditEvent/EditEventForm";
+import "./eventList.css";
 
 const EventList = ({
   id,
@@ -15,7 +16,7 @@ const EventList = ({
   image,
   eventEmoji,
   eventImage,
-  onDelete,
+  onDelete, // callback to refresh parent list after changes
   allEvents,
 }) => {
   const [isEditing, setIsEditing] = useState(false);
@@ -27,13 +28,13 @@ const EventList = ({
     location,
     type,
     description,
-     long_description,
+    long_description,
     price,
   });
 
   const { put, del } = useAxios();
   const [isFavorite, setIsFavorite] = useState(false);
-  const currentDate = new Date().toISOString().split('T', 1)[0]
+  const currentDate = new Date().toISOString().split("T", 1)[0];
 
   useEffect(() => {
     const favorites = JSON.parse(localStorage.getItem("favorites") || "{}");
@@ -57,33 +58,24 @@ const EventList = ({
     setEditedEvent({ ...editedEvent, [e.target.name]: e.target.value });
   };
 
- /* const normalizeDate = (dateStr) => {
+  /*const normalizeDate = (dateStr) => {
     if (!dateStr) return null;
     return new Date(dateStr).toISOString().split("T")[0];
-  
   };
 
-   /* const checkDateConflict = () => {
+ 
+  /*const checkDateConflict = () => {
     const newDate = normalizeDate(editedEvent.date);
     return allEvents.some(
       (evt) => evt.id !== id && normalizeDate(evt.date) === newDate
     );
-  };*/ 
-  //I don't know if these do something but they fail at mine
+  };*/
 
   const handleUpdate = () => {
-
-      /* if (checkDateConflict()) {
-      setDateConflict(true);
-      return; 
-    }*/
-
-   // setDateConflict(false);
     setLoading(true);
-    
     put(`api/events/${id}`, editedEvent)
       .then(() => {
-        setIsEditing(true);
+        setIsEditing(false);
         onDelete();
       })
       .catch((error) => {
@@ -93,21 +85,18 @@ const EventList = ({
         setLoading(false);
       });
   };
+
   const handleDelete = () => {
-    setLoading(true);
     if (window.confirm("Are you sure you want to delete this event?")) {
-      del(`api/events/${id}`)
+      del(`http://127.0.0.1:8000/api/events/${id}`)
         .then(() => {
           onDelete();
         })
         .catch((error) => {
           console.error("Failed to delete event:", error);
-        })
-        .finally(() => {
-          setLoading(false);
         });
     }
-  };
+  }; //add loading?
 
   return (
     <>
@@ -130,7 +119,6 @@ const EventList = ({
           <div>
             <div className="weatherModalIcon">
               <p onClick={() => setIsModalOpen(!isModalOpen)}>☀️ 🌧️</p>
-
               {isModalOpen && (
                 <div className="weatherModalWindow">
                   <p>All events need to have different weather</p>
@@ -152,7 +140,6 @@ const EventList = ({
           >
             {isFavorite ? "❤️" : "🤍"}
           </button>
-
           {!isEditing ? (
             <>
               <p>Name: {name}</p>
@@ -182,75 +169,13 @@ const EventList = ({
               <button onClick={handleDelete}>Delete</button>
             </>
           ) : (
-            <>
-              <input
-                type="text"
-                name="name"
-                value={editedEvent.name}
-                onChange={handleInputChange}
-              />
-            <input
-  type="date"
-  name="date"
-  value={editedEvent.date}
-  onChange={handleInputChange}
-  min={currentDate}
-  required
-/>
-
-              <input
-                type="text"
-                name="location"
-                value={editedEvent.location}
-                onChange={handleInputChange}
-              />
-              <select //dropdown for edit with event types
-                name="type"
-                value={editedEvent.type}
-                onChange={handleInputChange}
-              >
-                <option value="">-- Select Category --</option>
-                <option value="Outdoor & Nature">🌿 Outdoor & Nature</option>
-                <option value="Food & Social">🥗 Food & Social</option>
-                <option value="Hobbies & DIY">🎨 Hobbies & DIY</option>
-                <option value="Learning & Networking">
-                  📝 Learning & Networking
-                </option>
-                <option value="Health & Wellness">🌸 Health & Wellness</option>
-                <option value="Music & Entertainment">
-                  🎤 Music & Entertainment
-                </option>
-                <option value="Markets & Swaps">🛍️ Markets & Swaps</option>
-                <option value="Family & Kids">🧸 Family & Kids</option>
-                <option value="Sports & Games">🏀 Sports & Games</option>
-                <option value="Parties & Celebration">
-                  🎉 Parties & Celebration
-                </option>
-              </select>
-
-              <input
-                type="text"
-                name="description"
-                value={editedEvent.description}
-                onChange={handleInputChange}
-              />
-            
-              <input
-                type="number"
-                name="price"
-                value={editedEvent.price}
-                onChange={handleInputChange}
-              />
-                    <input
-                type="text"
-                name="long_description"
-                placeholder="Long description"
-                value={editedEvent.long_description}
-                onChange={handleInputChange}
-              />
-              <button onClick={handleUpdate}>Save</button>
-              <button onClick={() => setIsEditing(false)}>Cancel</button>
-            </>
+            <EditEvent
+              editedEvent={editedEvent}
+              onHandleInputChange={handleInputChange}
+              onSave={handleUpdate}
+              onCancel={() => setIsEditing(false)}
+              currentDate={currentDate}
+            />
           )}
         </div>
       )}

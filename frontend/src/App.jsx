@@ -1,16 +1,16 @@
-
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import EventContainer from "./Pages/EventList/EventContainer";
+import EventContainer from "./Pages/EventPage/EventContainer/EventContainer";
 import ScrollToTop from "react-scroll-to-top";
 import FrontPage from "./Pages/FrontPage/Frontpage";
 import About from "./Pages/About/About";
 import AddEvent from "./Pages/AddEvent/AddEvent";
 import DarkModeToggle from "./Components/Header/darkModeToggle";
+import EventList from "./Pages/EventPage/Eventlist/EventList";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
-import EventDetails from "./Pages/EventList/EventDetails";
-import EditEvent from "./Pages/EventList/EditEvent";
+import EventDetails from "./Components/Events/EventDetailsPage/EventDetails";
+
 
 function App() {
   return (
@@ -22,10 +22,10 @@ function App() {
           <Routes>
             <Route path="/" element={<FrontPage />} />
             <Route path="/about" element={<About />} />
-            <Route path="/EventList" element={<EventContainer />} />
+            <Route path="/Events" element={<EventContainer />} />
             <Route path="/AddEvent" element={<AddEvent />} />
             <Route path="/events/:id" element={<EventDetails />} />
-            <Route path="/events/:id/edit" element={<EditEvent />} />
+            <Route path="/events/:id/edit" element={<EventList />} />
           </Routes>
           <ScrollToTop smooth />
         </main>
@@ -36,25 +36,6 @@ function App() {
 }
 
 export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // import "./App.css";
 // import { BrowserRouter, Routes, Route } from "react-router";

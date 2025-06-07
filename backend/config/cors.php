@@ -5,14 +5,14 @@ return [
     'paths' => ['api/*'],
     'allowed_methods' => ['*'],
     'allowed_origins' => [
-        'http://localhost:5174'
+        'http://localhost:5176'
     ],
-    //From online. This is only thing I changed.
+    //Remember to change this to your React url 
     'allowed_origins_patterns' => [],
     'allowed_headers' => ['*'],
     'exposed_headers' => [],
     'max_age' => 0,
-    'supports_credentials' => true, 
+    'supports_credentials' => true,  //This can be changed to false
 ];
 
 

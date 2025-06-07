@@ -6,9 +6,9 @@ footer {
   color: #e0e7ff; /* soft indigo */
   padding: 40px 20px;
   text-align: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   border-top: 3px solid #22d3ee; /* cyan top border to match header highlight */
-  box-shadow: inset 0 4px 6px rgba(0,0,0,0.5);
+  box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.5);
   user-select: none;
 }
 
@@ -122,22 +122,34 @@ footer p {
   footer h2 {
     font-size: 20px;
   }
-  footer input[type="email"], footer button {
+  footer input[type="email"],
+  footer button {
     width: 100%;
   }
 }
 
+.contact {
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  flex-direction: row;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
 
+.contact p {
+  font-size: 0.9rem;
+  color: white;
+  font-weight: lighter;
+}
 
-
-
-
-
-
-
-
-
-
+@media (max-width: 600px) {
+  .contact {
+    flex-direction: column;
+  }
+}
 
 /* footer {
   display: flex;

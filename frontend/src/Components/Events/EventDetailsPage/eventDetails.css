@@ -1,215 +1,198 @@
-/*This is fully from ChatGPT and won't be in the final app. I just wanted a nicer page to look at while working*/
-
-:root {
-  --primary-color: #3366ff;
-  --secondary-color: #2a2a2a;
-  --bg-color: #f5f7ff;
-  --text-color: #444;
-  --accent-color: #ff6f61;
-  --font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --border-radius: 12px;
-  --transition-speed: 0.35s;
-}
 
 .eventDetailContainer {
-  max-width: 900px;
-  margin: 3rem auto;
-  padding: 2rem 3rem;
-  background-color: var(--bg-color);
-  border-radius: var(--border-radius);
-  box-shadow: 0 10px 25px rgba(50, 50, 93, 0.1), 0 6px 12px rgba(0, 0, 0, 0.07);
-  font-family: var(--font-family);
-  color: var(--text-color);
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-gap: 2rem;
-  position: relative;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background: #fafafa;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
 }
 
-.eventDetailContainer button {
-  grid-column: 1 / -1;
-  justify-self: start;
-  padding: 0.6rem 1.3rem;
-  font-size: 1rem;
+/* Back button */
+.eventDetailContainer > button {
+  background-color: #007bff;
   border: none;
-  border-radius: var(--border-radius);
-  background: var(--primary-color);
-  color: #fff;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
   cursor: pointer;
-  box-shadow: 0 4px 15px var(--primary-color);
-  transition: background-color var(--transition-speed) ease,
-              box-shadow var(--transition-speed) ease,
-              transform var(--transition-speed) ease;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s ease;
 }
 
- .eventDetailContainer button:hover {
-  background: var(--accent-color);
-  box-shadow: 0 6px 20px var(--accent-color);
-  transform: translateY(-2px);
+.eventDetailContainer > button:hover {
+  background-color: #0056b3;
 }
 
+/* Event header */
 .eventHeader {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: 150px auto 60px;
-  gap: 1rem;
-  align-items: center;
-  border-bottom: 2px solid var(--primary-color);
-  padding-bottom: 1rem;
-  margin-bottom: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 .eventImage {
-  width: 150px;
-  height: 150px;
-  border-radius: var(--border-radius);
+  width: 100%;
+  max-height: 350px;
   object-fit: cover;
-  box-shadow: 0 0 20px rgba(51, 102, 255, 0.3);
-  transition: transform 0.4s ease;
-}
-
-.eventImage:hover {
-  transform: scale(1.05) rotate(2deg);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
 }
 
 .eventName {
-  font-size: 2.8rem;
-  font-weight: 800;
-  color: var(--secondary-color);
-  margin: 0;
-  line-height: 1.1;
-  letter-spacing: -0.03em;
+  font-size: 2.2rem;
+  margin: 0.3rem 0;
+  font-weight: 700;
+  color: #222;
 }
 
 .eventEmoji {
-  font-size: 3rem;
-  user-select: none;
-  justify-self: center;
-  color: var(--primary-color);
-  filter: drop-shadow(0 0 2px var(--accent-color));
+  font-size: 2.5rem;
 }
 
+/* Event info */
 .eventInfo {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1.5rem;
-  font-weight: 600;
-  color: var(--secondary-color);
-  margin-bottom: 2rem;
+  background-color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.05);
 }
 
 .eventInfo p {
-  background: white;
-  padding: 1rem 1.2rem;
-  border-radius: var(--border-radius);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  transition: box-shadow 0.3s ease;
+  font-size: 1rem;
+  margin: 0.3rem 0;
 }
 
-.eventInfo p:hover {
-  box-shadow: 0 6px 18px rgba(51, 102, 255, 0.2);
+.eventInfo strong {
+  color: #555;
 }
 
+/* Event Description */
 .eventDescription {
-  grid-column: 1 / -1;
-  background: white;
-  padding: 2rem;
-  border-radius: var(--border-radius);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
-  color: var(--secondary-color);
-  line-height: 1.7;
+  margin-bottom: 1.5rem;
 }
 
-.eventDescription h3,
-.eventDescription h4 {
+.eventDescription h3 {
   margin-bottom: 0.8rem;
-  font-weight: 700;
-  color: var(--primary-color);
-  border-left: 4px solid var(--accent-color);
-  padding-left: 0.6rem;
+  color: #004085;
 }
 
-.eventExtra,
-.eventReviews {
-  grid-column: 1 / -1;
-  margin-top: 3rem;
-  background: white;
-  padding: 1.5rem 2rem;
-  border-radius: var(--border-radius);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+.eventDescription p {
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #444;
 }
 
-.eventExtra h4,
-.eventReviews h4 {
+/* Event Extra */
+.eventExtra {
+  background-color: #e9f5ff;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  box-shadow: inset 0 0 10px #cce5ff;
+}
+
+.eventExtra h4 {
+  margin-bottom: 0.8rem;
+  color: #004085;
+}
+
+.eventExtra p {
+  font-size: 1rem;
   margin-bottom: 1rem;
-  font-weight: 700;
-  color: var(--primary-color);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
 }
 
-.eventExtra ul,
-.eventReviews ul {
+.eventExtra ul {
   list-style: none;
   padding-left: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1rem;
-}
-
-.eventExtra li,
-.eventReviews li {
-  background: var(--bg-color);
-  border-radius: var(--border-radius);
-  padding: 0.8rem 1.2rem;
-  box-shadow: inset 0 0 7px rgba(0,0,0,0.05);
   font-size: 1rem;
-  transition: background-color 0.3s ease;
-  cursor: default;
 }
 
-.eventExtra li:hover,
-.eventReviews li:hover {
-  background-color: var(--primary-color);
-  color: white;
-  box-shadow: 0 6px 18px rgba(51, 102, 255, 0.3);
+.eventExtra ul li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.4rem;
+  position: relative;
 }
 
-@media (max-width: 800px) {
+.eventExtra ul li::before {
+  content: '•';
+  color: #007bff;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* Event Reviews */
+.eventReviews {
+  margin-bottom: 1.5rem;
+}
+
+.eventReviews h4 {
+  color: #004085;
+  margin-bottom: 1rem;
+}
+
+.eventReviews ul {
+  list-style: disc inside;
+  font-style: italic;
+  color: #555;
+}
+
+.eventReviews ul li {
+  margin-bottom: 0.7rem;
+}
+
+/* Event Covid Safety */
+.eventCovidSafety {
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  color: #856404;
+}
+
+.eventCovidSafety h3 {
+  margin-bottom: 0.8rem;
+}
+
+/* Fix nested <p> inside <p> issue */
+.eventCovidSafety p > p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* FAQ Section */
+.eventFAQ h3 {
+  color: #004085;
+  margin-bottom: 1rem;
+}
+
+.eventFAQ p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.eventFAQ strong {
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
   .eventDetailContainer {
-    grid-template-columns: 1fr;
-    padding: 1.5rem 1.5rem;
-  }
-
-  .eventHeader {
-    grid-template-columns: 1fr auto auto;
-    gap: 0.6rem;
-  }
-
-  .eventImage {
-    width: 100px;
-    height: 100px;
+    padding: 1rem;
   }
 
   .eventName {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
-  .eventEmoji {
-    font-size: 2rem;
-  }
-
-  .eventInfo {
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-
-  .eventExtra ul,
-  .eventReviews ul {
-    grid-template-columns: 1fr;
+  .eventExtra ul li {
+    padding-left: 1rem;
   }
 }
-
-

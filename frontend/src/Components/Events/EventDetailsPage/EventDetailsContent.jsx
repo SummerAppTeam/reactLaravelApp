@@ -3,7 +3,7 @@ import "./eventDetails.css";
 const EventDetailsContent = ({ event, navigate }) => {
   return (
     <div className="eventDetailContainer">
-      <button onClick={() => navigate(-1)}>Go Back</button>
+    
 
       <div className="eventHeader">
         <img
@@ -34,6 +34,8 @@ const EventDetailsContent = ({ event, navigate }) => {
         <p>{event.long_description}</p>
       </div>
 
+       <button onClick={() => navigate(-1)}>Go Back</button>
+
       <div className="eventExtra">
         <h4>What to Expect at Our Events</h4>
         <p>
@@ -55,7 +57,7 @@ const EventDetailsContent = ({ event, navigate }) => {
         </ul>
       </div>
 
-      <button onClick={() => navigate(-1)}>Go Back</button>
+     
 
       <div className="eventReviews">
         <h4>Join our happy customers!</h4>

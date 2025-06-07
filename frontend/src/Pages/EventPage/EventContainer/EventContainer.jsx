@@ -51,13 +51,14 @@ const EventContainer = () => {
     fetchEvents();
   }, []);
 
-  //if (loading) return <DotLoader />;
-  // if (error) return <p>{error}</p>;
+  if (loading) return <DotLoader />;
+
 
   const renderEventList = () => (
     <>
+  
       <div className="tickets">
-        {events.slice(0, visibleCount).map((event) => {
+        {filteredEvents.slice(0, visibleCount).map((event) => {
           const eventEmoji = GetEventEmoji(event.type);
           const eventImage = GetEventImage(event.type);
 
@@ -78,6 +79,8 @@ const EventContainer = () => {
           );
         })}
       </div>
+
+     
 
       <div className="showButtons">
         {visibleCount < events.length && (
@@ -119,16 +122,7 @@ const EventContainer = () => {
 
             {error}
 
-            <div>
-              <label htmlFor="search">Search</label>
-              <input
-                type="text"
-                id="search"
-                name="search"
-                value={searchValue}
-                onChange={searchHandle}
-              />
-            </div>
+          
 
             {showCalendar ? (
               <EventCalendar events={filteredEvents} />
@@ -169,7 +163,22 @@ const EventContainer = () => {
               <p>Find local events!</p>
               <p>Connect with others</p>
               <p>Enjoy beautiful Finland and relax</p>
+
+                <div>
+              <label htmlFor="search">Search</label>
+              <input
+                type="text"
+                id="search"
+                name="search"
+                value={searchValue}
+                onChange={searchHandle}
+              />
+            </div>
+            
+              
               {renderEventList()}
+                {error}
+              
               <button className="allTicketsButton">🎟️ View All Tickets</button>
             </section>
 

@@ -36,6 +36,7 @@ function DarkModeToggle() {
         size={30}
         sunColor="white"
         moonColor="white"
+     
       />
     </>
   );

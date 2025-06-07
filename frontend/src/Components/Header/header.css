@@ -193,7 +193,7 @@
 
 /* Dark mode toggle wrapper (optional) */
 .dark-mode-toggle {
-  margin-left: 16px;
+  margin-left: 160px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -205,7 +205,6 @@
 .dark-mode-toggle:hover {
   color: #14b8a6;
 }
-
 
 
 

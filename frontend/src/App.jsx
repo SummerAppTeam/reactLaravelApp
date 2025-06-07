@@ -5,19 +5,23 @@ import ScrollToTop from "react-scroll-to-top";
 import FrontPage from "./Pages/FrontPage/Frontpage";
 import About from "./Pages/About/About";
 import AddEvent from "./Pages/AddEvent/AddEvent";
-import DarkModeToggle from "./Components/Header/darkModeToggle";
+
 import EventList from "./Pages/EventPage/Eventlist/EventList";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import EventDetails from "./Components/Events/EventDetailsPage/EventDetails";
+import "./App.css"
+
+
 
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <DarkModeToggle />
-        <Header />
+       
+        <Header  />
+     
         <main>
           <Routes>
             <Route path="/" element={<FrontPage />} />
@@ -27,7 +31,7 @@ function App() {
             <Route path="/events/:id" element={<EventDetails />} />
             <Route path="/events/:id/edit" element={<EventList />} />
           </Routes>
-          <ScrollToTop smooth />
+          <ScrollToTop smooth />   
         </main>
       </div>
       <Footer />

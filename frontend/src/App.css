@@ -41,3 +41,20 @@ body.darkMode main {
 .darkMode h2 {
   color: rgb(178, 77, 236);
 }
+
+button.scroll-to-top {
+  background: linear-gradient(135deg, #6ec1ff 0%, #00aaff);
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.25s ease, box-shadow 0.3s ease;
+}
+
+button.scroll-to-top:hover {
+  background: linear-gradient(135deg, #00aaff 0%, #6ec1ff);
+  transform: scale(1.1);
+  box-shadow: 0 12px 20px rgba(0, 170, 255, 0.7);
+}
+
+

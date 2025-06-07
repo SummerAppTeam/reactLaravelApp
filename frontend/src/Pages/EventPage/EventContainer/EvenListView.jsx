@@ -17,7 +17,7 @@ const EventListView = ({ events, onDelete }) => {
       <section className="categorySection">
         <h2>Browse by Category</h2>
         <div className="categoryButtons">
-          <button onClick={() => setType(null)}>All</button>
+        
           <button onClick={() => setType("Outdoor & Nature")}>
             🌿 Outdoor & Nature
           </button>

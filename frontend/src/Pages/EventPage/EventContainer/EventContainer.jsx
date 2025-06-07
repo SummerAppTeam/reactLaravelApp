@@ -53,10 +53,8 @@ const EventContainer = () => {
 
   if (loading) return <DotLoader />;
 
-
   const renderEventList = () => (
     <>
-  
       <div className="tickets">
         {filteredEvents.slice(0, visibleCount).map((event) => {
           const eventEmoji = GetEventEmoji(event.type);
@@ -79,8 +77,6 @@ const EventContainer = () => {
           );
         })}
       </div>
-
-     
 
       <div className="showButtons">
         {visibleCount < events.length && (
@@ -113,16 +109,15 @@ const EventContainer = () => {
             <section className="introSection">
               <h1>Welcome to EventFinder Finland 🇫🇮</h1>
               <p>
-                Your go-to platform for discovering top events across Finland.
-                Whether you're seeking vibrant music festivals, thrilling sports
-                matches, or cultural showcases — we bring them all together for
-                you.
+                Explore events in iconic places across Finland, from the snowy
+                magic of Rovaniemi in the north to the lively streets of
+                Helsinki in the south, where each local gathering, tradition or
+                seasonal celebration reflects the rich and diverse cultural
+                spirit of the country.
               </p>
             </section>
 
             {error}
-
-          
 
             {showCalendar ? (
               <EventCalendar events={filteredEvents} />
@@ -131,11 +126,13 @@ const EventContainer = () => {
             )}
 
             <section className="highlightSection">
-              <h2>Experience the Culture of Finland</h2>
+              <h2>Experience Finnish Culture</h2>
               <p>
-                Attend events hosted in iconic Finnish locations — from the
-                snowy streets of Rovaniemi to the lively festivals in Helsinki.
-                Each event showcases the country’s diverse cultural scene.
+                Explore events in iconic places from the snowy magic of
+                Rovaniemi to the buzzing festivals in Helsinki. Each event
+                highlights the rich and diverse culture of Finland. Whether
+                you're a local or just visiting, there's always something new to
+                experience in every corner of the country.
               </p>
               <img
                 src="https://images.pexels.com/photos/1703323/pexels-photo-1703323.jpeg"
@@ -147,9 +144,9 @@ const EventContainer = () => {
             <section className="highlightSection">
               <h2>Events for Every Season</h2>
               <p>
-                Whether it's summer music festivals under the midnight sun or
-                winter sports in Lapland, our event listings keep you connected
-                with seasonal favorites across Finland.
+                Celebrate summer under the midnight sun or enjoy winter sports
+                in Lapland. We keep you updated with the best seasonal events
+                all year round.
               </p>
               <img
                 src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg"
@@ -159,26 +156,32 @@ const EventContainer = () => {
             </section>
 
             <section className="ticketSection">
-              <h2>Discover the Benefits</h2>
-              <p>Find local events!</p>
-              <p>Connect with others</p>
-              <p>Enjoy beautiful Finland and relax</p>
+              <h2>Why Use EventFinder?</h2>
+              <p>Discover local events you’ll love</p>
+              <p>Meet new people with shared interests</p>
+              <p>Enjoy the beauty and charm of Finland</p>
+              <p>Support local communities and creators</p>
+              <p>Stay updated with fresh events year-round</p>
 
-                <div>
-              <label htmlFor="search">Search</label>
-              <input
-                type="text"
-                id="search"
-                name="search"
-                value={searchValue}
-                onChange={searchHandle}
-              />
-            </div>
-            
-              
+              <h2>Browse All Events</h2>
+              <p>
+                Find your next favorite experience and make unforgettable
+                memories wherever you go.
+              </p>
+              <div>
+                <label htmlFor="search">Search</label>
+                <input
+                  type="text"
+                  id="search"
+                  name="search"
+                  value={searchValue}
+                  onChange={searchHandle}
+                />
+              </div>
+
               {renderEventList()}
-                {error}
-              
+              {error}
+
               <button className="allTicketsButton">🎟️ View All Tickets</button>
             </section>
 
@@ -199,10 +202,25 @@ const EventContainer = () => {
                 </p>
               </div>
               <div className="faqItem">
+                <h4>How can I submit my own event?</h4>
+                <p>
+                  You can submit your event through our online form and once
+                  approved, it will appear on the site.
+                </p>
+              </div>
+              <div className="faqItem">
                 <h4>Can I filter events by city?</h4>
                 <p>
                   Currently no, but we’re working on adding advanced filters
-                  including city and date!
+                  including city and date! Our page calendar will help you find
+                  events that fit your schedule.
+                </p>
+              </div>
+              <div className="faqItem">
+                <h4>Are there any free events listed?</h4>
+                <p>
+                  Yes, many local free events are included. Browse events to
+                  find options that fit your budget and interests.
                 </p>
               </div>
             </section>

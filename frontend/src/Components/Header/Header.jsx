@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router";
 import "./header.css";
+import DarkModeToggle from "./darkModeToggle";
 
 //mobile and desktop menu
 
@@ -14,6 +15,7 @@ function Header(props) {
         
          
       </NavLink>
+      <DarkModeToggle />
       {!menuOpen && (
         <button
           id="menuToggle"
@@ -23,11 +25,13 @@ function Header(props) {
           <span className="material-icons">menu</span>
         </button>
       )}
+      
       <nav
         id="mobileMenu"
         className={menuOpen ? "mobileMenu open" : "mobileMenu"}
         aria-label="Mobile menu"
       >
+        
         {menuOpen && (
           <button
             id="closeMenu"
@@ -39,6 +43,7 @@ function Header(props) {
             </span>
           </button>
         )}
+        
         <div className="mobileNav">
           <ul>
             <li>
@@ -56,6 +61,7 @@ function Header(props) {
           </ul>
         </div>
       </nav>
+      
       <nav className="desktopMenu">
         <ul>
           <li>
@@ -72,9 +78,11 @@ function Header(props) {
           </li>
         </ul>
       </nav>
-      
+       
     </header>
     
   );
 }
 export default Header;
+
+

@@ -43,11 +43,15 @@ const EventDetailsContent = ({ event, navigate }) => {
           attendees.
         </p>
         <ul>
-          <li>🎶 Engaging live music and performances</li>
-          <li>🍽️ Delicious food and refreshing drinks</li>
-          <li>🎉 Exciting activities for everyone</li>
-          <li>🤝 Friendly atmosphere and great company</li>
-          <li>📅 Memorable experiences and lasting connections</li>
+    <li>🎶 Engaging live music and performances</li>
+<li>🍽️ Delicious food and refreshing drinks</li>
+<li>🎉 Exciting activities for everyone</li>
+<li>🤝 Friendly atmosphere and great company</li>
+<li>Events in multiple categories</li>
+<li>👨‍👩‍👧‍👦 Family friendly events</li>
+<li>📅 Memorable experiences and lasting connections</li>
+
+        
         </ul>
       </div>
 
@@ -61,7 +65,7 @@ const EventDetailsContent = ({ event, navigate }) => {
             entertainment!"
           </li>
           <li>
-            "The perfect blend of great music, tasty food, and friendly people."
+            "The perfect blend of great music, tasty food and friendly people."
           </li>
           <li>
             "Every event leaves me wanting more — truly a community
@@ -79,26 +83,56 @@ const EventDetailsContent = ({ event, navigate }) => {
       <div className="eventCovidSafety">
         <h3>Health & Safety</h3>
         <p>
-          Your safety is our priority. We adhere to all local health guidelines,
-          including sanitization stations and recommended social distancing.
-          Masks are encouraged but optional depending on current regulations.
+     <p>Your safety is our priority. We ensure all events follow strict health and safety standards, including proper venue maintenance, clear emergency procedures, and accessible facilities to make your experience comfortable and secure.</p>
         </p>
       </div>
 
-      <div className="eventFAQ">
-        <h3>Frequently Asked Questions</h3>
-        <p>
-          Q: Can I bring my own food and drinks?
-          <br />
-          A:Outside food and drinks are not allowed, but we have a great
-          selection available on-site.
-        </p>
-        <p>
-          Q:Are pets allowed?
-          <br />
-          A:Only service animals are permitted for safety reasons.
-        </p>
-      </div>
+   <div className="eventFAQ">
+  <h3>Frequently Asked Questions</h3>
+
+  <p>
+    <strong>Q: Can I buy tickets through the app?</strong>  
+    <br />
+    A: Not at the moment. Ticket purchases are done on the event’s own website or platform.
+  </p>
+
+  <p>
+    <strong>Q: Are pets allowed?</strong>  
+    <br />
+    A: It depends on the event. Always check with the organizer beforehand. Only service animals are allowed for safety reasons.
+  </p>
+
+  <p>
+    <strong>Q: Can I bring my own food and drinks?</strong>  
+    <br />
+    A: Some events allow it, but be sure to confirm with the event organizers first.
+  </p>
+
+  <p>
+    <strong>Q: Are events wheelchair accessible?</strong>  
+    <br />
+    A: Many venues are wheelchair accessible, but it’s best to confirm with the organizer before attending.
+  </p>
+
+  <p>
+    <strong>Q: Can I volunteer at events?</strong>  
+    <br />
+    A: Some events welcome volunteers. Contact the organizers directly to find out about opportunities.
+  </p>
+
+  <p>
+    <strong>Q: What happens if an event is canceled?</strong>  
+    <br />
+    A: The event organizer will notify you, and ticket refunds will be handled according to their policy.
+  </p>
+
+  <p>
+    <strong>Q: Can I bring children to all events?</strong>  
+    <br />
+    A: Not all events are suitable for children. Check each event’s details before bringing kids.
+  </p>
+</div>
+
     </div>
   );
 };

@@ -17,7 +17,7 @@ function Footer(props) {
             <NavLink to="/AddEvent">Add Event</NavLink>
           </li>
           <li>
-            <NavLink to="/EventList">Events</NavLink>
+            <NavLink to="/Events">Events</NavLink>
           </li>
         </ul>
       </nav>

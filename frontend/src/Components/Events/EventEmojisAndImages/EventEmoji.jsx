@@ -16,7 +16,7 @@ const GetEventEmoji = (event) => {
       return "🛍️";
     case "Family & Kids":
       return "🧸";
-          case "Sports & Games":
+    case "Sports & Games":
       return "🏀";
     case "Parties & Celebration":
       return "🎉";
@@ -26,8 +26,3 @@ const GetEventEmoji = (event) => {
 };
 
 export default GetEventEmoji;
-
-
-
-
-

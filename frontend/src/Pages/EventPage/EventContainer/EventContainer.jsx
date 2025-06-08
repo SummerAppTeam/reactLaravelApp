@@ -33,6 +33,30 @@ const EventContainer = () => {
     return matchesSearch;
   });
 
+  const lowToHigh = () => {
+    const sortedEvents = [...events].sort((a, b) => a.price - b.price);
+    setEvents(sortedEvents);
+  };
+
+  const highToLow = () => {
+    const sortedEvents = [...events].sort((a, b) => b.price - a.price);
+    setEvents(sortedEvents);
+  };
+
+  const sortAtoZ = () => {
+    const sortedEvents = [...events].sort((a, b) =>
+      a.name.localeCompare(b.name)
+    );
+    setEvents(sortedEvents);
+  };
+
+  const sortZtoA = () => {
+    const sortedEvents = [...events].sort((a, b) =>
+      b.name.localeCompare(a.name)
+    );
+    setEvents(sortedEvents);
+  };
+
   const fetchEvents = () => {
     setLoading(true);
 
@@ -178,6 +202,21 @@ const EventContainer = () => {
                   onChange={searchHandle}
                 />
               </div>
+              <select
+                onChange={(e) => {
+                  const value = e.target.value;
+                  value === "low" && lowToHigh();
+                  value === "high" && highToLow();
+                  value === "az" && sortAtoZ();
+                  value === "za" && sortZtoA();
+                }}
+              >
+                <option value="">Sort Events</option>
+                <option value="low">Price: Low to High</option>
+                <option value="high">Price: High to Low</option>
+                <option value="az">Name: A–Z</option>
+                <option value="za">Name: Z–A</option>
+              </select>
 
               {renderEventList()}
               {error}

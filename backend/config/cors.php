@@ -13,9 +13,7 @@ return [
     'exposed_headers' => [],
     'max_age' => 0,
     'supports_credentials' => true,  //This can be changed to false
-    'openweather' => [
-    'key' => env('OPENWEATHER_KEY'),
-],
+ 
 
 ];
 

@@ -6,9 +6,8 @@ use App\Http\Controllers\Api\EventController;
 
 
 
-Route::get('/welcome', function () {
+
+Route::get('/', function () {
     return view('welcome');
-}); // define default view
-
-
+});
 

@@ -1,5 +1,3 @@
-
-
 const EditEvent = ({
   editedEvent,
   onHandleInputChange,
@@ -15,13 +13,13 @@ const EditEvent = ({
         type="text"
         name="name"
         value={editedEvent.name}
-       onChange={onHandleInputChange}
+        onChange={onHandleInputChange}
       />
       <input
         type="date"
         name="date"
         value={editedEvent.date}
-      onChange={onHandleInputChange}
+        onChange={onHandleInputChange}
         min={currentDate}
         required
       />
@@ -29,9 +27,13 @@ const EditEvent = ({
         type="text"
         name="location"
         value={editedEvent.location}
-    onChange={onHandleInputChange}
+        onChange={onHandleInputChange}
       />
-      <select name="type" value={editedEvent.type} onChange={onHandleInputChange}>
+      <select
+        name="type"
+        value={editedEvent.type}
+        onChange={onHandleInputChange}
+      >
         <option value="">-- Select Category --</option>
         <option value="Outdoor & Nature">🌿 Outdoor & Nature</option>
         <option value="Food & Social">🥗 Food & Social</option>
@@ -61,14 +63,10 @@ const EditEvent = ({
         name="long_description"
         placeholder="Long description"
         value={editedEvent.long_description}
-       onChange={onHandleInputChange}
+        onChange={onHandleInputChange}
       />
-      <button onClick={onSave}>
-        Save
-      </button>
-      <button onClick={onCancel}>
-        Cancel
-      </button>
+      <button onClick={onSave}>Save</button>
+      <button onClick={onCancel}>Cancel</button>
     </div>
   );
 };

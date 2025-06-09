@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router";
-import EventListView from "./EvenListView";
+import EventListView from "./EventListView";
 import { DotLoader } from "react-spinners";
 import EventCalendar from "../../../Components/Events/EventCalendar/EventCalendar";
 import useAxios from "../../../hooks/useAxios";

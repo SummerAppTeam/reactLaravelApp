@@ -1,12 +1,12 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import EventContainer from "./Pages/EventPage/EventContainer/EventContainer";
+import EventContainer from "./Pages/EventList/EventContainer/EventContainer";
 import ScrollToTop from "react-scroll-to-top";
 import FrontPage from "./Pages/FrontPage/Frontpage";
 import About from "./Pages/About/About";
 import AddEvent from "./Pages/AddEvent/AddEvent";
 
-import EventList from "./Pages/EventPage/Eventlist/EventList";
+import EventList from "./Pages/EventList/EventList/EventList";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import EventDetails from "./Components/Events/EventDetailsPage/EventDetails";

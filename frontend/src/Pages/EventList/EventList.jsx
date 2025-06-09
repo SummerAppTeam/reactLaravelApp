@@ -1,5 +1,6 @@
-import axios from "axios";
 import { useState, useEffect } from "react";
+import axios from "axios";
+import "./eventList.css";
 
 const EventList = ({
   id,
@@ -13,9 +14,13 @@ const EventList = ({
   eventEmoji,
   eventImage,
   onDelete,
-  allEvents,  
+  allEvents,
+  onUpdate, // <-- optional update callback
 }) => {
   const [isEditing, setIsEditing] = useState(false);
+  const [isFavorite, setIsFavorite] = useState(false);
+  const [dateConflict, setDateConflict] = useState(false);
+
   const [editedEvent, setEditedEvent] = useState({
     name,
     date,
@@ -23,19 +28,13 @@ const EventList = ({
     type,
     description,
     price,
+    image,
   });
-
-
-
-
-  const [isFavorite, setIsFavorite] = useState(false);
-
 
   useEffect(() => {
     const favorites = JSON.parse(localStorage.getItem("favorites") || "{}");
     setIsFavorite(Boolean(favorites[id]));
   }, [id]);
-
 
   const toggleFavorite = () => {
     const newFav = !isFavorite;
@@ -54,16 +53,14 @@ const EventList = ({
     setEditedEvent({ ...editedEvent, [e.target.name]: e.target.value });
   };
 
-  
   const normalizeDate = (dateStr) => {
     if (!dateStr) return null;
     return new Date(dateStr).toISOString().split("T")[0];
   };
 
- 
   const checkDateConflict = () => {
     const newDate = normalizeDate(editedEvent.date);
-    return allEvents.some(
+    return allEvents?.some(
       (evt) => evt.id !== id && normalizeDate(evt.date) === newDate
     );
   };
@@ -71,7 +68,7 @@ const EventList = ({
   const handleUpdate = () => {
     if (checkDateConflict()) {
       setDateConflict(true);
-      return; 
+      return;
     }
 
     setDateConflict(false);
@@ -80,10 +77,12 @@ const EventList = ({
       .put(`http://127.0.0.1:8000/api/events/${id}`, editedEvent)
       .then(() => {
         setIsEditing(false);
-        onDelete(); 
+        alert("Event updated successfully!");
+        if (onUpdate) onUpdate(); // optional refresh callback
       })
       .catch((error) => {
         console.error("Failed to update event:", error);
+        alert("Failed to update event.");
       });
   };
 
@@ -92,10 +91,12 @@ const EventList = ({
       axios
         .delete(`http://127.0.0.1:8000/api/events/${id}`)
         .then(() => {
-          onDelete(); 
+          alert("Event deleted.");
+          if (onDelete) onDelete();
         })
         .catch((error) => {
           console.error("Failed to delete event:", error);
+          alert("Could not delete event.");
         });
     }
   };
@@ -114,7 +115,6 @@ const EventList = ({
 
       <p className="eventEmoji">{eventEmoji}</p>
 
-   
       <button
         onClick={toggleFavorite}
         aria-label={isFavorite ? "Remove from favorites" : "Add to favorites"}
@@ -126,10 +126,10 @@ const EventList = ({
 
       {!isEditing ? (
         <>
-          <p>Name: {name}</p>
-          <p>Date: {date}</p>
+          <p><strong>Name:</strong> {name}</p>
+          <p><strong>Date:</strong> {date}</p>
           <p>
-            Location:{" "}
+            <strong>Location:</strong>{" "}
             <a
               href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
                 location
@@ -146,9 +146,9 @@ const EventList = ({
               📍 {location}
             </a>
           </p>
-          <p>Type: {type}</p>
-          <p>Description: {description}</p>
-          <p>Price: €{price}</p>
+          <p><strong>Type:</strong> {type}</p>
+          <p><strong>Description:</strong> {description}</p>
+          <p><strong>Price:</strong> €{price}</p>
           <button onClick={() => setIsEditing(true)}>Edit</button>
           <button onClick={handleDelete}>Delete</button>
         </>
@@ -166,7 +166,6 @@ const EventList = ({
             value={editedEvent.date}
             onChange={handleInputChange}
           />
-          
           <input
             type="text"
             name="location"
@@ -191,6 +190,11 @@ const EventList = ({
             value={editedEvent.price}
             onChange={handleInputChange}
           />
+          {dateConflict && (
+            <p className="error" style={{ color: "red" }}>
+              ❗ Another event is already scheduled for this date.
+            </p>
+          )}
           <button onClick={handleUpdate}>Save</button>
           <button onClick={() => setIsEditing(false)}>Cancel</button>
         </>

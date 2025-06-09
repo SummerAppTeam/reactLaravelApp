@@ -84,6 +84,7 @@
           eventEmoji={eventEmoji}
           eventImage={eventImage}
           onDelete={fetchEvents}
+          onUpdate={fetchEvents}
         
         />
       </div>
@@ -93,7 +94,7 @@
           )}
         </div>
     
-        {/* Show More / Show Less buttons outside .tickets, at bottom */}
+     
         {!showCalendar && (
           <div className="showButtons">
             {visibleCount < filteredEvents.length && (

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router";
-import EventList from "../Eventlist/EventList";
+import EventList from "../EventList/EventList";
 import GetEventEmoji from "../../../Components/Events/EventEmojisAndImages/EventEmoji";
 import GetEventImage from "../../../Components/Events/EventEmojisAndImages/EventImages";
 

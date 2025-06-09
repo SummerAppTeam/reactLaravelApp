@@ -4,7 +4,7 @@ import EventListView from "./EventListView";
 import { DotLoader } from "react-spinners";
 import EventCalendar from "../../../Components/Events/EventCalendar/EventCalendar";
 import useAxios from "../../../hooks/useAxios";
-import EventList from "../Eventlist/EventList";
+import EventList from "../EventList/EventList";
 import GetEventEmoji from "../../../Components/Events/EventEmojisAndImages/EventEmoji";
 import GetEventImage from "../../../Components/Events/EventEmojisAndImages/EventImages";
 

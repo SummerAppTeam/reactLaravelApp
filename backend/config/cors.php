@@ -1,27 +1,17 @@
 <?php
 
-return [
 
-
-    'paths' => ['api/*', 'events', 'store', 'update/*', 'delete/*'], // Combined all routes
-
+    'paths' => ['api/*'],
     'allowed_methods' => ['*'],
-
-    'allowed_origins' => [
-        'http://localhost:3000',
-        'http://localhost:5180'
-    ],
-
+    'allowed_origins' => ['http://localhost:5174'], // React dev server
     'allowed_origins_patterns' => [],
-
     'allowed_headers' => ['*'],
 
     'exposed_headers' => [],
 
     'max_age' => 0,
 
-    'supports_credentials' => true, 
 
+    'supports_credentials' => true,
 ];
-
 

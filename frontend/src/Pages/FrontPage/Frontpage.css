@@ -14,31 +14,94 @@
     margin-bottom: 0.5em;
   }
   
+ 
   .hero p {
-    max-width: 600px;
-    margin: 0 auto 1.5em;
+    margin-bottom: 20px;
+  }
+  
+  .button-group {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
   }
   
   .btn-main {
-    background-color: #007bff;
+    background-color: #007acc;
     color: white;
-    border: none;
     padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
-    border-radius: 4px;
   }
   
-  .banner {
-    background-color: #444;
-    color: white;
-    padding: 60px 20px;
-    margin: 40px 0;
+  .btn-main:hover {
+    background-color: #005f99;
   }
   
-  .banner-content {
-    max-width: 600px;
-    margin: auto;
+  .btn-learn {
+    background: none;
+    border: none;
+    color: #007acc;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
   }
+  
+  .btn-learn:hover {
+    color: #005a99;
+    text-decoration: underline;
+  }
+  
+  .arrow {
+    font-size: 18px;
+  }
+  
+
+.banner-slide {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 1s ease-in-out;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.banner-overlay h3 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.banner-overlay p {
+  font-size: 1.1em;
+  max-width: 600px;
+}
+
   
   .ready {
     display: flex;
@@ -53,11 +116,20 @@
   }
   
   .ready-boxes {
-    flex: 1 1 300px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 20px;
   }
+  
+  .box-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
   
   .box {
     flex: 1 1 45%;
@@ -69,6 +141,8 @@
   .connect {
     padding: 40px 20px;
     text-align: center;
+    background-color: #696a6c;
+    color:white;
   }
   
   .btn-alt {
@@ -137,6 +211,21 @@
   
   .chatbox button:hover {
     background-color: #005fa3;
+  }
+  
+  .map-button {
+    margin-top: 8px;
+    padding: 8px 16px;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .map-button:hover {
+    background-color: #005f99;
   }
   
   

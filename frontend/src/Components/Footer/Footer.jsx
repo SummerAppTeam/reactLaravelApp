@@ -7,24 +7,35 @@ function Footer(props) {
     <footer className={props.className}>
       <nav>
         <ul>
-          <li><NavLink to="/">Event Guide</NavLink></li>
-          <li><NavLink to="/about">About Us</NavLink></li>
-          <li><NavLink to="/privacy">Privacy</NavLink></li>
-          <li><NavLink to="/contact">Contact Us</NavLink></li>
-          <li><NavLink to="/policy">Service & Policy</NavLink></li>
-        </ul>
-        <ul>
-          <li><NavLink to="/">Frontpage</NavLink></li>
-          <li><NavLink to="/About">About Us</NavLink></li>
-          <li><NavLink to="/AddEvent">Add Event</NavLink></li>
-          <li><NavLink to="/EventList">Events</NavLink></li>
+          <li>
+            <NavLink to="/">Frontpage</NavLink>
+          </li>
+          <li>
+            <NavLink to="/About">About us</NavLink>
+          </li>
+          <li>
+            <NavLink to="/AddEvent">Add Event</NavLink>
+          </li>
+          <li>
+            <NavLink to="/events">Events</NavLink>
+          </li>
         </ul>
       </nav>
+
       <Newsletter />
-      <h3>© {new Date().getFullYear()} Summer App Team</h3>
+
+      <section className="contact">
+        <p>
+          Reach us anytime at<br />
+          contact@events.com <br />
+          Or call us at <br />
+          +044 567 890 ☎️ <br />
+          We're always happy to help!
+        </p>
+      </section>
+      <h3>Copyright {props.className}</h3>
     </footer>
   );
 }
 
 export default Footer;
-

@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "axios": "^1.9.0",
+<<<<<<< HEAD
+    "react-router-dom": "^7.6.2",
+    "react-scroll-to-top": "^3.1.0",
+    "react-spinners": "^0.17.0",
+    "react-toggle-dark-mode": "^1.1.1"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5"
+=======
+    "react-scroll-to-top": "^3.1.0"
+>>>>>>> 5e126692460c5375a372f078124f841c7b5201c3
+  }
+}

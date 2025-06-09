@@ -35,13 +35,20 @@ function DarkModeToggle() {
   };
 
   return (
-    <DarkModeSwitch
-      checked={isDarkMode}
-      onChange={toggleDarkMode}
-      size={30}
-      sunColor="yellow"
-      moonColor="black"
-    />
+
+
+
+    <>
+      {/*Remember to install darkmodeswith from react for this to work*/}
+      <DarkModeSwitch
+        checked={isDarkMode}
+        onChange={toggleDarkMode}
+        size={30}
+        sunColor="white"
+        moonColor="white"
+     
+      />
+    </>
   );
 }
 

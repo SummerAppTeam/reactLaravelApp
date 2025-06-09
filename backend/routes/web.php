@@ -14,7 +14,5 @@ use App\Http\Controllers\Api\WeatherController;
 
 Route::get('/', function () {
     return view('welcome');
-}); // define default view
-
-
+});
 

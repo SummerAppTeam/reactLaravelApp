@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./header.css";
+import DarkModeToggle from "./DarkModeToggle"
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -10,7 +11,6 @@ function Header() {
       <NavLink to="/" className="logo">
         <h2>Events</h2>
       </NavLink>
-
       {!menuOpen && (
         <button
           id="menuToggle"

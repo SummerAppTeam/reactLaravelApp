@@ -1,6 +1,9 @@
 import { useState } from "react";
+import { DotLoader } from "react-spinners";
+
 
 function Newsletter() {
+  const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState(""); //store
   const [isEmailValid, setIsEmailValid] = useState(true); //check if valid
 
@@ -14,17 +17,31 @@ function Newsletter() {
     if (email === "" || !/\S+@\S+\.\S+/.test(email)) { //check if empty or doesn't match an email address 
       setIsEmailValid(false);
     } else {
+       setLoading(true);
       setIsEmailValid(true);
-      alert("Thank you for subscribing with us!");
+     
+    
+
+    setTimeout(() => {
+      setLoading(false); 
+        alert("Thank you for subscribing with us!");
       setEmail("");
-    }
+    }, 1200); 
+   
   }
+}
 
   return (
     <>
       <h2>Subscribe to our newsletter!</h2>
       {!isEmailValid ? <p>Please enter a valid email address</p> : null}
+    {loading ? (
+      <div style={{ marginTop: "20px" }}>
+        <DotLoader size={60} />
+      </div>
+    ) : (
       <form onSubmit={handleSubmit}>
+    
         <input
           type="email"
           placeholder="Enter your email address please"
@@ -36,9 +53,10 @@ function Newsletter() {
         >
           Subscribe
         </button>
-      </form>
-    </>
-  );
+       </form>
+    )}
+  </>
+);
 }
 
 export default Newsletter;

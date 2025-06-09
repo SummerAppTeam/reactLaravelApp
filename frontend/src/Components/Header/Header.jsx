@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router";
 import "./header.css";
+import DarkModeToggle from "./DarkModeToggle"
 
 //mobile and desktop menu
 
@@ -14,6 +15,7 @@ function Header(props) {
         
          
       </NavLink>
+       <DarkModeToggle />
       {!menuOpen && (
         <button
           id="menuToggle"
@@ -51,7 +53,7 @@ function Header(props) {
               <NavLink to="/AddEvent">Add Event</NavLink>
             </li>
             <li>
-              <NavLink to="/EventList">Events</NavLink>
+              <NavLink to="/events">Events</NavLink>
             </li>
           </ul>
         </div>
@@ -68,7 +70,7 @@ function Header(props) {
             <NavLink to="/AddEvent">Add Event</NavLink>
           </li>
           <li>
-            <NavLink to="/EventList">Events</NavLink>
+            <NavLink to="/events">Events</NavLink>
           </li>
         </ul>
       </nav>

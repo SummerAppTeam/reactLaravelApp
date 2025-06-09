@@ -4,12 +4,9 @@
   min-height: 100vh;
 }
 
-main {
-  flex: 1;
-}
-
 h2 {
   font-size: 2rem;
+  text-align: center;
 }
 
 body {
@@ -20,4 +17,27 @@ body {
 
 main {
   background-color: rgba(255, 255, 255, 0.577);
+}
+
+/*How to use darkmode in css:*/
+
+body.darkMode { 
+  background-color: #333333;
+  color: white;
+}
+
+body.darkMode main {
+  background-color: #333333;
+  color: white;
+}
+
+.darkMode .eventTicket {
+  background-color: #292929;
+  color: white;
+  border: grey 1px solid;
+  border-left: 6px purple solid;
+}
+
+.darkMode h2 {
+  color: rgb(178, 77, 236);
 }

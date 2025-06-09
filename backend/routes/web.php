@@ -8,3 +8,13 @@ Route::get('/', function () {
 });
 
 Route::middleware('auth:sanctum')->post('/theme', [UserController::class, 'updateTheme']);
+use App\Http\Controllers\Api\EventController;
+use App\Http\Controllers\Api\WeatherController;
+
+
+Route::get('/', function () {
+    return view('welcome');
+}); // define default view
+
+
+

@@ -1,0 +1,233 @@
+.home {
+    font-family: sans-serif;
+    color: #222;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #fff, #f0fce7);
+  }
+  
+  .hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+  }
+  
+ 
+  .hero p {
+    margin-bottom: 20px;
+  }
+  
+  .button-group {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .btn-main {
+    background-color: #007acc;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .btn-main:hover {
+    background-color: #005f99;
+  }
+  
+  .btn-learn {
+    background: none;
+    border: none;
+    color: #007acc;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .btn-learn:hover {
+    color: #005a99;
+    text-decoration: underline;
+  }
+  
+  .arrow {
+    font-size: 18px;
+  }
+  
+
+.banner-slide {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 1s ease-in-out;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.banner-overlay h3 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.banner-overlay p {
+  font-size: 1.1em;
+  max-width: 600px;
+}
+
+  
+  .ready {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 60px 20px;
+    gap: 30px;
+    background: linear-gradient(to bottom, #f8fdf5, #ffffff);
+  }
+  
+  .ready-text {
+    flex: 1 1 300px;
+  }
+  
+  .ready-boxes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 20px;
+  }
+  
+  .box-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  
+  .box {
+    flex: 1 1 45%;
+    height: 100px;
+    background: #e7f3ff;
+    border-radius: 8px;
+  }
+  
+  .connect {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #696a6c;
+    color:white;
+  }
+  
+  .btn-alt {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .offices {
+    background-color: #f4fefb;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .office-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+  }
+  .chatbox {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 320px;
+    background: #fff;
+    border: 2px solid #007acc;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+  }
+  
+  .chatbox h4 {
+    margin: 0 0 10px 0;
+    color: #007acc;
+  }
+  
+  .chatbox textarea {
+    width: 100%;
+    resize: none;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  .chatbox button {
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    margin-right: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .chatbox button:hover {
+    background-color: #005fa3;
+  }
+  
+  .map-button {
+    margin-top: 8px;
+    padding: 8px 16px;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .map-button:hover {
+    background-color: #005f99;
+  }
+  
+  
+  
+  

@@ -1,0 +1,197 @@
+.eventDetailContainer {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background: #fafafa;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+}
+
+/* Back button */
+.eventDetailContainer > button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.eventDetailContainer > button:hover {
+  background-color: #0056b3;
+}
+
+/* Event header */
+.eventHeader {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.eventImage {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+}
+
+.eventName {
+  font-size: 2.2rem;
+  margin: 0.3rem 0;
+  font-weight: 700;
+  color: #222;
+}
+
+.eventEmoji {
+  font-size: 2.5rem;
+}
+
+/* Event info */
+.eventInfo {
+  background-color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+}
+
+.eventInfo p {
+  font-size: 1rem;
+  margin: 0.3rem 0;
+}
+
+.eventInfo strong {
+  color: #555;
+}
+
+/* Event Description */
+.eventDescription {
+  margin-bottom: 1.5rem;
+}
+
+.eventDescription h3 {
+  margin-bottom: 0.8rem;
+  color: #004085;
+}
+
+.eventDescription p {
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Event Extra */
+.eventExtra {
+  background-color: #e9f5ff;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  box-shadow: inset 0 0 10px #cce5ff;
+}
+
+.eventExtra h4 {
+  margin-bottom: 0.8rem;
+  color: #004085;
+}
+
+.eventExtra p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.eventExtra ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1rem;
+}
+
+.eventExtra ul li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.4rem;
+  position: relative;
+}
+
+.eventExtra ul li::before {
+  content: '•';
+  color: #007bff;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* Event Reviews */
+.eventReviews {
+  margin-bottom: 1.5rem;
+}
+
+.eventReviews h4 {
+  color: #004085;
+  margin-bottom: 1rem;
+}
+
+.eventReviews ul {
+  list-style: disc inside;
+  font-style: italic;
+  color: #555;
+}
+
+.eventReviews ul li {
+  margin-bottom: 0.7rem;
+}
+
+/* Event Covid Safety */
+.eventCovidSafety {
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  color: #856404;
+}
+
+.eventCovidSafety h3 {
+  margin-bottom: 0.8rem;
+}
+
+/* Fix nested <p> inside <p> issue */
+.eventCovidSafety p > p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* FAQ Section */
+.eventFAQ h3 {
+  color: #004085;
+  margin-bottom: 1rem;
+}
+
+.eventFAQ p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.eventFAQ strong {
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .eventDetailContainer {
+    padding: 1rem;
+  }
+
+  .eventName {
+    font-size: 1.6rem;
+  }
+
+  .eventExtra ul li {
+    padding-left: 1rem;
+  }
+}

@@ -34,8 +34,9 @@ function DarkModeToggle() {
         checked={isDarkMode}
         onChange={toggleDarkMode}
         size={30}
-        sunColor="yellow"
-        moonColor="black"
+        sunColor="white"
+        moonColor="white"
+     
       />
     </>
   );

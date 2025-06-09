@@ -17,11 +17,22 @@ function Footer(props) {
             <NavLink to="/AddEvent">Add Event</NavLink>
           </li>
           <li>
-            <NavLink to="/EventList">Events</NavLink>
+            <NavLink to="/events">Events</NavLink>
           </li>
         </ul>
       </nav>
+
       <Newsletter />
+
+      <section className="contact">
+        <p>
+          Reach us anytime at<br></br>
+          contact@events.com <br></br>
+          Or call us at <br />
+          +044 567 890 ☎️ <br />
+          We're always happy to help!
+        </p>
+      </section>
       <h3>Copyright {props.className}</h3>
     </footer>
   );

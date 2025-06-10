@@ -53,7 +53,7 @@ const ContactSection = () => {
         {/* Left content: header + text + form card */}
         <div className="left-content">
           <h2>Connect with Nordic Lights Gatherings</h2>
-         <p> We’re here to support your community events. Contact us to see how our platform can assist you. </p>
+         <p> We’re here to support your community events. Contact us to find out how our platform can help you succeed.</p>
 
           <div className="video-card">
             <video

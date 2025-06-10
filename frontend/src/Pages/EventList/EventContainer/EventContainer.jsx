@@ -131,7 +131,7 @@ const EventContainer = () => {
         ) : (
           <>
             <section className="introSection">
-              <h1>Welcome to EventFinder Finland 🇫🇮</h1>
+              <h1>Find Your Favorite Events</h1>
               <p>
                 Explore events in iconic places across Finland, from the snowy
                 magic of Rovaniemi in the north to the lively streets of
@@ -152,11 +152,12 @@ const EventContainer = () => {
             <section className="highlightSection">
               <h2>Experience Finnish Culture</h2>
               <p>
-                Explore events in iconic places from the snowy magic of
-                Rovaniemi to the buzzing festivals in Helsinki. Each event
-                highlights the rich and diverse culture of Finland. Whether
-                you're a local or just visiting, there's always something new to
-                experience in every corner of the country.
+                <p>
+                  Discover unique celebrations and traditions across Finland,
+                  from vibrant city festivals to tranquil nature events. Whether
+                  you’re near or far, there’s always a chance to connect with
+                  local culture and make new memories.
+                </p>
               </p>
               <img
                 src="https://images.pexels.com/photos/1703323/pexels-photo-1703323.jpeg"

@@ -52,11 +52,8 @@ const ContactSection = () => {
       <div className="contact-container">
         {/* Left content: header + text + form card */}
         <div className="left-content">
-          <h2>Connect with Event Spark</h2>
-          <p>
-            We're here to help you create unforgettable community events. Get in
-            touch to learn more about our platform and services.
-          </p>
+          <h2>Connect with Nordic Lights Gatherings</h2>
+         <p> We’re here to support your community events. Contact us to see how our platform can assist you. </p>
 
           <div className="video-card">
             <video
@@ -135,36 +132,41 @@ const ContactSection = () => {
           </div>
         </div>
 
+
         {/* Right content: contact info */}
         <div className="right-content">
           <div className="contact-info-block">
             <h3>Event Support</h3>
-            <p>Aleksanterinkatu 14, Helsinki, Finland</p>
-            <p>support@eventspark.fi</p>
+  <p>Keskuskatu 5, Helsinki, Finland</p>
+            <p>support@nordiclights.fi</p>
           </div>
 
           <div className="contact-info-block">
             <h3>Partnerships</h3>
-            <p>Eerikinkatu 3, Tampere, Finland</p>
-            <p>partners@eventspark.fi</p>
+  <p>Satakunnankatu 10, Tampere, Finland
+
+</p>
+            <p>partners@nordiclights.fi</p>
           </div>
 
           <div className="contact-info-block">
             <h3>Media Inquiries</h3>
-            <p>Linnankatu 9, Turku, Finland</p>
-            <p>media@eventspark.fi</p>
+  <p>Revontulentie 15, Rovaniemi, Finland
+
+</p>
+            <p>media@nordiclights.fi</p>
           </div>
 
           <div className="contact-info-block">
             <h3>General Inquiry</h3>
-            <p>Aleksanterinkatu 14, Helsinki, Finland</p>
-            <p>info@eventspark.fi</p>
+             <p>Keskuskatu 5, Helsinki, Finland</p>
+            <p>info@nordiclights.fi</p>
           </div>
 
           <div className="contact-info-block">
             <h3>Our Headquarters</h3>
             <p>
-              Visit our office in Helsinki or reach out to our regional teams.
+            Drop by our Helsinki headquarters at Keskuskatu 5 or get in touch with our local teams across Finland.
             </p>
           </div>
         </div>

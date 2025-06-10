@@ -44,7 +44,7 @@ function Header(props) {
         <div className="mobileNav">
           <ul>
             <li>
-              <NavLink to="/">Frontpage</NavLink>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
               <NavLink to="/About">About us</NavLink>
@@ -61,7 +61,7 @@ function Header(props) {
       <nav className="desktopMenu">
         <ul>
           <li>
-            <NavLink to="/">Frontpage</NavLink>
+            <NavLink to="/">Home</NavLink>
           </li>
           <li>
             <NavLink to="/About">About us</NavLink>

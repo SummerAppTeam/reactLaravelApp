@@ -3,6 +3,7 @@ import "./eventDetails.css";
 const EventDetailsContent = ({ event, navigate }) => {
   return (
     <div className="eventDetailContainer">
+       <button onClick={() => navigate(-1)} className="goBackButton">Go Back</button>
       <div className="sectionOne">
       <div className="eventContainer">
          <div className="eventInfo">
@@ -38,11 +39,11 @@ const EventDetailsContent = ({ event, navigate }) => {
         <p>{event.long_description}</p>
        </div></div></div></div></div>
 
-      <button onClick={() => navigate(-1)}>Go Back</button>
+     
 
       <div className="eventExtra">
-         <img src="https://images.pexels.com/photos/1263986/pexels-photo-1263986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Vibes" className="happyCustomers"></img>
-        <h4>What to Expect at Our Events</h4>
+    
+        <div className="eventContent"> <h4>What to Expect at Our Events</h4>
         <p>
           Our event selection is carefully hand-picked to offer diverse,
           engaging experiences that everyone can enjoy. We prioritize
@@ -59,7 +60,7 @@ const EventDetailsContent = ({ event, navigate }) => {
           <li>👨‍👩‍👧‍👦 Family friendly events</li>
           <li>📅 Memorable experiences and lasting connections</li>
         </ul>
-      </div>
+      </div>     <img src="https://images.pexels.com/photos/1263986/pexels-photo-1263986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Vibes" className="happyCustomers"></img></div>
 
       <div className="eventReviews">
         <h4>Join our happy customers!</h4>

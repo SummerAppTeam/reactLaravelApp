@@ -1,0 +1,160 @@
+/* === Hero Section === */
+.introSection {
+    max-width: 1000px;
+    margin: 3rem auto;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #f8f9fa, #e6e9ef);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    animation: slideFadeIn 0.8s ease-out forwards;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .dark-theme .introSection {
+    background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.05);
+  }
+  
+  .introSection h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+    font-weight: 800;
+    position: relative;
+  }
+  
+  .introSection h1::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--color-accent);
+    margin: 0.5rem auto;
+    border-radius: 2px;
+  }
+  
+  .introSection p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--color-dark);
+  }
+  
+  .dark-theme .introSection p {
+    color: #ddd;
+  }
+  
+  /* === Highlight Section === */
+  .highlightSection {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 1000px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .highlightSection:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dark-theme .highlightSection {
+    background-color: #2c2c2c;
+    box-shadow: 0 10px 24px rgba(255, 255, 255, 0.05);
+  }
+  
+  .highlightSection h2 {
+    font-size: 2rem;
+    color: var(--color-secondary);
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .highlightSection p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: var(--color-dark);
+    margin-bottom: 1.5rem;
+  }
+  
+  .dark-theme .highlightSection p {
+    color: #ccc;
+  }
+  
+  .highlightImage {
+    width: 100%;
+    max-height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease;
+  }
+  
+  .highlightImage:hover {
+    transform: scale(1.03);
+  }
+  
+  /* === Event List in 3-Column Grid === */
+  .tickets {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 3rem auto;
+    max-width: 1200px;
+  }
+  
+  .message {
+    background: var(--color-light);
+    border-radius: 15px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .dark-theme .message {
+    background: #292929;
+    box-shadow: 0 8px 18px rgba(255, 255, 255, 0.05);
+  }
+  
+  .message:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  }
+  
+  .message .secondary {
+    margin-top: 1rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+  
+  .message .secondary:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive grid adjustments */
+  @media (max-width: 1024px) {
+    .tickets {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 680px) {
+    .tickets {
+      grid-template-columns: 1fr;
+    }
+  
+    .highlightImage {
+      max-height: 180px;
+    }
+  }
+  

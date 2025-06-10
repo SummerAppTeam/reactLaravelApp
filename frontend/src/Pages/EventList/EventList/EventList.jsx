@@ -16,7 +16,7 @@ const EventList = ({
   image,
   eventEmoji,
   eventImage,
-  onDelete, // callback to refresh parent list after changes
+  onDelete, 
   allEvents,
 }) => {
   const [isEditing, setIsEditing] = useState(false);

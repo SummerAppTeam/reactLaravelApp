@@ -74,7 +74,7 @@ const Frontpage = () => {
   </p>
 
   <div className="button-group">
-    <button className="btn-main" onClick={() => navigate("/EventList")}>
+    <button className="btn-main" onClick={() => navigate("/Events")}>
       Explore Event
     </button>
 
@@ -100,7 +100,7 @@ const Frontpage = () => {
               <h2>Ready to Spark Your Event?</h2>
               <p>Join the Event Spark community and start creating unforgettable experiences.</p>
               <p>Explore the possibilities and bring your vision to life with our intuitive platform.</p>
-              <button className="btn-main" onClick={() => navigate("/EventList")}>
+              <button className="btn-main" onClick={() => navigate("/Events")}>
                 Explore Event ➜
               </button>
             </div>

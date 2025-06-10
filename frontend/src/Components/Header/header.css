@@ -18,7 +18,7 @@
   margin: 0;
   font-weight: 900;
   font-size: 28px;
-  color: #22d3ee; /* cyan-400 */
+  color: #051012; /* cyan-400 */
   letter-spacing: 2px;
   user-select: none;
   cursor: pointer;
@@ -27,7 +27,7 @@
 }
 
 .header h2:hover {
-  color: #14b8a6; /* cyan-500 */
+  color: #e11d1d; /* cyan-500 */
   text-shadow: 0 0 12px #14b8a6cc;
 }
 

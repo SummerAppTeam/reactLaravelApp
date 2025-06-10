@@ -1,6 +1,81 @@
-.calendarContainer {
+.calendarWrapper {
+  max-width: 900px;
+  width: 90%;
   padding: 1rem;
-  background-color: #f9f9f9;
+  background-color: #ffffff;
+  border-radius: 1.4rem;
+  margin: 0rem auto;
+  margin-top: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.modal h3 {
+  color: #333;
+  font-size: 1.4rem;
+}
+
+.modal p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.fc {
+  font-size: 1rem;
+  color: #333;
+}
+
+.fc-daygrid-event {
+  background-color: #3d53b6;
+  border: none;
+  padding: 0.6rem;
   border-radius: 1rem;
-  max-width: 400px; 
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+
+.fc-daygrid-event:hover {
+  background-color: #589feb;
+  transform: scale(1.1);
+}
+
+
+.modal {
+  position: fixed;
+  width: 90%;
+  max-width: 500px;
+  top: 40%;
+  left: 50%;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(51, 51, 51, 0.693);
+  z-index: 900;
+}
+
+.modal button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  background-color: #007bff;
+  border: none;
+  border-radius: 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+.modal button:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
 }

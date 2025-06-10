@@ -4,6 +4,7 @@ import "./AddEvent.css";
 import useAxios from "../../hooks/useAxios";
 import { DotLoader } from "react-spinners";
 
+
 const currentDate = new Date().toISOString().split("T", 1)[0];
 
 

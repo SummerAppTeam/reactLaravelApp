@@ -1,10 +1,10 @@
-import { NavLink } from "react-router";
+import { NavLink } from "react-router-dom";
 import "./footer.css";
 import Newsletter from "./NewsLetter";
 
 function Footer(props) {
   return (
-    <footer>
+    <footer className={props.className}>
       <nav>
         <ul>
           <li>
@@ -26,8 +26,8 @@ function Footer(props) {
 
       <section className="contact">
         <p>
-          Reach us anytime at<br></br>
-          contact@events.com <br></br>
+          Reach us anytime at<br />
+          contact@events.com <br />
           Or call us at <br />
           +044 567 890 ☎️ <br />
           We're always happy to help!
@@ -37,4 +37,5 @@ function Footer(props) {
     </footer>
   );
 }
+
 export default Footer;

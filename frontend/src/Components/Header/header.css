@@ -351,4 +351,15 @@ a {
   .mobileMenu {
     display: none;
   }
+  .logo {
+    margin: 0;
+    margin-bottom: 1rem;
+    padding: 0;
+  }
+}
+
+body.darkMode {
+  background-color: #333333;
+  color: white;
+}
 } */

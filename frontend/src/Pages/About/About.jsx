@@ -113,7 +113,7 @@ const About = () => {
 
       <section className="tools-section">
         <div className="tools-wrapper">
-          {/* Left: Text Box */}
+      
           <div className="tools-box">
             <h1>Technologies & Tools Used</h1>
             <ul>

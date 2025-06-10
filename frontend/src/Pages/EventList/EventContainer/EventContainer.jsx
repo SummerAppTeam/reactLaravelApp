@@ -198,6 +198,7 @@ const EventContainer = () => {
                   type="text"
                   id="search"
                   name="search"
+                  placeholder="Search by Name or City"
                   value={searchValue}
                   onChange={searchHandle}
                 />

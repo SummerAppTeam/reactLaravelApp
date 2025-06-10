@@ -4,12 +4,13 @@ import "./About.css";
 import grid1 from "../AboutImages/grid1.jpg";
 import grid2 from "../AboutImages/grid2.jpg";
 import grid3 from "../AboutImages/grid3.jpg";
+import grid4 from "../AboutImages/grid4.jpg";
 import tools from "../AboutImages/tool-image.jpg";
 
 const About = () => {
   return (
     <div className="about-container">
-      {/* Hero section*/}
+     
 
       <section className="hero-section">
         <div className="hero-overlay">
@@ -21,7 +22,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Mission Section*/}
+     
 
       <section className="mission-grid">
         <div className="mission-image"></div>
@@ -58,7 +59,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team Section */}
+     
       <section className="team-section">
         <div className="team-content">
           <h2>Meet the Team</h2>
@@ -74,18 +75,18 @@ const About = () => {
               <img src={grid1} alt="grid1" />
             </div>
             <div className="team-text">
-              <h3>Aino Niemi</h3>
-              <p>Co-founder, CEO</p>
+              <h3>Huttunen Beniitta</h3>
+              <p>Developer</p>
             </div>
           </div>
 
           <div className="team-card">
             <div className="team-image">
-              <img src={grid2} alt="grid2" />
+              <img src={grid4} alt="grid4" />
             </div>
             <div className="team-text">
-              <h3>Lauri Mäkinen</h3>
-              <p>Lead Developer</p>
+              <h3>Sonia Akter</h3>
+              <p>Developer</p>
             </div>
           </div>
 
@@ -94,8 +95,17 @@ const About = () => {
               <img src={grid3} alt="grid" />
             </div>
             <div className="team-text">
-              <h3>Sofia Virtanen</h3>
-              <p>Community Manager</p>
+              <h3>Ugorji Chibuzor</h3>
+              <p>Developer</p>
+            </div>
+          </div>
+          <div className="team-card">
+            <div className="team-image">
+              <img src={grid2} alt="grid" />
+            </div>
+            <div className="team-text">
+              <h3>Shihab Mahfuz</h3>
+              <p>Developer</p>
             </div>
           </div>
         </div>
@@ -108,7 +118,7 @@ const About = () => {
             <h1>Technologies & Tools Used</h1>
             <ul>
               <li>
-                <strong>Frontend:</strong> React, Tailwind CSS
+                <strong>Frontend:</strong> React, CSS
               </li>
               <li>
                 <strong>Backend:</strong> Laravel, PHP
@@ -128,7 +138,7 @@ const About = () => {
             </ul>
           </div>
 
-          {/* Right: Image Box */}
+        
           <div className="tools-image">
             <img src={tools} alt="Tools Preview" />
           </div>

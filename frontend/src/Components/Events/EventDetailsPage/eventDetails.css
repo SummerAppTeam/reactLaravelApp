@@ -70,7 +70,7 @@
   align-items: center;
   text-align: center;
   padding: 1rem;
-  border-radius: 2rem;
+
   margin: 0 auto;
   word-break: break-word;
   overflow: hidden;
@@ -89,7 +89,7 @@
   max-width: 1000px;
   gap: 2rem;
   padding: 3rem 2rem;
-  border-radius: 1.5rem;
+
   margin: 0 auto 2rem auto;
   flex-wrap: wrap;
  

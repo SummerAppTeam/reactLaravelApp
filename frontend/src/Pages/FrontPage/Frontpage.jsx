@@ -170,73 +170,72 @@ const Frontpage = () => {
 
         <section className="offices">
           <h2>Reach out to our regional offices across Finland.</h2>
-         <div className="office-grid">
-  <div>
-    <h4>Helsinki Office</h4>
-    <p>📍 Keskuskatu 5, Helsinki, Finland</p>
-    <p>✉️ helsinki@nordiclights.fi</p>
-    <button
-      className="map-button"
-      onClick={() =>
-        window.open(
-          "https://www.google.com/maps/dir/?api=1&destination=Keskuskatu+5,+Helsinki,+Finland",
-          "_blank"
-        )
-      }
-    >
-      Navigate on Google Maps ➜
-    </button>
-  </div>
-  <div>
-    <h4>Tampere Office</h4>
-    <p>📍 Satakunnankatu 10, Tampere, Finland</p>
-    <p>✉️ tampere@nordiclights.fi</p>
-    <button
-      className="map-button"
-      onClick={() =>
-        window.open(
-          "https://www.google.com/maps/dir/?api=1&destination=Satakunnankatu+10,+Tampere,+Finland",
-          "_blank"
-        )
-      }
-    >
-      Navigate on Google Maps ➜
-    </button>
-  </div>
-  <div>
-    <h4>Lapland Office</h4>
-    <p>📍 Revontulentie 15, Rovaniemi, Finland</p>
-    <p>✉️ lapland@nordiclights.fi</p>
-    <button
-      className="map-button"
-      onClick={() =>
-        window.open(
-          "https://www.google.com/maps/dir/?api=1&destination=Revontulentie+15,+Rovaniemi,+Finland",
-          "_blank"
-        )
-      }
-    >
-      Navigate on Google Maps ➜
-    </button>
-  </div>
-  <div>
-    <h4>Oulu Office</h4>
-    <p>📍 Kauppurienkatu 12, Oulu, Finland</p>
-    <p>✉️ oulu@nordiclights.fi</p>
-    <button
-      className="map-button"
-      onClick={() =>
-        window.open(
-          "https://www.google.com/maps/dir/?api=1&destination=Kauppurienkatu+12,+Oulu,+Finland",
-          "_blank"
-        )
-      }
-    >
-      Navigate on Google Maps ➜
-    </button>
-  </div>
-</div>
-
+          <div className="office-grid">
+            <div>
+              <h4>Helsinki Office</h4>
+              <p>📍 Keskuskatu 5, Helsinki, Finland</p>
+              <p>✉️ helsinki@nordiclights.fi</p>
+              <button
+                className="map-button"
+                onClick={() =>
+                  window.open(
+                    "https://www.google.com/maps/dir/?api=1&destination=Keskuskatu+5,+Helsinki,+Finland",
+                    "_blank"
+                  )
+                }
+              >
+                Navigate on Google Maps ➜
+              </button>
+            </div>
+            <div>
+              <h4>Tampere Office</h4>
+              <p>📍 Satakunnankatu 10, Tampere, Finland</p>
+              <p>✉️ tampere@nordiclights.fi</p>
+              <button
+                className="map-button"
+                onClick={() =>
+                  window.open(
+                    "https://www.google.com/maps/dir/?api=1&destination=Satakunnankatu+10,+Tampere,+Finland",
+                    "_blank"
+                  )
+                }
+              >
+                Navigate on Google Maps ➜
+              </button>
+            </div>
+            <div>
+              <h4>Lapland Office</h4>
+              <p>📍 Revontulentie 15, Rovaniemi, Finland</p>
+              <p>✉️ lapland@nordiclights.fi</p>
+              <button
+                className="map-button"
+                onClick={() =>
+                  window.open(
+                    "https://www.google.com/maps/dir/?api=1&destination=Revontulentie+15,+Rovaniemi,+Finland",
+                    "_blank"
+                  )
+                }
+              >
+                Navigate on Google Maps ➜
+              </button>
+            </div>
+            <div>
+              <h4>Oulu Office</h4>
+              <p>📍 Kauppurienkatu 12, Oulu, Finland</p>
+              <p>✉️ oulu@nordiclights.fi</p>
+              <button
+                className="map-button"
+                onClick={() =>
+                  window.open(
+                    "https://www.google.com/maps/dir/?api=1&destination=Kauppurienkatu+12,+Oulu,+Finland",
+                    "_blank"
+                  )
+                }
+              >
+                Navigate on Google Maps ➜
+              </button>
+            </div>
+          </div>
         </section>
       </main>
     </div>

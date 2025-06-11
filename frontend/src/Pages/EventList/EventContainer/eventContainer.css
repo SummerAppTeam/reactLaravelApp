@@ -1,4 +1,3 @@
-
 :root {
   --blue: #3498db;
   --blue-dark: #2980b9;
@@ -41,7 +40,7 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.eventContainer {
+.eventContainer2 {
   max-width: 1024px;
   margin: 0 auto;
   display: flex;
@@ -102,6 +101,7 @@
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.5rem;
   margin-top: 1rem;
+  
 }
 
 .message {
@@ -372,4 +372,69 @@
     text-align: center;
   }
 }
+
+.viewButton {
+  position: fixed;
+  z-index: 1100;
+  top: 14%;
+  left: 1%;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  background-color: #4092da;
+  color: #fff;
+}
+
+.viewButton:hover {
+   background-color: #5a6268;
+}
+
+.viewButton:active {
+  background-color: #2d6ca4;
+}
+
+.categoryButtons{
+  gap: 2rem;
+}
+
+.categoryButtons {
+  display: flex;
+  flex-wrap: wrap;          /* wrap buttons if too many */
+  justify-content: center;  /* center buttons horizontally */
+  gap: 1rem;                /* space between buttons */
+  margin-bottom: 1.5rem;
+}
+
+.categoryButtons button {
+  background-color: #2a5298;
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;    
+  border-radius: 50px;      
+  box-shadow: 0 4px 12px rgba(30, 60, 114, 0.6);
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+}
+
+.categoryButtons button:hover {
+  background-color: #1e3c72;
+  transform: scale(1.05);
+}
+
+.individualImage {
+  width: 90%;
+  height: 30vh; 
+  border: #a5a5a5 solid 3px;
+  border-radius: 1rem;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+
+
+}
+
 

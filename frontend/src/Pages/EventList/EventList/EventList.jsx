@@ -6,6 +6,8 @@ import useAxios from "../../../hooks/useAxios";
 import { DotLoader } from "react-spinners";
 import EditEvent from "../EditEvent/EditEventForm";
 import "./eventList.css";
+import "../EventContainer/eventContainer.css";
+
 
 
 const EventList = ({
@@ -128,11 +130,11 @@ const EventList = ({
           <img src={eventImage} className="editImage" alt="Event type icon" />
           <img
             src={
-              image ||
-              "https://images.pexels.com/photos/2311602/pexels-photo-2311602.jpeg?auto=compress&cs=tinysrgb&h=750&dpr=2"
+              image 
             }
             alt="Individual event"
-            className="eventImage"
+            className="individualImage"
+          
           />
 
           <p className="eventEmoji">{eventEmoji}</p>

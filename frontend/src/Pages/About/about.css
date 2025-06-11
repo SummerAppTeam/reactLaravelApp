@@ -275,6 +275,7 @@ body.darkMode .tools-box {
   .hero p {
     font-size: 1rem;
     max-width: 90%;
+   
   }
 
   .mission-grid {
@@ -329,6 +330,7 @@ body.darkMode .tools-box {
 
   .tools-box {
     position: static;
+   
     order: 2;
     flex: none;
     background: transparent;

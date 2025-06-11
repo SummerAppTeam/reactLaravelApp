@@ -1,34 +1,41 @@
 
 :root {
-  --bg-color: #ffffff;
+  --bg-color: white;
   --text-color: #333;
-  --card-bg: #ffffff;
-  --section-bg: #f3f3f3;
   --accent-color: #0066cc;
-  --shadow-color: rgba(0, 0, 0, 0.1);
+  --team-bg: rgb(232, 249, 255);
+  --overlay-color: rgba(112, 110, 110, 0.5);
 }
 
 body.darkMode {
-  --bg-color: #121212;
+  --bg-color: #1e1e1e;
   --text-color: #f0f0f0;
-  --card-bg: #1e1e1e;
-  --section-bg: #1a1a1a;
-  --accent-color: #4dabf7;
-  --shadow-color: rgba(255, 255, 255, 0.05);
+  --accent-color: #4da6ff;
+  --team-bg: #121212;
+  --overlay-color: rgba(0, 0, 0, 0.6);
 }
-
 
 .about-container {
   background: var(--bg-color);
   color: var(--text-color);
   font-family: Arial, sans-serif;
-  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
+.hero {
+  text-align: center;
+  padding: 1rem 1rem;
+  background-color: #f3f3f3;
+}
+
+body.darkMode .hero {
+  background-color: #2a2a2a;
+}
 
 .hero-section {
   width: 100vw;
   height: 400px;
+  margin: 0;
+  padding: 0;
   background-image: url("../AboutImages/heroimage.jpg");
   background-size: cover;
   background-position: center;
@@ -36,7 +43,7 @@ body.darkMode {
 }
 
 .hero-overlay {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--overlay-color);
   width: 100%;
   height: 400px;
   text-align: center;
@@ -44,7 +51,6 @@ body.darkMode {
   flex-direction: column;
   justify-content: center;
   color: white;
-  animation: fadeIn 1s ease-in-out;
 }
 
 .hero h1 {
@@ -58,12 +64,14 @@ body.darkMode {
   margin: 0 auto;
 }
 
-
 .mission-grid {
   display: flex;
   width: 100vw;
   height: 910px;
+  margin: 0;
+  padding: 0;
 }
+
 
 .mission-image {
   width: 50%;
@@ -71,17 +79,21 @@ body.darkMode {
   background-image: url("../AboutImages/mission-image.jpg");
   background-size: cover;
   background-position: center;
+  margin: 0;
+  padding: 0;
 }
+
 
 .mission-section {
   width: 50%;
   background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
   padding-bottom: 80px;
   padding-left: 32px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  animation: fadeUp 1s ease;
 }
 
 .mission-section h2 {
@@ -104,10 +116,10 @@ body.darkMode {
   margin-bottom: 8px;
 }
 
-
 .team-section {
-  background-color: var(--section-bg);
-  transition: background-color 0.4s;
+  background-color: var(--team-bg);
+  margin: 0;
+  padding: 0;
 }
 
 .team-content {
@@ -127,22 +139,14 @@ body.darkMode {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--card-bg);
-  box-shadow: 0 4px 12px var(--shadow-color);
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.3s ease, background-color 0.4s ease;
-  animation: fadeUp 1s ease;
-}
-
-.team-card:hover {
-  transform: scale(1.03);
 }
 
 .team-image {
   width: 277.33px;
   height: 320px;
   background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .team-image img {
@@ -163,14 +167,16 @@ body.darkMode {
 
 .team-text p {
   font-size: 0.95rem;
-  color: var(--text-color);
+  color: #555;
 }
 
+body.darkMode .team-text p {
+  color: #cccccc;
+}
 
 .tools-section {
   background-color: var(--bg-color);
   padding: 64px 0;
-  transition: background-color 0.4s ease;
 }
 
 .tools-wrapper {
@@ -181,9 +187,9 @@ body.darkMode {
   margin: 0 auto;
   border-radius: 24px;
   overflow: hidden;
-  box-shadow: 0 8px 20px var(--shadow-color);
-  animation: fadeUp 1s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
 }
+
 
 .tools-box {
   flex: 1;
@@ -191,6 +197,10 @@ body.darkMode {
   color: white;
   padding: 64px 48px;
   box-sizing: border-box;
+}
+
+body.darkMode .tools-box {
+  background: linear-gradient(135deg, #001f3f, #000000);
 }
 
 .tools-box h1 {
@@ -208,6 +218,7 @@ body.darkMode {
   margin-bottom: 12px;
 }
 
+
 .tools-image {
   flex: 1;
   max-height: 100%;
@@ -218,29 +229,6 @@ body.darkMode {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeUp {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 
@@ -268,16 +256,5 @@ body.darkMode {
 
   .tools-box {
     padding: 32px 24px;
-  }
-
-  .mission-grid {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .mission-image,
-  .mission-section {
-    width: 100%;
-    height: auto;
   }
 }

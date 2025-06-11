@@ -1,24 +1,27 @@
-/* EventContainer.css */
 
-/* Variables for colors (light/dark mode can toggle these via body classes) */
 :root {
-  --color-bg-light: #f9f9f9;
-  --color-bg-dark: #121212;
-  --color-text-light: #222;
-  --color-text-dark: #ddd;
-  --color-primary: #0078d4;
-  --color-secondary: #555;
-  --color-error: #d93025;
-  --color-border: #ccc;
-  --color-accent: #0066cc;
+  --blue: #3498db;
+  --blue-dark: #2980b9;
+  --text: #2c3e50;
+  --gray: #555;
+  --light-bg: #f8fdf5;
+  --dark-bg: #121212;
+  --dark-gray: #e0e0e0;
+  --dark-panel: #2d2d2d;
+  --dark-accent: #448aff;
   --color-button-bg: #0078d4;
   --color-button-hover-bg: #005fa3;
   --color-link: #0078d4;
   --color-link-hover: #004080;
   --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --color-primary: #0078d4;
+  --color-secondary: #555;
+}
+.light-theme {
+  --color-bg: var(--color-bg-light);
+  --color-text: var(--color-text-light);
 }
 
-/* Dark theme overrides */
 .dark-theme {
   --color-bg: var(--color-bg-dark);
   --color-text: var(--color-text-dark);
@@ -29,13 +32,6 @@
   --color-link-hover: #99bbff;
 }
 
-/* Light theme (default) */
-.light-theme {
-  --color-bg: var(--color-bg-light);
-  --color-text: var(--color-text-light);
-}
-
-/* General page wrapper */
 .pageWrapper {
   background-color: var(--color-bg);
   color: var(--color-text);
@@ -45,16 +41,15 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Container for event sections */
 .eventContainer {
   max-width: 1024px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  color: var(--color-text);
 }
 
-/* View toggle button */
 .viewToggle {
   display: flex;
   justify-content: flex-start;
@@ -76,15 +71,16 @@
   background-color: var(--color-button-hover-bg);
 }
 
-/* Intro section */
 .introSection {
   text-align: center;
   line-height: 1.5;
+  color: var(--color-text);
 }
 
 .introSection h1 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
+  color: var(--color-text);
 }
 
 .introSection p {
@@ -94,7 +90,6 @@
   color: var(--color-secondary);
 }
 
-/* Error message */
 .errorText {
   color: var(--color-error);
   margin: 1rem 0;
@@ -102,10 +97,9 @@
   text-align: center;
 }
 
-/* Tickets / event list */
 .tickets {
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.5rem;
   margin-top: 1rem;
 }
@@ -115,22 +109,20 @@
   border: 1px solid var(--color-border);
   border-radius: 10px;
   padding: 1rem;
+  color: var(--color-text);
   box-shadow: 0 1px 4px rgb(0 0 0 / 0.1);
   transition: box-shadow 0.3s ease;
-
 }
 
 .dark-theme .message {
   background-color: #1e1e1e;
-  border-color: var(--color-border);
-  box-shadow: 0 1px 6px rgba(0,0,0,0.6);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
 }
 
 .message:hover {
   box-shadow: 0 4px 10px rgb(0 0 0 / 0.15);
 }
 
-/* Link below each event */
 .message .secondary {
   display: inline-block;
   margin-top: 0.5rem;
@@ -145,7 +137,6 @@
   text-decoration: underline;
 }
 
-/* Show More / Show Less buttons */
 .showButtons {
   display: flex;
   justify-content: center;
@@ -168,7 +159,6 @@
   background-color: var(--color-button-hover-bg);
 }
 
-/* Highlight sections */
 .highlightSection {
   background-color: var(--color-bg-light);
   border-radius: 10px;
@@ -177,11 +167,12 @@
   max-width: 800px;
   margin: 0 auto 2rem;
   text-align: center;
+  color: var(--color-text);
 }
 
 .dark-theme .highlightSection {
   background-color: #222;
-  box-shadow: 0 1px 7px rgba(0,0,0,0.7);
+  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.7);
 }
 
 .highlightSection h2 {
@@ -203,7 +194,6 @@
   object-fit: cover;
 }
 
-/* Ticket section */
 .ticketSection {
   background-color: var(--color-bg-light);
   border-radius: 10px;
@@ -211,11 +201,12 @@
   box-shadow: 0 1px 5px rgb(0 0 0 / 0.1);
   max-width: 800px;
   margin: 0 auto 2rem;
+  color: var(--color-text);
 }
 
 .dark-theme .ticketSection {
   background-color: #222;
-  box-shadow: 0 1px 7px rgba(0,0,0,0.7);
+  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.7);
 }
 
 .ticketSection h2 {
@@ -229,15 +220,16 @@
   text-align: center;
 }
 
-/* Search input and label */
 .ticketSection label {
   display: block;
   margin-top: 1rem;
   margin-bottom: 0.3rem;
   font-weight: 600;
+  color: var(--color-text);
 }
 
-.ticketSection input[type="text"] {
+.ticketSection input[type="text"],
+.ticketSection select {
   width: 100%;
   max-width: 300px;
   padding: 0.4rem 0.7rem;
@@ -245,59 +237,21 @@
   border-radius: 5px;
   font-size: 1rem;
   outline-offset: 2px;
-  transition: border-color 0.2s ease;
-  
-}
-
-.ticketSection input[type="text"]:focus {
-  border-color: var(--color-primary);
-  box-shadow: 0 0 4px var(--color-primary);
-
-}
-
-/* Select dropdown */
-.ticketSection select {
-  margin-top: 1rem;
-  padding: 0.4rem 0.7rem;
-  font-size: 1rem;
-  border-radius: 5px;
-  border: 1px solid var(--color-border);
-  max-width: 320px;
-  outline-offset: 2px;
-  cursor: pointer;
+  color: var(--color-text);
+  background-color: var(--color-bg);
   transition: border-color 0.2s ease;
 }
 
+.ticketSection input[type="text"]:focus,
 .ticketSection select:focus {
   border-color: var(--color-primary);
   box-shadow: 0 0 4px var(--color-primary);
 }
 
-/* "View All Tickets" button */
-/* .allTicketsButton {
-  margin-top: 1.5rem;
-  background-color: var(--color-primary);
-  color: white;
-  border: none;
-  padding: 0.8rem 1.8rem;
-  border-radius: 6px;
-  font-weight: 700;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  display: block;
-  width: fit-content;
-  margin-left: auto;
-}
-
-.allTicketsButton:hover {
-  background-color: var(--color-accent);
-} */
-
-/* FAQ section */
 .faqSection {
   max-width: 800px;
   margin: 2rem auto 0;
+  color: var(--color-text);
 }
 
 .faqSection h2 {
@@ -317,7 +271,6 @@
   margin-bottom: 0.3rem;
   color: var(--color-text);
   font-weight: 600;
-  cursor: default;
 }
 
 .faqItem p {
@@ -325,7 +278,7 @@
   line-height: 1.4;
 }
 
-/* Responsive tweaks */
+/* Mobile responsiveness */
 @media (max-width: 720px) {
   .tickets {
     grid-template-columns: 1fr;
@@ -339,6 +292,79 @@
   .ticketSection,
   .faqSection {
     padding: 1rem;
+  }
+
+  .allTicketsButton {
+    width: 100%;
+    text-align: center;
+  }
+
+  .highlightSection h2,
+  .ticketSection h2,
+  .faqSection h2 {
+    font-size: 1.5rem;
+  }
+
+  .highlightSection p,
+  .ticketSection p,
+  .faqItem p {
+    font-size: 1rem;
+    color: var(--color-text);
+  }
+}
+@media (max-width: 720px) {
+  .tickets {
+    grid-template-columns: 1fr;
+  }
+
+  .introSection h1 {
+    font-size: 2rem;
+    color: var(--color-text);
+  }
+
+  .introSection p {
+    font-size: 1rem;
+    color: var(--color-secondary);
+  }
+
+  .highlightSection,
+  .ticketSection,
+  .faqSection {
+    padding: 1rem;
+  }
+
+  .highlightSection h2,
+  .ticketSection h2,
+  .faqSection h2 {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+  }
+
+  .highlightSection p,
+  .ticketSection p,
+  .faqItem p {
+    font-size: 1rem;
+    color: var(--color-secondary);
+  }
+
+  .faqItem h4 {
+    font-size: 1rem;
+    color: var(--color-text);
+  }
+
+  .message {
+    font-size: 0.95rem;
+    color: var(--color-text);
+  }
+
+  .showButtons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .showButtons button {
+    width: 100%;
+    padding: 0.5rem;
   }
 
   .allTicketsButton {

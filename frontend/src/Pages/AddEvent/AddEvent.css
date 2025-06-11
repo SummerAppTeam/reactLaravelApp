@@ -1,4 +1,3 @@
-
 :root {
   --form-bg: #f9f9f9;
   --text-color: #333;
@@ -96,7 +95,7 @@ body.darkMode {
   color: var(--text-color);
   font-size: 1.5rem;
 }
-=======
+/*=======
     max-width: 400px;
     margin: 2rem auto;
     padding: 1.5rem;
@@ -104,7 +103,7 @@ body.darkMode {
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     font-family: Arial, sans-serif;
-  }
+  }*/ 
   
   .addEventForm input {
     width: 90%;
@@ -142,7 +141,6 @@ body.darkMode {
     border: 1px solid #ccc;
     border-radius: 6px;
     font-size: 14px;
-    background-color: white;
     width: 97%;
     margin-bottom: 10px;
     transition: border-color 0.3s ease;
@@ -169,3 +167,5 @@ body.darkMode {
     color: #333;
     font-size: 1.5rem;
   }
+
+ 

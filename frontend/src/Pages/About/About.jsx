@@ -1,13 +1,12 @@
-
 import React from "react";
 import "./About.css";
 import grid1 from "../AboutImages/teams.png";
 import grid2 from "../AboutImages/grid2.jpg";
 
-import grid3 from "../AboutImages/grid3.jpg";
+//import grid3 from "../AboutImages/grid3.jpg";
 import grid4 from "../AboutImages/grid4.jpg";
 
-import grid3 from "../AboutImages/toa-heftiba-NmlnHu1bJwQ-unsplash.png";
+//import grid3 from "../AboutImages/toa-heftiba-NmlnHu1bJwQ-unsplash.png";
 
 import tools from "../AboutImages/tool-image.jpg";
 import ContactSection from "./ContactSection";
@@ -94,7 +93,7 @@ const About = () => {
 
           <div className="team-card">
             <div className="team-image">
-              <img src={grid3} alt="grid" />
+              {/*<img src={grid3} alt="grid" /> */}
             </div>
             <div className="team-text">
 

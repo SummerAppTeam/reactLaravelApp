@@ -7,6 +7,7 @@ import { DotLoader } from "react-spinners";
 import EditEvent from "../EditEvent/EditEventForm";
 import "./eventList.css";
 
+
 const EventList = ({
   id,
   name,

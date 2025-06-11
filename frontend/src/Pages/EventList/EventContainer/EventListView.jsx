@@ -3,6 +3,7 @@ import { Link } from "react-router";
 import EventList from "../EventList/EventList";
 import GetEventEmoji from "../../../Components/Events/EventEmojisAndImages/EventEmoji";
 import GetEventImage from "../../../Components/Events/EventEmojisAndImages/EventImages";
+import "./eventContainer.css";
 
 const EventListView = ({ events, onDelete }) => {
   const [type, setType] = useState(null);

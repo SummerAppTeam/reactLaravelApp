@@ -7,6 +7,7 @@ import useAxios from "../../../hooks/useAxios";
 import EventList from "../EventList/EventList";
 import GetEventEmoji from "../../../Components/Events/EventEmojisAndImages/EventEmoji";
 import GetEventImage from "../../../Components/Events/EventEmojisAndImages/EventImages";
+import "./eventContainer.css";
 
 const EventContainer = () => {
   const [events, setEvents] = useState([]);
@@ -121,7 +122,7 @@ const EventContainer = () => {
     <div className="pageWrapper">
       <div className="eventContainer">
         <div className="viewToggle">
-          <button onClick={() => setShowCalendar((prev) => !prev)}>
+          <button className="viewButton" onClick={() => setShowCalendar((prev) => !prev)}>
             {showCalendar ? "Show List View" : "Show Calendar View"}
           </button>
         </div>

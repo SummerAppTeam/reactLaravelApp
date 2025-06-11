@@ -2,8 +2,9 @@ import "./eventDetails.css";
 
 const EventDetailsContent = ({ event, navigate }) => {
   return (
+        <div className="eventContainerBackground">
     <div className="eventDetailContainer">
-       <button onClick={() => navigate(-1)} className="goBackButton">Go Back</button>
+       <button onClick={() => navigate(-1)} className="goBackButton">Back to Events</button>
       <div className="sectionOne">
       <div className="eventContainer">
          <div className="eventInfo">
@@ -25,8 +26,7 @@ const EventDetailsContent = ({ event, navigate }) => {
      
                   <h2 className="eventName">{event.name} {event.eventEmoji || "🎉"}
 </h2>
-        <h3>About the Event</h3>
-    
+      
         <p>{event.description}</p>
   
         <p>Date: {event.date}</p>
@@ -52,36 +52,33 @@ const EventDetailsContent = ({ event, navigate }) => {
         </p>
         
         <ul>
-          <li>🎶 Engaging live music and performances</li>
-          <li>🍽️ Delicious food and refreshing drinks</li>
-          <li>🎉 Exciting activities for everyone</li>
-          <li>🤝 Friendly atmosphere and great company</li>
-          <li>Events in multiple categories</li>
-          <li>👨‍👩‍👧‍👦 Family friendly events</li>
-          <li>📅 Memorable experiences and lasting connections</li>
+          <li>🎶 Engaging live music and performances 🍽️ Delicious food and refreshing drinks</li>
+        
+          <li>🎉 Exciting activities for everyone 🤝 Friendly atmosphere and great company</li>
+      
+          <li>👨‍👩‍👧‍👦 Family friendly events 📅 Memorable experiences and lasting connections</li>
+        
         </ul>
-      </div>     <img src="https://images.pexels.com/photos/1263986/pexels-photo-1263986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Vibes" className="happyCustomers"></img></div>
+      </div>     
+      </div>
 
       <div className="eventReviews">
         <h4>Join our happy customers!</h4>
         <ul>
           
           <li>
-            <img src="https://images.pexels.com/photos/1263986/pexels-photo-1263986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Vibes" classname="happyCustomers"></img>
+            <img src="https://images.pexels.com/photos/1212984/pexels-photo-1212984.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Vibes" classname="happyCustomers"></img>
             "An unforgettable experience with amazing vibes and fantastic
             entertainment!" 
           </li>
+      
           <li>
-            <img src="https://images.pexels.com/photos/1263986/pexels-photo-1263986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Vibes" classname="happyCustomers"></img>
-            "The perfect blend of great music, tasty food and friendly people."
-          </li>
-          <li>
-                <img src="https://images.pexels.com/photos/1263986/pexels-photo-1263986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Vibes" classname="happyCustomers"></img>
+                <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Vibes" classname="happyCustomers"></img>
             "Every event leaves me wanting more — truly a community
             celebration."
           </li>
           <li>
-              <img src="https://images.pexels.com/photos/1263986/pexels-photo-1263986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Vibes" classname="happyCustomers"></img>
+              <img src="https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Vibes" classname="happyCustomers"></img>
             "Fun for all ages with something exciting around every corner!"
           </li>
      
@@ -132,7 +129,7 @@ const EventDetailsContent = ({ event, navigate }) => {
 
     
       </div>
-    </div></div>
+    </div></div></div>
   );
 };
 

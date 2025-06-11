@@ -1,0 +1,374 @@
+
+:root {
+  --blue: #3498db;
+  --blue-dark: #2980b9;
+  --text: #2c3e50;
+  --gray: #555;
+  --light-bg: #f8fdf5;
+  --dark-bg: #121212;
+  --dark-gray: #e0e0e0;
+  --dark-panel: #2d2d2d;
+  --dark-accent: #448aff;
+  --color-button-bg: #0078d4;
+  --color-button-hover-bg: #005fa3;
+  --color-link: #0078d4;
+  --color-link-hover: #004080;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --color-primary: #0078d4;
+  --color-secondary: #555;
+}
+.light-theme {
+  --color-bg: var(--color-bg-light);
+  --color-text: var(--color-text-light);
+}
+
+.dark-theme {
+  --color-bg: var(--color-bg-dark);
+  --color-text: var(--color-text-dark);
+  --color-border: #444;
+  --color-button-bg: #004080;
+  --color-button-hover-bg: #003060;
+  --color-link: #66aaff;
+  --color-link-hover: #99bbff;
+}
+
+.pageWrapper {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+  font-family: var(--font-family);
+  padding: 1rem 1.5rem 3rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.eventContainer {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: var(--color-text);
+}
+
+.viewToggle {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+
+.viewToggle button {
+  background-color: var(--color-button-bg);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.viewToggle button:hover {
+  background-color: var(--color-button-hover-bg);
+}
+
+.introSection {
+  text-align: center;
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+.introSection h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.introSection p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--color-secondary);
+}
+
+.errorText {
+  color: var(--color-error);
+  margin: 1rem 0;
+  font-weight: 600;
+  text-align: center;
+}
+
+.tickets {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.message {
+  background-color: var(--color-bg-light);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 1rem;
+  color: var(--color-text);
+  box-shadow: 0 1px 4px rgb(0 0 0 / 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.dark-theme .message {
+  background-color: #1e1e1e;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+}
+
+.message:hover {
+  box-shadow: 0 4px 10px rgb(0 0 0 / 0.15);
+}
+
+.message .secondary {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: var(--color-link);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.message .secondary:hover {
+  color: var(--color-link-hover);
+  text-decoration: underline;
+}
+
+.showButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0 2rem;
+}
+
+.showButtons button {
+  background-color: var(--color-button-bg);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.showButtons button:hover {
+  background-color: var(--color-button-hover-bg);
+}
+
+.highlightSection {
+  background-color: var(--color-bg-light);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 5px rgb(0 0 0 / 0.1);
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  color: var(--color-text);
+}
+
+.dark-theme .highlightSection {
+  background-color: #222;
+  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.7);
+}
+
+.highlightSection h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+  color: var(--color-primary);
+}
+
+.highlightSection p {
+  font-size: 1rem;
+  color: var(--color-secondary);
+  margin-bottom: 1rem;
+}
+
+.highlightImage {
+  max-width: 50%;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+  object-fit: cover;
+}
+
+.ticketSection {
+  background-color: var(--color-bg-light);
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 1px 5px rgb(0 0 0 / 0.1);
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  color: var(--color-text);
+}
+
+.dark-theme .ticketSection {
+  background-color: #222;
+  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.7);
+}
+
+.ticketSection h2 {
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+
+.ticketSection p {
+  margin: 0.3rem 0;
+  color: var(--color-text);
+  text-align: center;
+}
+
+.ticketSection label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.ticketSection input[type="text"],
+.ticketSection select {
+  width: 100%;
+  max-width: 300px;
+  padding: 0.4rem 0.7rem;
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+  font-size: 1rem;
+  outline-offset: 2px;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  transition: border-color 0.2s ease;
+}
+
+.ticketSection input[type="text"]:focus,
+.ticketSection select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 4px var(--color-primary);
+}
+
+.faqSection {
+  max-width: 800px;
+  margin: 2rem auto 0;
+  color: var(--color-text);
+}
+
+.faqSection h2 {
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.faqItem {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 1rem;
+}
+
+.faqItem h4 {
+  margin-bottom: 0.3rem;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.faqItem p {
+  color: var(--color-secondary);
+  line-height: 1.4;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 720px) {
+  .tickets {
+    grid-template-columns: 1fr;
+  }
+
+  .introSection h1 {
+    font-size: 2rem;
+  }
+
+  .highlightSection,
+  .ticketSection,
+  .faqSection {
+    padding: 1rem;
+  }
+
+  .allTicketsButton {
+    width: 100%;
+    text-align: center;
+  }
+
+  .highlightSection h2,
+  .ticketSection h2,
+  .faqSection h2 {
+    font-size: 1.5rem;
+  }
+
+  .highlightSection p,
+  .ticketSection p,
+  .faqItem p {
+    font-size: 1rem;
+    color: var(--color-text);
+  }
+}
+@media (max-width: 720px) {
+  .tickets {
+    grid-template-columns: 1fr;
+  }
+
+  .introSection h1 {
+    font-size: 2rem;
+    color: var(--color-text);
+  }
+
+  .introSection p {
+    font-size: 1rem;
+    color: var(--color-secondary);
+  }
+
+  .highlightSection,
+  .ticketSection,
+  .faqSection {
+    padding: 1rem;
+  }
+
+  .highlightSection h2,
+  .ticketSection h2,
+  .faqSection h2 {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+  }
+
+  .highlightSection p,
+  .ticketSection p,
+  .faqItem p {
+    font-size: 1rem;
+    color: var(--color-secondary);
+  }
+
+  .faqItem h4 {
+    font-size: 1rem;
+    color: var(--color-text);
+  }
+
+  .message {
+    font-size: 0.95rem;
+    color: var(--color-text);
+  }
+
+  .showButtons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .showButtons button {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .allTicketsButton {
+    width: 100%;
+    text-align: center;
+  }
+}

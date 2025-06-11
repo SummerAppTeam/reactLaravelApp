@@ -21,7 +21,6 @@ main {
   background-color: rgba(255, 255, 255, 0.577);
 }
 
-/*How to use darkmode in css:*/
 
 body.darkMode { 
   background-color: #333333;

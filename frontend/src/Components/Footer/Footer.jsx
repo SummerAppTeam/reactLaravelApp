@@ -8,7 +8,7 @@ function Footer(props) {
       <nav>
         <ul>
           <li>
-            <NavLink to="/">Frontpage</NavLink>
+            <NavLink to="/">Home</NavLink>
           </li>
           <li>
             <NavLink to="/About">About us</NavLink>
@@ -29,7 +29,7 @@ function Footer(props) {
           Reach us anytime at<br />
           contact@events.com <br />
           Or call us at <br />
-          +044 567 890 ☎️ <br />
+          +044 577 7XX ☎️ <br />
           We're always happy to help!
         </p>
       </section>

@@ -13,11 +13,10 @@ const About = () => {
 
       <section className="hero-section">
         <div className="hero-overlay">
-          <h1>Welcome to Event Planner</h1>
-          <p>
-            Discover how we're revolutionizig events experience for organizers
-            and attendees alike.
-          </p>
+       <h1>Welcome to Nordic Lights Gatherings</h1>
+   <p> We make event planning easier and more enjoyable for organizers and attendees alike.
+
+ </p>
         </div>
       </section>
 
@@ -27,33 +26,29 @@ const About = () => {
         <div className="mission-image"></div>
 
         <div className="mission-section">
-          <h2>Empowering Events</h2>
-          <h3>Our Mission: Sparking Community Events</h3>
-          <p>
-            Event Spark is dedicated to empowering Finnish community event
-            organizers by providing innovative tools and resources to create
-            unforgettable experiences.
-          </p>
+        <h2>Empowering Gatherings</h2>
+  <h3>Our Mission: Uniting Communities</h3>
+       <p>
+  Nordic Lights Gatherings supports Finnish event creators with modern tools and meaningful resources to craft lasting impactful experiences.
+</p>
 
           <div className="mission-points">
-            <h4>Effortless Event Management</h4>
-            <p>
-              Simplify your event planning process with our user-friendly
-              platform, designed to handle everything from scheduling to
-              promotion.
-            </p>
+             <h4>Seamless Event Planning</h4>
+           <p>
+    Take the stress out of planning with our intuitive platform—built to handle everything from logistics to outreach with ease.
+  </p>
 
-            <h4>Engaging Community Features</h4>
-            <p>
-              Foster a strong sense of community with interactive features that
-              allow attendees to connect, share, and collaborate.
-            </p>
 
-            <h4>Data-Driven Insights</h4>
-            <p>
-              Gain valuable insights into event performance with comprehensive
-              analytics, helping you optimize future events for maximum impact.
-            </p>
+    <h4>Engaging Community Features</h4>
+         <p>
+    Strengthen connections with built-in features that make it easy for attendees to engage, share and stay connected.
+  </p>
+
+  <h4>Clear Event Feedback</h4>
+<p>
+  Get useful info about your events to help you plan better and make each gathering more enjoyable.
+</p>
+
           </div>
         </div>
       </section>
@@ -62,10 +57,9 @@ const About = () => {
       <section className="team-section">
         <div className="team-content">
           <h2>Meet the Team</h2>
-          <p>
-            The passionate individuals driving Event Spark's mission to
-            transform community events in Finland.
-          </p>
+         <p>
+    Meet the dedicated team behind Nordic Lights Gatherings, committed to bringing people together across Finland through powerful community events.
+  </p>
         </div>
 
         <div className="team-grid">
@@ -74,7 +68,7 @@ const About = () => {
               <img src={grid1} alt="grid1" />
             </div>
             <div className="team-text">
-              <h3>Aino Niemi</h3>
+              <h3>Maria Pekkala</h3>
               <p>Co-founder, CEO</p>
             </div>
           </div>
@@ -84,7 +78,7 @@ const About = () => {
               <img src={grid2} alt="grid2" />
             </div>
             <div className="team-text">
-              <h3>Lauri Mäkinen</h3>
+              <h3>Petri Huttunen</h3>
               <p>Lead Developer</p>
             </div>
           </div>
@@ -94,7 +88,7 @@ const About = () => {
               <img src={grid3} alt="grid" />
             </div>
             <div className="team-text">
-              <h3>Sofia Virtanen</h3>
+              <h3>Anna Vaskinen</h3>
               <p>Community Manager</p>
             </div>
           </div>

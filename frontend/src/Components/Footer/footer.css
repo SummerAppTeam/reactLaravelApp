@@ -1,174 +1,95 @@
-/* footer.css */
-
 /* Base footer styling */
 footer {
   background-color: #E8F8FF; 
-  padding: 2rem 0;
-  text-align: center;
+  padding: 2rem 1rem;
+  border-top: 1px solid #e0e0e0;
 }
 
-footer nav ul {
-  background: linear-gradient(135deg, #111827, #1f2937);
-  color: #e0e7ff; /* soft indigo */
-  padding: 40px 20px;
-  text-align: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  border-top: 3px solid #22d3ee; /* cyan top border to match header highlight */
-  box-shadow: inset 0 4px 6px rgba(0,0,0,0.5);
-  user-select: none;
+/* Navigation container */
+footer nav {
+  margin-bottom: 1.5rem;
 }
 
 /* Navigation list */
 footer nav ul {
   list-style: none;
   padding: 0;
-  margin: 0 0 30px 0;
+  margin: 0;
   display: flex;
   justify-content: center;
-  gap: 35px;
+  flex-wrap: wrap;
+  gap: 1.5rem;
 }
 
 /* Nav links */
 footer nav ul li a {
-  color: #e0e7ff;
+  color: #333; /* Dark gray text */
   text-decoration: none;
-  font-weight: 600;
-  font-size: 16px;
-  padding: 6px 12px;
-  border-radius: 6px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  transition: color 0.2s ease;
   display: inline-block;
 }
 
-footer nav ul li a:hover,
+footer nav ul li a:hover {
+  color: #007bff; /* Blue hover color */
+}
+
+/* Active link styling */
 footer nav ul li a.active {
-  background-color: #22d3ee; /* cyan highlight */
-  color: #111827; /* dark text on highlight */
-  box-shadow: 0 2px 10px rgba(34, 211, 238, 0.6);
+  color: #007bff;
+  font-weight: 600;
+}
+
+/* Contact section */
+footer .contact {
+  text-align: center;
+  margin: 1.5rem 0;
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
 /* Copyright text */
 footer h3 {
+  text-align: center;
   font-weight: 400;
-  margin-top: 25px;
-  font-size: 14px;
-  color: #94a3b8; /* lighter indigo-gray */
-  user-select: text;
-}
-
-/* Newsletter section */
-footer h2 {
-  font-size: 22px;
-  margin-bottom: 20px;
-  color: #e0e7ff;
-  text-shadow: 0 0 6px #22d3eeaa;
-  user-select: none;
-}
-
-footer form {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-/* Email input */
-footer input[type="email"] {
-  padding: 12px 16px;
-  font-size: 16px;
-  border: none;
-  border-radius: 8px;
-  width: 300px;
-  max-width: 100%;
-  box-sizing: border-box;
-  box-shadow: 0 0 8px rgba(34, 211, 238, 0.3);
-  transition: box-shadow 0.3s ease;
-}
-
-footer input[type="email"]:focus {
-  outline: none;
-  box-shadow: 0 0 12px #22d3ee;
-}
-
-/* Subscribe button */
-footer button {
-  background-color: #e23939;
-  color: #111827;
-  border: none;
-  padding: 12px 28px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 700;
-  font-size: 16px;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  user-select: none;
-  box-shadow: 0 0 10px #22d3eeaa;
-}
-
-footer button:hover {
-  background-color: red;
-  box-shadow: 0 0 14px #14b8a6cc;
-}
-
-/* Validation message */
-footer p {
-  color: #f87171; /* red-400 */
-  margin: 10px 0 20px 0;
-  font-size: 15px;
-  font-weight: 600;
-  user-select: none;
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: 1rem;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
   footer nav ul {
     flex-direction: column;
-    gap: 15px;
+    align-items: center;
+    gap: 0.8rem;
   }
-  footer h2 {
-    font-size: 20px;
-  }
-  footer input[type="email"], footer button {
-    width: 100%;
+  
+  footer .contact {
+    font-size: 0.85rem;
   }
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-/* footer {
+form {
   display: flex;
   justify-content: center;
-  gap: 3rem; 
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
 
-footer nav ul li a {
-  text-decoration: none;
-  color: black;
+input[type="email"] {
+  flex: 1;
+  min-width: 250px;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
   font-size: 1rem;
-  font-weight: 500;
 }
-
-footer h3 {
-  display: none; 
-}
-
-
-@media (max-width: 768px) {
-  footer nav ul {
-    flex-direction: column;
-    gap: 1rem;
-  }
-} */

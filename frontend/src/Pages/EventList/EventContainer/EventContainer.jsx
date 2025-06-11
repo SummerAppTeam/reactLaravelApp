@@ -8,7 +8,7 @@ import useAxios from "../../../hooks/useAxios";
 import EventList from "../EventList/EventList";
 import GetEventEmoji from "../../../Components/Events/EventEmojisAndImages/EventEmoji";
 import GetEventImage from "../../../Components/Events/EventEmojisAndImages/EventImages";
-// import './EventContainer.css';
+import './EventContainer.css';
 
 const EventContainer = () => {
   const [events, setEvents] = useState([]);
@@ -223,7 +223,7 @@ const EventContainer = () => {
               {renderEventList()}
               {error}
 
-              <button className="allTicketsButton">🎟️ View All Tickets</button>
+              {/* <button className="allTicketsButton">🎟️ View All Tickets</button> */}
             </section>
 
             <section className="faqSection">

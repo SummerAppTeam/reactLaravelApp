@@ -1,160 +1,348 @@
-/* === Hero Section === */
+/* EventContainer.css */
+
+/* Variables for colors (light/dark mode can toggle these via body classes) */
+:root {
+  --color-bg-light: #f9f9f9;
+  --color-bg-dark: #121212;
+  --color-text-light: #222;
+  --color-text-dark: #ddd;
+  --color-primary: #0078d4;
+  --color-secondary: #555;
+  --color-error: #d93025;
+  --color-border: #ccc;
+  --color-accent: #0066cc;
+  --color-button-bg: #0078d4;
+  --color-button-hover-bg: #005fa3;
+  --color-link: #0078d4;
+  --color-link-hover: #004080;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Dark theme overrides */
+.dark-theme {
+  --color-bg: var(--color-bg-dark);
+  --color-text: var(--color-text-dark);
+  --color-border: #444;
+  --color-button-bg: #004080;
+  --color-button-hover-bg: #003060;
+  --color-link: #66aaff;
+  --color-link-hover: #99bbff;
+}
+
+/* Light theme (default) */
+.light-theme {
+  --color-bg: var(--color-bg-light);
+  --color-text: var(--color-text-light);
+}
+
+/* General page wrapper */
+.pageWrapper {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+  font-family: var(--font-family);
+  padding: 1rem 1.5rem 3rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Container for event sections */
+.eventContainer {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* View toggle button */
+.viewToggle {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+
+.viewToggle button {
+  background-color: var(--color-button-bg);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.viewToggle button:hover {
+  background-color: var(--color-button-hover-bg);
+}
+
+/* Intro section */
 .introSection {
-    max-width: 1000px;
-    margin: 3rem auto;
-    text-align: center;
-    padding: 2rem 1.5rem;
-    border-radius: 15px;
-    background: linear-gradient(135deg, #f8f9fa, #e6e9ef);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    animation: slideFadeIn 0.8s ease-out forwards;
-    position: relative;
-    overflow: hidden;
-  }
+  text-align: center;
+  line-height: 1.5;
+}
+
+.introSection h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.introSection p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--color-secondary);
+}
+
+/* Error message */
+.errorText {
+  color: var(--color-error);
+  margin: 1rem 0;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Tickets / event list */
+.tickets {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.message {
+  background-color: var(--color-bg-light);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 0.1);
+  transition: box-shadow 0.3s ease;
+
+}
+
+.dark-theme .message {
+  background-color: #1e1e1e;
+  border-color: var(--color-border);
+  box-shadow: 0 1px 6px rgba(0,0,0,0.6);
+}
+
+.message:hover {
+  box-shadow: 0 4px 10px rgb(0 0 0 / 0.15);
+}
+
+/* Link below each event */
+.message .secondary {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: var(--color-link);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.message .secondary:hover {
+  color: var(--color-link-hover);
+  text-decoration: underline;
+}
+
+/* Show More / Show Less buttons */
+.showButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0 2rem;
+}
+
+.showButtons button {
+  background-color: var(--color-button-bg);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.showButtons button:hover {
+  background-color: var(--color-button-hover-bg);
+}
+
+/* Highlight sections */
+.highlightSection {
+  background-color: var(--color-bg-light);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 5px rgb(0 0 0 / 0.1);
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.dark-theme .highlightSection {
+  background-color: #222;
+  box-shadow: 0 1px 7px rgba(0,0,0,0.7);
+}
+
+.highlightSection h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+  color: var(--color-primary);
+}
+
+.highlightSection p {
+  font-size: 1rem;
+  color: var(--color-secondary);
+  margin-bottom: 1rem;
+}
+
+.highlightImage {
+  max-width: 50%;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+  object-fit: cover;
+}
+
+/* Ticket section */
+.ticketSection {
+  background-color: var(--color-bg-light);
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 1px 5px rgb(0 0 0 / 0.1);
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.dark-theme .ticketSection {
+  background-color: #222;
+  box-shadow: 0 1px 7px rgba(0,0,0,0.7);
+}
+
+.ticketSection h2 {
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+
+.ticketSection p {
+  margin: 0.3rem 0;
+  color: var(--color-text);
+  text-align: center;
+}
+
+/* Search input and label */
+.ticketSection label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.ticketSection input[type="text"] {
+  width: 100%;
+  max-width: 300px;
+  padding: 0.4rem 0.7rem;
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+  font-size: 1rem;
+  outline-offset: 2px;
+  transition: border-color 0.2s ease;
   
-  .dark-theme .introSection {
-    background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
-    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.05);
-  }
-  
-  .introSection h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: var(--color-primary);
-    font-weight: 800;
-    position: relative;
-  }
-  
-  .introSection h1::after {
-    content: "";
-    display: block;
-    width: 80px;
-    height: 4px;
-    background: var(--color-accent);
-    margin: 0.5rem auto;
-    border-radius: 2px;
-  }
-  
-  .introSection p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
-    color: var(--color-dark);
-  }
-  
-  .dark-theme .introSection p {
-    color: #ddd;
-  }
-  
-  /* === Highlight Section === */
-  .highlightSection {
-    background-color: #ffffff;
-    border-radius: 20px;
-    padding: 2rem;
-    margin: 2rem auto;
-    max-width: 1000px;
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .highlightSection:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.1);
-  }
-  
-  .dark-theme .highlightSection {
-    background-color: #2c2c2c;
-    box-shadow: 0 10px 24px rgba(255, 255, 255, 0.05);
-  }
-  
-  .highlightSection h2 {
-    font-size: 2rem;
-    color: var(--color-secondary);
-    font-weight: 700;
-    margin-bottom: 1rem;
-  }
-  
-  .highlightSection p {
-    font-size: 1.1rem;
-    line-height: 1.5;
-    color: var(--color-dark);
-    margin-bottom: 1.5rem;
-  }
-  
-  .dark-theme .highlightSection p {
-    color: #ccc;
-  }
-  
-  .highlightImage {
-    width: 100%;
-    max-height: 220px;
-    object-fit: cover;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.4s ease;
-  }
-  
-  .highlightImage:hover {
-    transform: scale(1.03);
-  }
-  
-  /* === Event List in 3-Column Grid === */
+}
+
+.ticketSection input[type="text"]:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 4px var(--color-primary);
+
+}
+
+/* Select dropdown */
+.ticketSection select {
+  margin-top: 1rem;
+  padding: 0.4rem 0.7rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid var(--color-border);
+  max-width: 320px;
+  outline-offset: 2px;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.ticketSection select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 4px var(--color-primary);
+}
+
+/* "View All Tickets" button */
+/* .allTicketsButton {
+  margin-top: 1.5rem;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.8rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+}
+
+.allTicketsButton:hover {
+  background-color: var(--color-accent);
+} */
+
+/* FAQ section */
+.faqSection {
+  max-width: 800px;
+  margin: 2rem auto 0;
+}
+
+.faqSection h2 {
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.faqItem {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 1rem;
+}
+
+.faqItem h4 {
+  margin-bottom: 0.3rem;
+  color: var(--color-text);
+  font-weight: 600;
+  cursor: default;
+}
+
+.faqItem p {
+  color: var(--color-secondary);
+  line-height: 1.4;
+}
+
+/* Responsive tweaks */
+@media (max-width: 720px) {
   .tickets {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin: 3rem auto;
-    max-width: 1200px;
+    grid-template-columns: 1fr;
   }
-  
-  .message {
-    background: var(--color-light);
-    border-radius: 15px;
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  .introSection h1 {
+    font-size: 2rem;
   }
-  
-  .dark-theme .message {
-    background: #292929;
-    box-shadow: 0 8px 18px rgba(255, 255, 255, 0.05);
+
+  .highlightSection,
+  .ticketSection,
+  .faqSection {
+    padding: 1rem;
   }
-  
-  .message:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+
+  .allTicketsButton {
+    width: 100%;
+    text-align: center;
   }
-  
-  .message .secondary {
-    margin-top: 1rem;
-    font-weight: 600;
-    color: var(--color-accent);
-    text-decoration: none;
-    font-size: 0.95rem;
-  }
-  
-  .message .secondary:hover {
-    text-decoration: underline;
-  }
-  
-  /* Responsive grid adjustments */
-  @media (max-width: 1024px) {
-    .tickets {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (max-width: 680px) {
-    .tickets {
-      grid-template-columns: 1fr;
-    }
-  
-    .highlightImage {
-      max-height: 180px;
-    }
-  }
-  
+}

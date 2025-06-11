@@ -87,7 +87,7 @@ img{
 }
 
 
-.eventTicket input,
+.eventTicket input,.eventTicket select,
 .eventTicket textarea {
   width: 100%;
   max-width: 400px; 
@@ -246,6 +246,8 @@ body.darkMode .weatherModalWindow button {
 body.darkMode .weatherModalWindow button:hover {
   color: #ff6b6b;
 }
+
+
 
 
 

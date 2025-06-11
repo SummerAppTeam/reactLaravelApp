@@ -1,4 +1,5 @@
 
+
 :root {
   --bg-color: white;
   --text-color: #333;
@@ -14,6 +15,9 @@ body.darkMode {
   --team-bg: #121212;
   --overlay-color: rgba(0, 0, 0, 0.6);
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
 
 .about-container {
   background: var(--bg-color);
@@ -36,14 +40,16 @@ body.darkMode .hero {
   height: 400px;
   margin: 0;
   padding: 0;
-  background-image: url("../AboutImages/heroimage.jpg");
+  background-image: url("../AboutImages/heropic.png");
   background-size: cover;
   background-position: center;
   position: relative;
 }
 
 .hero-overlay {
+
   background-color: var(--overlay-color);
+
   width: 100%;
   height: 400px;
   text-align: center;
@@ -54,13 +60,22 @@ body.darkMode .hero {
 }
 
 .hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.hero h1,
+.hero-overlay h1 {
+  font-size: 3.75rem;
+  font-family: "poppins", sans-serif;
 }
 
 .hero p {
   font-size: 1.1rem;
+  font-weight: 400px;
   max-width: 600px;
+  margin-bottom: 0;
+  font-family: "poppins", sans-serif;
   margin: 0 auto;
 }
 
@@ -76,7 +91,9 @@ body.darkMode .hero {
 .mission-image {
   width: 50%;
   height: 910px;
+
   background-image: url("../AboutImages/mission-image.jpg");
+
   background-size: cover;
   background-position: center;
   margin: 0;
@@ -180,23 +197,30 @@ body.darkMode .team-text p {
 }
 
 .tools-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
+  position: relative;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  height: 650px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
   border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  overflow: visible;
+  padding: 0 40px;
 }
+
 
 
 .tools-box {
   flex: 1;
-  background: linear-gradient(135deg, #004e92, #000428);
+  background: linear-gradient(135deg, #0e233f, #4f569a);
   color: white;
   padding: 64px 48px;
   box-sizing: border-box;
+  border-radius: 24px;
+  z-index: 1;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
 body.darkMode .tools-box {
@@ -204,14 +228,14 @@ body.darkMode .tools-box {
 }
 
 .tools-box h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 24px;
 }
 
 .tools-box ul {
   list-style: disc;
   padding-left: 20px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 .tools-box li {
@@ -219,20 +243,61 @@ body.darkMode .tools-box {
 }
 
 
+/* Refactor tools-image to align with spacing */
+
 .tools-image {
-  flex: 1;
-  max-height: 100%;
+  position: absolute;
+  top: 50%;
+  right: 40px; /* same as wrapper padding */
+  transform: translateY(-50%);
+  width: 550px;
+  height: 520px;
   overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  z-index: 2;
 }
 
 .tools-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 
 @media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  .mission-grid {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .mission-image {
+    width: 100%;
+    height: 300px;
+  }
+
+  .mission-section {
+    width: 100%;
+    padding: 40px 20px;
+    align-items: flex-start;
+  }
+
+  .mission-section p {
+    max-width: 100%;
+    font-size: 1rem;
+  }
+
   .team-grid {
     flex-direction: column;
     padding: 32px;
@@ -244,17 +309,95 @@ body.darkMode .tools-box {
     margin: 0 auto;
   }
 
-  .tools-wrapper {
-    flex-direction: column;
-    border-radius: 0;
+  .tools-section {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%);
+    padding: 3rem 1.5rem;
+    min-height: 100vh;
   }
 
-  .tools-box,
-  .tools-image {
-    width: 100%;
+  .tools-wrapper {
+    position: static;
+    height: auto;
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0;
+    border-radius: 0;
+    overflow: visible;
   }
 
   .tools-box {
-    padding: 32px 24px;
+    position: static;
+    order: 2;
+    flex: none;
+    background: transparent;
+    padding: 1.5rem;
+    border-radius: 0;
+    box-shadow: none;
+    text-align: center;
+    z-index: auto;
+  }
+
+  .tools-box h1 {
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .tools-box h1 {
+    font-size: 2rem;
+  }
+
+  .tools-box h1,
+  .tools-box ul,
+  .tools-box li {
+    font-family: "Poppins", sans-serif;
+  }
+
+  .tools-box ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .tools-box li {
+    margin-bottom: 1rem;
+    opacity: 0.9;
+  }
+
+  .tools-box strong {
+    font-weight: 600;
+    opacity: 1;
+  }
+
+  .tools-image {
+    position: static;
+    order: 1;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: none;
+    top: auto;
+    right: auto;
+    overflow: visible;
+    box-shadow: none;
+    z-index: auto;
+  }
+
+  .tools-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
   }
 }

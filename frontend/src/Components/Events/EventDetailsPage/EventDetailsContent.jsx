@@ -2,9 +2,18 @@ import "./eventDetails.css";
 
 const EventDetailsContent = ({ event, navigate }) => {
   return (
+        <div className="eventContainerBackground">
     <div className="eventDetailContainer">
-      <div className="eventHeader">
-        <img
+       <button onClick={() => navigate(-1)} className="goBackButton">Back to Events</button>
+      <div className="sectionOne">
+      <div className="eventContainer">
+         <div className="eventInfo">
+     
+
+     
+     <div className="eventHeader">
+      
+    <img
           src={
             event.image ||
             "https://images.pexels.com/photos/2311602/pexels-photo-2311602.jpeg?auto=compress&cs=tinysrgb&h=750&dpr=2"
@@ -12,12 +21,14 @@ const EventDetailsContent = ({ event, navigate }) => {
           alt={event.name}
           className="eventImage"
         />
-        <h2 className="eventName">{event.name}</h2>
-        <p className="eventEmoji">{event.eventEmoji || "🎉"}</p>
-      </div>
-
-      <div className="eventInfo">
+     
+      <div className="longDescription">
+     
+                  <h2 className="eventName">{event.name} {event.eventEmoji || "🎉"}
+</h2>
+      
         <p>{event.description}</p>
+  
         <p>Date: {event.date}</p>
         <p>
           <strong>Location:</strong> {event.location}
@@ -25,67 +36,64 @@ const EventDetailsContent = ({ event, navigate }) => {
         <p>
           <strong>Price:</strong> €{event.price}
         </p>
-      </div>
-
-      <div className="eventDescription">
-        <h3>About the Event</h3>
         <p>{event.long_description}</p>
-      </div>
+       </div></div></div></div></div>
 
-      <button onClick={() => navigate(-1)}>Go Back</button>
+     
 
       <div className="eventExtra">
-        <h4>What to Expect at Our Events</h4>
+    
+        <div className="eventContent"> <h4>What to Expect at Our Events</h4>
         <p>
           Our event selection is carefully hand-picked to offer diverse,
           engaging experiences that everyone can enjoy. We prioritize
           accessibility and quality to ensure memorable moments for all
           attendees.
         </p>
+        
         <ul>
-          <li>🎶 Engaging live music and performances</li>
-          <li>🍽️ Delicious food and refreshing drinks</li>
-          <li>🎉 Exciting activities for everyone</li>
-          <li>🤝 Friendly atmosphere and great company</li>
-          <li>Events in multiple categories</li>
-          <li>👨‍👩‍👧‍👦 Family friendly events</li>
-          <li>📅 Memorable experiences and lasting connections</li>
+          <li>🎶 Engaging live music and performances 🍽️ Delicious food and refreshing drinks</li>
+        
+          <li>🎉 Exciting activities for everyone 🤝 Friendly atmosphere and great company</li>
+      
+          <li>👨‍👩‍👧‍👦 Family friendly events 📅 Memorable experiences and lasting connections</li>
+        
         </ul>
+      </div>     
       </div>
 
       <div className="eventReviews">
         <h4>Join our happy customers!</h4>
         <ul>
+          
           <li>
+            <img src="https://images.pexels.com/photos/1212984/pexels-photo-1212984.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Vibes" classname="happyCustomers"></img>
             "An unforgettable experience with amazing vibes and fantastic
-            entertainment!"
+            entertainment!" 
           </li>
+      
           <li>
-            "The perfect blend of great music, tasty food and friendly people."
-          </li>
-          <li>
+                <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Vibes" classname="happyCustomers"></img>
             "Every event leaves me wanting more — truly a community
             celebration."
           </li>
           <li>
+              <img src="https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Vibes" classname="happyCustomers"></img>
             "Fun for all ages with something exciting around every corner!"
           </li>
-          <li>
-            "A vibrant atmosphere that makes every moment special and
-            memorable."
-          </li>
+     
         </ul>
       </div>
-      <div className="eventCovidSafety">
+            <div className="eventSafetyFaqContainer">
+
+
+      <div className="eventSafety">
         <h3>Health & Safety</h3>
-        <p>
+      
           <p>
-            Your safety is our priority. We ensure all events follow strict
-            health and safety standards, including proper venue maintenance,
-            clear emergency procedures, and accessible facilities to make your
-            experience comfortable and secure.
+         Your safety is our top priority. We diligently ensure that every event adheres to strict health and safety protocols, including thorough venue maintenance and regular safety inspections. <br></br><br></br>Clear emergency procedures are established and communicated to all attendees and staff to guarantee a quick and efficient response if needed. Our facilities are fully accessible to accommodate all guests, including those with mobility challenges or special needs. <br></br> <br></br>Additionally, we collaborate closely with local health authorities to stay updated on any new guidelines, making sure every aspect of your experience is comfortable, secure, and enjoyable from start to finish. Your well-being is at the heart of everything we do.
           </p>
-        </p>
+     
       </div>
 
       <div className="eventFAQ">
@@ -119,28 +127,9 @@ const EventDetailsContent = ({ event, navigate }) => {
           with the organizer before attending.
         </p>
 
-        <p>
-          <strong>Q: Can I volunteer at events?</strong>
-          <br />
-          A: Some events welcome volunteers. Contact the organizers directly to
-          find out about opportunities.
-        </p>
-
-        <p>
-          <strong>Q: What happens if an event is canceled?</strong>
-          <br />
-          A: The event organizer will notify you, and ticket refunds will be
-          handled according to their policy.
-        </p>
-
-        <p>
-          <strong>Q: Can I bring children to all events?</strong>
-          <br />
-          A: Not all events are suitable for children. Check each event’s
-          details before bringing kids.
-        </p>
+    
       </div>
-    </div>
+    </div></div></div>
   );
 };
 

@@ -8,7 +8,9 @@ import useAxios from "../../../hooks/useAxios";
 import EventList from "../EventList/EventList";
 import GetEventEmoji from "../../../Components/Events/EventEmojisAndImages/EventEmoji";
 import GetEventImage from "../../../Components/Events/EventEmojisAndImages/EventImages";
-import './EventContainer.css';
+
+import "./eventContainer.css";
+
 
 const EventContainer = () => {
   const [events, setEvents] = useState([]);
@@ -123,7 +125,7 @@ const EventContainer = () => {
     <div className="pageWrapper">
       <div className="eventContainer">
         <div className="viewToggle">
-          <button onClick={() => setShowCalendar((prev) => !prev)}>
+          <button className="viewButton" onClick={() => setShowCalendar((prev) => !prev)}>
             {showCalendar ? "Show List View" : "Show Calendar View"}
           </button>
         </div>
@@ -133,7 +135,7 @@ const EventContainer = () => {
         ) : (
           <>
             <section className="introSection">
-              <h1>Welcome to EventFinder Finland 🇫🇮</h1>
+              <h1>Find Your Favorite Events</h1>
               <p>
                 Explore events in iconic places across Finland, from the snowy
                 magic of Rovaniemi in the north to the lively streets of
@@ -154,11 +156,12 @@ const EventContainer = () => {
             <section className="highlightSection">
               <h2>Experience Finnish Culture</h2>
               <p>
-                Explore events in iconic places from the snowy magic of
-                Rovaniemi to the buzzing festivals in Helsinki. Each event
-                highlights the rich and diverse culture of Finland. Whether
-                you're a local or just visiting, there's always something new to
-                experience in every corner of the country.
+                <p>
+                  Discover unique celebrations and traditions across Finland,
+                  from vibrant city festivals to tranquil nature events. Whether
+                  you’re near or far, there’s always a chance to connect with
+                  local culture and make new memories.
+                </p>
               </p>
               <img
                 src="https://images.pexels.com/photos/1703323/pexels-photo-1703323.jpeg"
@@ -200,6 +203,7 @@ const EventContainer = () => {
                   type="text"
                   id="search"
                   name="search"
+                  placeholder="Search by Name or City"
                   value={searchValue}
                   onChange={searchHandle}
                 />
@@ -273,6 +277,7 @@ const EventContainer = () => {
 };
 
 export default EventContainer;
+
 
 
 
@@ -536,7 +541,6 @@ export default EventContainer;
 // };
 
 // export default EventContainer;
-
 
 
 

@@ -1,3 +1,6 @@
+import useWeather from "../../../hooks/useWeather";
+import useGeocode from "../../../hooks/useGeoCode";
+import { ClipLoader } from "react-spinners";
 import { useState, useEffect } from "react";
 import useAxios from "../../../hooks/useAxios";
 import { DotLoader } from "react-spinners";
@@ -35,6 +38,21 @@ const EventList = ({
   const { put, del } = useAxios();
   const [isFavorite, setIsFavorite] = useState(false);
   const currentDate = new Date().toISOString().split("T", 1)[0];
+
+  const {
+    coordinates,
+    loading: geoLoading,
+    error: geoError,
+  } = useGeocode(location);
+
+  const { lat, lon } = coordinates || {};
+
+  const {
+    weather,
+    forecast,
+    loading: weatherLoading,
+    error: weatherError,
+  } = useWeather(lat, lon);
 
   useEffect(() => {
     const favorites = JSON.parse(localStorage.getItem("favorites") || "{}");
@@ -121,7 +139,58 @@ const EventList = ({
               <p onClick={() => setIsModalOpen(!isModalOpen)}>☀️ 🌧️</p>
               {isModalOpen && (
                 <div className="weatherModalWindow">
-                  <p>All events need to have different weather</p>
+                  {geoLoading ? (
+                    <ClipLoader size={35} color="#333" />
+                  ) : geoError ? (
+                    <p>Unable to find coordinates for this location.</p>
+                  ) : weatherLoading ? (
+                    <ClipLoader size={35} color="#007bff" />
+                  ) : weatherError ? (
+                    <p>Error fetching weather data.</p>
+                  ) : weather ? (
+                    <>
+                      <p>
+                        <strong>Current Weather</strong> ☀️
+                      </p>
+                      <p>{weather.weather[0].description}</p>
+                      <p>Temperature: {Math.round(weather.main.temp)} °C</p>
+                      <p>
+                        Feels Like: {Math.round(weather.main.feels_like)} °C
+                      </p>
+                      <p>Wind: {weather.wind.speed} m/s</p>
+
+                      {forecast ? (
+                        <div className="forecast">
+                          <p>
+                            <strong>5-Day Forecast</strong>
+                          </p>
+                          <div className="forecastGrid">
+                            {forecast.list
+                              .filter((_, index) => index % 8 === 0)
+                              .map((day, index) => (
+                                <div className="forecastCard" key={index}>
+                                  <p>
+                                    {new Date(day.dt_txt).toLocaleDateString()}
+                                  </p>
+                                  <img
+                                    src={`https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`}
+                                    alt={day.weather[0].description}
+                                    className="forecastIcon"
+                                  />
+                                  <p>{day.weather[0].description}</p>
+                                  <p>{Math.round(day.main.temp)}°C</p>
+                                </div>
+                              ))}
+                          </div>
+                        </div>
+                      ) : (
+                        <p>No forecast data available.</p>
+                      )}
+                    </>
+                  ) : (
+                    <p>No weather data available.</p>
+                  )}
+
                   <button onClick={() => setIsModalOpen(false)}>
                     <span className="material-icons">close</span>
                   </button>

@@ -188,4 +188,42 @@ img{
 
 
 
+.forecast {
+  margin-top: 1rem;
+  background: #f0f4f8;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.forecastGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.forecastCard {
+  background: white;
+  padding: 0.75rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease-in-out;
+}
+
+.forecastCard:hover {
+  transform: scale(1.05);
+}
+
+.forecastCard p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.forecastIcon {
+  width: 50px;
+  height: 50px;
+}
 

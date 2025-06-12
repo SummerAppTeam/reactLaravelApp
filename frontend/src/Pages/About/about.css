@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 :root {
   --bg-color: white;
   --text-color: #333;
@@ -87,7 +90,7 @@ body.darkMode .hero {
   width: 50%;
   height: 910px;
 
-  background-image: url("../AboutImages/mission-image.jpg");
+  background-image: url("../AboutImages/mission.png");
 
   background-size: cover;
   background-position: center;

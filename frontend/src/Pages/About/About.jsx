@@ -2,7 +2,7 @@ import React from "react";
 import "./About.css";
 import grid1 from "../AboutImages/teams.png";
 import grid2 from "../AboutImages/grid2.jpg";
-
+import grid3 from "../AboutImages/grid3.png";
 //import grid3 from "../AboutImages/grid3.jpg";
 import grid4 from "../AboutImages/grid4.jpg";
 
@@ -90,9 +90,7 @@ const About = () => {
           </div>
 
           <div className="team-card">
-            <div className="team-image">
-              {/*<img src={grid3} alt="grid" /> */}
-            </div>
+            <div className="team-image">{<img src={grid3} alt="grid" />}</div>
             <div className="team-text">
               <h3>Ugorji Chibuzor</h3>
               <p>Developer</p>

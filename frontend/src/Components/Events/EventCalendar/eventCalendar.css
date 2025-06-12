@@ -1,6 +1,149 @@
-.calendarContainer {
+.calendarWrapper {
+  max-width: 900px;
+  width: 90%;
   padding: 1rem;
-  background-color: #f9f9f9;
+  background-color: #ffffff;
+
+  border-radius: 1.4rem;
+  margin: 0rem auto;
+  margin-top: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+.calendarWrapper h2 {
+  font-size: 2rem;
+  color: rgb(40, 37, 37);
+}
+
+.modal h3 {
+  color: #333;
+  font-size: 1.4rem;
+}
+
+.modal p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.fc {
+  font-size: 1rem;
+  color: #333;
+}
+
+.fc-daygrid-event {
+  white-space: normal;
+  word-break: break-word;
+  overflow: hidden;
+  background-color: #3d53b6;
+  border: none;
+  padding: 0.6rem;
   border-radius: 1rem;
-  max-width: 400px; 
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+
+.fc-daygrid-event:hover {
+  background-color: #589feb;
+  transform: scale(1.1);
+}
+
+.modal {
+  position: fixed;
+  width: 90%;
+  max-width: 500px;
+  top: 50%;
+  left: 50%;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(51, 51, 51, 0.693);
+  z-index: 900;
+}
+
+.modal button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  background-color: #007bff;
+  border: none;
+  border-radius: 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+.modal button:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+.darkMode .calendarWrapper {
+  background: none;
+  box-shadow: none;
+  color: #e0e0e0;
+}
+
+.darkMode .fc-col-header-cell {
+  background-color: #2c2c2c;
+}
+
+.darkMode .calendarWrapper h2 {
+  color: #e6bcfe;
+}
+
+.darkMode .fc {
+  color: #dbdbdb;
+}
+
+.darkMode .fc-daygrid-event,
+.darkMode .modal button {
+  background-color: #7b61ff;
+  color: white;
+}
+
+.darkMode .fc-daygrid-event:hover,
+.darkMode .modal button:hover {
+  background-color: #a48aff;
+}
+
+.darkMode .modal {
+  background-color: #2b2b2b;
+  color: #f1f1f1;
+}
+
+.darkMode .modal p,
+.darkMode .modal h3 {
+  color: #cfcfcf;
+}
+
+.darkMode .modalOverlay {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.darkMode .fc-toolbar .fc-today-button,
+.darkMode .fc-toolbar .fc-prev-button,
+.darkMode .fc-toolbar .fc-next-button {
+  background-color: #7b61ff;
+  color: white;
+}
+
+.darkMode .fc-toolbar .fc-today-button:hover,
+.darkMode .fc-toolbar .fc-prev-button:hover,
+.darkMode .fc-toolbar .fc-next-button:hover {
+  background-color: #a48aff;
+}
+@media (max-width: 768px) {
+  .fc {
+    font-size: 0.6rem;
+  }
 }

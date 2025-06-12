@@ -1,70 +1,70 @@
-
 import React from "react";
 import "./About.css";
 import grid1 from "../AboutImages/teams.png";
 import grid2 from "../AboutImages/grid2.jpg";
-import grid3 from "../AboutImages/toa-heftiba-NmlnHu1bJwQ-unsplash.png";
+
+//import grid3 from "../AboutImages/grid3.jpg";
+import grid4 from "../AboutImages/grid4.jpg";
+
+//import grid3 from "../AboutImages/toa-heftiba-NmlnHu1bJwQ-unsplash.png";
+
 import tools from "../AboutImages/tool-image.jpg";
 import ContactSection from "./ContactSection";
 const About = () => {
   return (
     <div className="about-container">
-      {/* Hero section*/}
-
       <section className="hero-section">
         <div className="hero-overlay">
-          <h1>Welcome to Event Planner</h1>
+          <h1>Welcome to Nordic Lights Gatherings</h1>
           <p>
-            Discover how we're revolutionizig events experience for organizers
-            and attendees alike.
+            {" "}
+            We make event planning easier and more enjoyable for organizers and
+            attendees alike.
           </p>
         </div>
       </section>
-
-      {/* Mission Section*/}
 
       <section className="mission-grid">
         <div className="mission-image"></div>
 
         <div className="mission-section">
-          <h2>Empowering Events</h2>
-          <h3>Our Mission: Sparking Community Events</h3>
+          <h2>Empowering Gatherings</h2>
+          <h3>Our Mission: Uniting Communities</h3>
           <p>
-            Event Spark is dedicated to empowering Finnish community event
-            organizers by providing innovative tools and resources to create
-            unforgettable experiences.
+            Nordic Lights Gatherings supports Finnish event creators with modern
+            tools and meaningful resources to craft lasting impactful
+            experiences.
           </p>
 
           <div className="mission-points">
-            <h4>Effortless Event Management</h4>
+            <h4>Seamless Event Planning</h4>
             <p>
-              Simplify your event planning process with our user-friendly
-              platform, designed to handle everything from scheduling to
-              promotion.
+              Take the stress out of planning with our intuitive platform—built
+              to handle everything from logistics to outreach with ease.
             </p>
 
             <h4>Engaging Community Features</h4>
             <p>
-              Foster a strong sense of community with interactive features that
-              allow attendees to connect, share, and collaborate.
+              Strengthen connections with built-in features that make it easy
+              for attendees to engage, share and stay connected.
             </p>
 
-            <h4>Data-Driven Insights</h4>
+            <h4>Clear Event Feedback</h4>
             <p>
-              Gain valuable insights into event performance with comprehensive
-              analytics, helping you optimize future events for maximum impact.
+              Get useful info about your events to help you plan better and make
+              each gathering more enjoyable.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Team Section */}
       <section className="team-section">
         <div className="team-content">
           <h2>Meet the Team</h2>
           <p>
-            The passionate individuals driving Event Spark's mission to
-            transform community events in Finland.
+            Meet the dedicated team behind Nordic Lights Gatherings, committed
+            to bringing people together across Finland through powerful
+            community events.
           </p>
         </div>
 
@@ -74,28 +74,37 @@ const About = () => {
               <img src={grid1} alt="grid1" />
             </div>
             <div className="team-text">
-              <h3>Aino Niemi</h3>
-              <p>Co-founder, CEO</p>
+              <h3>Huttunen Beniitta</h3>
+              <p>Developer</p>
             </div>
           </div>
 
           <div className="team-card">
             <div className="team-image">
-              <img src={grid2} alt="grid2" />
+              <img src={grid4} alt="grid4" />
             </div>
             <div className="team-text">
-              <h3>Lauri Mäkinen</h3>
-              <p>Lead Developer</p>
+              <h3>Sonia Akter</h3>
+              <p>Developer</p>
             </div>
           </div>
 
           <div className="team-card">
             <div className="team-image">
-              <img src={grid3} alt="grid" />
+              {/*<img src={grid3} alt="grid" /> */}
             </div>
             <div className="team-text">
-              <h3>Sofia Virtanen</h3>
-              <p>Community Manager</p>
+              <h3>Ugorji Chibuzor</h3>
+              <p>Developer</p>
+            </div>
+          </div>
+          <div className="team-card">
+            <div className="team-image">
+              <img src={grid2} alt="grid" />
+            </div>
+            <div className="team-text">
+              <h3>Shihab Mahfuz</h3>
+              <p>Developer</p>
             </div>
           </div>
         </div>
@@ -103,12 +112,11 @@ const About = () => {
 
       <section className="tools-section">
         <div className="tools-wrapper">
-          {/* Left: Text Box */}
           <div className="tools-box">
             <h1>Technologies & Tools Used</h1>
             <ul>
               <li>
-                <strong>Frontend:</strong> React, Tailwind CSS
+                <strong>Frontend:</strong> React, CSS
               </li>
               <li>
                 <strong>Backend:</strong> Laravel, PHP
@@ -128,7 +136,6 @@ const About = () => {
             </ul>
           </div>
 
-          {/* Right: Image Box */}
           <div className="tools-image">
             <img src={tools} alt="Tools Preview" />
           </div>
@@ -137,7 +144,6 @@ const About = () => {
           <ContactSection />
         </div>
       </section>
-
     </div>
   );
 };

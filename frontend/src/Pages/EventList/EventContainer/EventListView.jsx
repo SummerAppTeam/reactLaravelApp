@@ -3,6 +3,7 @@ import { Link } from "react-router";
 import EventList from "../EventList/EventList";
 import GetEventEmoji from "../../../Components/Events/EventEmojisAndImages/EventEmoji";
 import GetEventImage from "../../../Components/Events/EventEmojisAndImages/EventImages";
+import "./eventContainer.css";
 
 const EventListView = ({ events, onDelete }) => {
   const [type, setType] = useState(null);
@@ -17,7 +18,6 @@ const EventListView = ({ events, onDelete }) => {
       <section className="categorySection">
         <h2>Browse by Category</h2>
         <div className="categoryButtons">
-        
           <button onClick={() => setType("Outdoor & Nature")}>
             🌿 Outdoor & Nature
           </button>

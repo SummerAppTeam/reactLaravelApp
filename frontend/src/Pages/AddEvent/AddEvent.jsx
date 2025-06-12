@@ -5,7 +5,6 @@ import useAxios from "../../hooks/useAxios";
 import { DotLoader } from "react-spinners";
 
 const currentDate = new Date().toISOString().split("T", 1)[0];
-// make sure date is not in past
 
 const AddEvent = ({ onEventAdded }) => {
   const { post } = useAxios();
@@ -96,7 +95,7 @@ const AddEvent = ({ onEventAdded }) => {
             type="date"
             value={form.date}
             onChange={handleChange}
-            min={currentDate} //date not in past
+            min={currentDate}
             required
           />
           <input
@@ -143,12 +142,7 @@ const AddEvent = ({ onEventAdded }) => {
             onChange={handleChange}
             placeholder="Add a longer Description"
           />
-          {/* <textarea
-        name="long_description"
-        value={form.long_description}
-        onChange={handleChange}
-        placeholder="Long Description"
-      /> */}
+
           <input
             name="image"
             value={form.image}

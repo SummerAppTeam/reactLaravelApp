@@ -25,6 +25,3 @@ const GetEventEmoji = (event) => {
 };
 
 export default GetEventEmoji;
-
-
-

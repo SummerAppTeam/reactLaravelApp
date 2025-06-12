@@ -4,6 +4,7 @@ import "./AddEvent.css";
 import useAxios from "../../hooks/useAxios";
 import { DotLoader } from "react-spinners";
 
+
 const currentDate = new Date().toISOString().split("T", 1)[0];
 
 const AddEvent = ({ onEventAdded }) => {
@@ -22,6 +23,7 @@ const AddEvent = ({ onEventAdded }) => {
 
   const [successMessage, setSuccessMessage] = useState("");
   const [loading, setLoading] = useState(false);
+
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });

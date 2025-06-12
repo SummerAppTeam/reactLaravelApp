@@ -15,7 +15,7 @@ const EventContainer = () => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   const [showCalendar, setShowCalendar] = useState(false);
-  const [visibleCount, setVisibleCount] = useState(3);
+  const [visibleCount, setVisibleCount] = useState(4);
   const [searchValue, setSearchValue] = useState("");
 
   const currentDate = new Date().toISOString().split("T", 1)[0];

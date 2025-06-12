@@ -1,24 +1,25 @@
 const GetEventEmoji = (event) => {
   switch (event?.trim()) {
-    case "Music":
-    case "Concert":
-      return "🎵";
-    case "Sports":
-    case "Sport":
-      return "🏀";
-    case "Party":
-    case "Festival":
-      return "🎉";
-    case "Workshop":
+    case "Outdoor & Nature":
+      return "🌿";
+    case "Food & Social":
+      return "🥗";
+    case "Hobbies & DIY":
+      return "🎨";
+    case "Learning & Networking":
       return "📝";
-    case "Networking":
-      return "🤝";
-    case "Exhibition":
-      return "🖼️";
-    case "Performance":
-      return "🎭";
-    case "Comedy":
-      return "🎤";
+    case "Health & Wellness":
+      return "🌸";
+    case "Music & Entertainment":
+      return "🎤 ";
+    case "Markets & Swaps":
+      return "🛍️";
+    case "Family & Kids":
+      return "🧸";
+    case "Sports & Games":
+      return "🏀";
+    case "Parties & Celebration":
+      return "🎉";
     default:
       return "🗓️";
   }

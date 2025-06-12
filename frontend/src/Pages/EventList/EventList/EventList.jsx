@@ -6,6 +6,7 @@ import useAxios from "../../../hooks/useAxios";
 import { DotLoader } from "react-spinners";
 import EditEvent from "../EditEvent/EditEventForm";
 import "./eventList.css";
+import "../EventContainer/eventContainer.css";
 
 const EventList = ({
   id,
@@ -19,12 +20,14 @@ const EventList = ({
   image,
   eventEmoji,
   eventImage,
-  onDelete, // callback to refresh parent list after changes
-  allEvents,
+  onDelete,
 }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [temperature, setTemperature] = useState(null);
+  const [error, setError] = useState(null);
+
   const [editedEvent, setEditedEvent] = useState({
     name,
     date,
@@ -76,19 +79,6 @@ const EventList = ({
     setEditedEvent({ ...editedEvent, [e.target.name]: e.target.value });
   };
 
-  /*const normalizeDate = (dateStr) => {
-    if (!dateStr) return null;
-    return new Date(dateStr).toISOString().split("T")[0];
-  };
-
- 
-  /*const checkDateConflict = () => {
-    const newDate = normalizeDate(editedEvent.date);
-    return allEvents.some(
-      (evt) => evt.id !== id && normalizeDate(evt.date) === newDate
-    );
-  };*/
-
   const handleUpdate = () => {
     setLoading(true);
     put(`api/events/${id}`, editedEvent)
@@ -114,7 +104,35 @@ const EventList = ({
           console.error("Failed to delete event:", error);
         });
     }
-  }; //add loading?
+  };
+
+  const fetchTemperature = async () => {
+    const apiKey = "918ec3224453b160de6d1c2eaa5b0266";
+    try {
+      const response = await fetch(
+        `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(
+          location
+        )}&units=metric&appid=${apiKey}`
+      );
+      const data = await response.json();
+      if (data.main && data.main.temp) {
+        setTemperature(data.main.temp);
+        setError(null);
+      } else {
+        setError("Temperature not available");
+        setTemperature(null);
+      }
+    } catch (err) {
+      console.error("Failed to fetch weather:", err);
+      setError("Failed to load weather");
+    }
+  };
+
+  const toggleModal = () => {
+    const nextState = !isModalOpen;
+    setIsModalOpen(nextState);
+    if (nextState) fetchTemperature();
+  };
 
   return (
     <>
@@ -123,14 +141,7 @@ const EventList = ({
       ) : (
         <div className="eventTicket">
           <img src={eventImage} className="editImage" alt="Event type icon" />
-          <img
-            src={
-              image ||
-              "https://images.pexels.com/photos/2311602/pexels-photo-2311602.jpeg?auto=compress&cs=tinysrgb&h=750&dpr=2"
-            }
-            alt="Individual event"
-            className="eventImage"
-          />
+          <img src={image} alt="Individual event" className="individualImage" />
 
           <p className="eventEmoji">{eventEmoji}</p>
 
@@ -209,6 +220,7 @@ const EventList = ({
           >
             {isFavorite ? "❤️" : "🤍"}
           </button>
+
           {!isEditing ? (
             <>
               <p>Name: {name}</p>

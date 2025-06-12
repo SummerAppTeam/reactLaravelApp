@@ -2,10 +2,10 @@ import { useState } from "react";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import "./eventCalendar.css";
+import { useNavigate } from "react-router";
 
 export function EventCalendar({ events }) {
   const [modal, setModal] = useState(null);
- 
 
   const calendarEvents = events.map((event) => ({
     title: event.name,
@@ -21,7 +21,6 @@ export function EventCalendar({ events }) {
 
   return (
     <div className="calendarWrapper">
-      
       <h2>Browse Events by Date</h2>
       <FullCalendar
         plugins={[dayGridPlugin]}
@@ -42,8 +41,6 @@ export function EventCalendar({ events }) {
           });
         }}
       />
-
-      
 
       {modal && (
         <div className="modalOverlay">

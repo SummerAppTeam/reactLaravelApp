@@ -7,7 +7,7 @@ The Event App is about finding and managing local events in Finland. The website
 ___
 
 ## 👥 Team Members & Their Roles
-* Habiba – Frontend, Backend 👩‍💻
+* Sonia – Frontend, Backend 👩‍💻
 * Beniitta – Frontend, Backend 📱
 * Vitalis – Frontend 🧑‍💻
 * Shihab – Frontend 🛠️

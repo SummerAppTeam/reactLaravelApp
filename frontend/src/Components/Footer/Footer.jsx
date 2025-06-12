@@ -1,12 +1,13 @@
-import { NavLink } from "react-router";
+import { NavLink } from "react-router"; 
 import "./footer.css";
 import Newsletter from "./NewsLetter";
 
-function Footer(props) {
+function Footer() {
   return (
     <footer>
       <nav>
         <ul>
+
           <li>
             <NavLink to="/">Home</NavLink>
           </li>
@@ -34,7 +35,9 @@ function Footer(props) {
         </p>
       </section>
       <h3>Copyright {props.className}</h3>
+
     </footer>
   );
 }
+
 export default Footer;

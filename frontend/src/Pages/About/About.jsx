@@ -3,6 +3,7 @@ import "./About.css";
 import grid1 from "../AboutImages/teams.png";
 import grid2 from "../AboutImages/grid2.jpg";
 
+
 //import grid3 from "../AboutImages/grid3.jpg";
 import grid4 from "../AboutImages/grid4.jpg";
 
@@ -23,6 +24,7 @@ const About = () => {
           </p>
         </div>
       </section>
+
 
       <section className="mission-grid">
         <div className="mission-image"></div>

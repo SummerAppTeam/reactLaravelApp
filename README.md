@@ -60,11 +60,13 @@ _____
 
 “I learned how to work as a team by dividing tasks and managing everything through GitHub so everyone could stay updated and contribute. I want to improve my skills in  management all the task in a timely manner and React related tools to work more efficiently on the frontend and backend” - Shihab 
 
+____
 
 “I found working with multiple branches while collaborating with others a bit tricky at first. There were quite a few merging issues and I ended up doing a fair amount of copy-pasting just to make everything work. At one point, I accidentally pushed the .env file to GitHub, which caused more trouble. Deleting it from version history was harder than I expected, and it made merging with others even more difficult afterward.
 
 Even though it was challenging, I learned a lot from the experience. In the future, I definitely want to explore better ways to work with Git, branches and team collaboration. It taught me how important communication and good version control practices really are” - Beniitta
 
+____
 
 “I contributed to both the frontend and backend development of this project. On the frontend, I used React to build reusable components such as the landing page, event form, and calendar view. I focused on ensuring mobile responsiveness, implementing CSS styling, and integrating APIs including weather and map services.
 On the backend, I worked on input validation for both forms and APIs, implemented unique IDs, managed database migrations, and handled data storage and retrieval.

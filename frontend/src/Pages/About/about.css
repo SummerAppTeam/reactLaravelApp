@@ -1,5 +1,3 @@
-
-
 :root {
   --bg-color: white;
   --text-color: #333;
@@ -17,7 +15,6 @@ body.darkMode {
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
-
 
 .about-container {
   background: var(--bg-color);
@@ -47,7 +44,6 @@ body.darkMode .hero {
 }
 
 .hero-overlay {
-
   background-color: var(--overlay-color);
 
   width: 100%;
@@ -87,7 +83,6 @@ body.darkMode .hero {
   padding: 0;
 }
 
-
 .mission-image {
   width: 50%;
   height: 910px;
@@ -99,7 +94,6 @@ body.darkMode .hero {
   margin: 0;
   padding: 0;
 }
-
 
 .mission-section {
   width: 50%;
@@ -210,8 +204,6 @@ body.darkMode .team-text p {
   padding: 0 40px;
 }
 
-
-
 .tools-box {
   flex: 1;
   background: linear-gradient(135deg, #0e233f, #4f569a);
@@ -242,7 +234,6 @@ body.darkMode .tools-box {
   margin-bottom: 12px;
 }
 
-
 /* Refactor tools-image to align with spacing */
 
 .tools-image {
@@ -265,7 +256,6 @@ body.darkMode .tools-box {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
-
 
 @media (max-width: 768px) {
   .hero h1 {
@@ -329,6 +319,7 @@ body.darkMode .tools-box {
 
   .tools-box {
     position: static;
+
     order: 2;
     flex: none;
     background: transparent;

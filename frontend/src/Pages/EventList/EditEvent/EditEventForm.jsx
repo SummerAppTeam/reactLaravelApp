@@ -1,5 +1,3 @@
-
-
 const EditEvent = ({
   editedEvent,
   onHandleInputChange,

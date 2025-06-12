@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./header.css";
-import DarkModeToggle from "./DarkModeToggle"
+import DarkModeToggle from "./DarkModeToggle";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -57,5 +57,6 @@ function Header() {
   );
 }
 
-export default Header;
 
+
+export default Header;

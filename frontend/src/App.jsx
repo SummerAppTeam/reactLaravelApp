@@ -30,7 +30,6 @@ function App() {
             <Route path="/events/:id" element={<EventDetails />} />
             <Route path="/events/:id/edit" element={<EventList />} />
           </Routes>
-
           <ScrollToTop smooth />
         </main>
 

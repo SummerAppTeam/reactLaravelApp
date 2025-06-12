@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link } from "react-router";
 import EventListView from "./EventListView";
@@ -10,7 +9,6 @@ import GetEventEmoji from "../../../Components/Events/EventEmojisAndImages/Event
 import GetEventImage from "../../../Components/Events/EventEmojisAndImages/EventImages";
 
 import "./eventContainer.css";
-
 
 const EventContainer = () => {
   const [events, setEvents] = useState([]);
@@ -123,9 +121,12 @@ const EventContainer = () => {
 
   return (
     <div className="pageWrapper">
-      <div className="eventContainer">
+      <div className="eventContainer2">
         <div className="viewToggle">
-          <button className="viewButton" onClick={() => setShowCalendar((prev) => !prev)}>
+          <button
+            className="viewButton"
+            onClick={() => setShowCalendar((prev) => !prev)}
+          >
             {showCalendar ? "Show List View" : "Show Calendar View"}
           </button>
         </div>
@@ -277,20 +278,6 @@ const EventContainer = () => {
 };
 
 export default EventContainer;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // import { useState, useEffect } from "react";
 // import { Link } from "react-router";
@@ -541,28 +528,3 @@ export default EventContainer;
 // };
 
 // export default EventContainer;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

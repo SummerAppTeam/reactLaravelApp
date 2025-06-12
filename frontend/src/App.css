@@ -21,8 +21,7 @@ main {
   background-color: rgba(255, 255, 255, 0.577);
 }
 
-
-body.darkMode { 
+body.darkMode {
   background-color: #333333;
   color: white;
 }
@@ -41,4 +40,14 @@ body.darkMode main {
 
 .darkMode h2 {
   color: rgb(178, 77, 236);
+}
+
+button.scroll-to-top {
+  background: #57b7f3;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-to-top:hover {
+  background-color: #8ccef7;
 }

@@ -1,4 +1,4 @@
-# 🎉 Events App
+# 🎉 Events App - Nordic Lights Gatherings
 
 This web application was developed as a team project for a course at Business College Helsinki. The goal was to gain experience in both teamwork and full-stack web development by combining Laravel (backend) and React (frontend) into a single app while collaborating as a team.
 

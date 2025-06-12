@@ -10,19 +10,16 @@ const ContactSection = () => {
   const [messageSent, setMessageSent] = useState(false);
 
   const handleNext = () => {
-    if (stage === 0) {
-      setStage(1);
-    } else if (stage === 1) {
-      setStage(2);
-    } else if (stage === 2) {
-      setStage(3);
-    } else if (stage === 3) {
-      setStage(4);
-    }
+    setStage((prevStage) => {
+      if (prevStage < 4) {
+        return prevStage + 1;
+      }
+      return prevStage;
+    });
   };
 
   const handleSend = () => {
-    fetch("http://192.168.1.105:8000/api/contact", {
+    fetch("api/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

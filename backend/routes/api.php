@@ -8,3 +8,4 @@ use App\Http\Controllers\Api\EventController;
 
 Route::apiResource('events', EventController::class);
 
+Route::post('/contact', [ContactController::class, 'store']);

@@ -34,7 +34,7 @@ function Footer() {
           We're always happy to help!
         </p>
       </section>
-      <h3>Copyright {props.className}</h3>
+    
 
     </footer>
   );

@@ -53,6 +53,7 @@ _____
 * Add image compression and different image sizes
 * Find better ways to work with branches and version control
 * Find better ways to connect Laravel and React
+* Edit weather forecast to search by address not city
 
 _____
 

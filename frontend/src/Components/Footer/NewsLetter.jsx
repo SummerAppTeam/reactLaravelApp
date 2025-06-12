@@ -4,8 +4,8 @@ import { DotLoader } from "react-spinners";
 
 function Newsletter() {
   const [loading, setLoading] = useState(false);
-  const [email, setEmail] = useState(""); //store
-  const [isEmailValid, setIsEmailValid] = useState(true); //check if valid
+  const [email, setEmail] = useState(""); 
+  const [isEmailValid, setIsEmailValid] = useState(true); 
 
   function handleInput(event) {
     setEmail(event.target.value);

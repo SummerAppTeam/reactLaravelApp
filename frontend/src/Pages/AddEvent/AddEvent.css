@@ -1,4 +1,102 @@
+
+:root {
+  --form-bg: #f9f9f9;
+  --text-color: #333;
+  --input-bg: #ffffff;
+  --input-border: #ccc;
+  --input-focus: #4a90e2;
+  --button-bg: #4a90e2;
+  --button-hover: #357abd;
+  --select-bg: #ffffff;
+  --success-bg: #e6f4ea;
+  --success-text: #4caf50;
+}
+
+
+body.darkMode {
+  --form-bg: #2a2a2a;
+  --text-color: #f0f0f0;
+  --input-bg: #333;
+  --input-border: #555;
+  --input-focus: #90caf9;
+  --button-bg: #2196f3;
+  --button-hover: #1976d2;
+  --select-bg: #3a3a3a;
+  --success-bg: #33691e;
+  --success-text: #a5d6a7;
+}
+
 .addEventForm {
+
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: var(--form-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.addEventForm input,
+.addEventForm select {
+  width: 90%;
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--input-border);
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.addEventForm input:focus,
+.addEventForm select:focus {
+  border-color: var(--input-focus);
+  outline: none;
+}
+
+.addEventForm button {
+  width: 100%;
+  padding: 0.7rem;
+  background-color: var(--button-bg);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.addEventForm button:hover {
+  background-color: var(--button-hover);
+}
+
+.addEventForm select {
+  background-color: var(--select-bg);
+}
+
+.successMessage {
+  color: var(--success-text);
+  font-weight: 600;
+  margin-top: 15px;
+  text-align: center;
+  background-color: var(--success-bg);
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.formHeader {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+  font-size: 1.5rem;
+}
+=======
     max-width: 400px;
     margin: 2rem auto;
     padding: 1.5rem;

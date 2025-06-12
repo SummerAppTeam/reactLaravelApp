@@ -184,6 +184,68 @@ img{
   transform: scale(1.05);
   box-shadow: 0 6px 16px rgba(44, 62, 145, 0.4);
 }
+.weatherModalWindow {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: #ffffff;
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  padding: 16px 20px;
+  width: 220px;
+  z-index: 10;
+  animation: fadeInUp 0.3s ease forwards;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  transition: all 0.3s ease;
+}
+
+.weatherModalWindow p {
+  margin: 8px 0;
+}
+
+.weatherModalWindow button {
+  background: transparent;
+  border: none;
+  color: #999;
+  float: right;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-top: -10px;
+  margin-right: -10px;
+  transition: color 0.3s ease;
+}
+
+.weatherModalWindow button:hover {
+  color: #e74c3c;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dark mode */
+body.darkMode .weatherModalWindow {
+  background: var(--dark-panel);
+  color: var(--dark-gray);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+body.darkMode .weatherModalWindow button {
+  color: #bbb;
+}
+
+body.darkMode .weatherModalWindow button:hover {
+  color: #ff6b6b;
+}
 
 
 

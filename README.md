@@ -44,7 +44,7 @@ Create your database
 
 _____
 
-## Improvements for the Future:
+## 📚 Improvements for the Future:
 * Improve mobile responsiveness, dark mode and overall CSS styling
 * Add backend for the newsletter
 * Add user authentication
@@ -56,7 +56,7 @@ _____
 
 _____
 
-## What we learned: 
+## 🚀 What we learned: 
 
 “I learned how to work as a team by dividing tasks and managing everything through GitHub so everyone could stay updated and contribute. I want to improve my skills in  management all the task in a timely manner and React related tools to work more efficiently on the frontend and backend” - Shihab 
 

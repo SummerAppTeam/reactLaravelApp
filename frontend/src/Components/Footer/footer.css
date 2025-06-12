@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-/* Base footer styling */
-footer {
-  background-color: #E8F8FF; 
-  padding: 2rem 1rem;
-  border-top: 1px solid #e0e0e0;
-}
-
-/* Navigation container */
-footer nav {
-  margin-bottom: 1.5rem;
-=======
 
 footer {
   background: linear-gradient(135deg, #111827, #1f2937);
@@ -20,7 +8,6 @@ footer {
   border-top: 3px solid #22d3ee; 
   box-shadow: inset 0 4px 6px rgba(0,0,0,0.5);
   user-select: none;
->>>>>>> d2551e7e33faea1da6f0228e04a0edb936e60ada
 }
 
 
@@ -50,7 +37,6 @@ footer nav ul li a:hover {
 
 /* Active link styling */
 footer nav ul li a.active {
-<<<<<<< HEAD
   color: #007bff;
   font-weight: 600;
 }
@@ -62,89 +48,14 @@ footer .contact {
   color: #666;
   font-size: 0.9rem;
   line-height: 1.6;
-=======
-  background-color: #22d3ee; 
-  color: #111827; 
-  box-shadow: 0 2px 10px rgba(34, 211, 238, 0.6);
->>>>>>> d2551e7e33faea1da6f0228e04a0edb936e60ada
 }
 
 footer h3 {
   text-align: center;
   font-weight: 400;
-<<<<<<< HEAD
   font-size: 0.8rem;
   color: #999;
   margin-top: 1rem;
-=======
-  margin-top: 25px;
-  font-size: 14px;
-  color: #94a3b8; 
-  user-select: text;
-}
-
-
-footer h2 {
-  font-size: 22px;
-  margin-bottom: 20px;
-  color: #e0e7ff;
-  text-shadow: 0 0 6px #22d3eeaa;
-  user-select: none;
-}
-
-footer form {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-
-footer input[type="email"] {
-  padding: 12px 16px;
-  font-size: 16px;
-  border: none;
-  border-radius: 8px;
-  width: 300px;
-  max-width: 100%;
-  box-sizing: border-box;
-  box-shadow: 0 0 8px rgba(34, 211, 238, 0.3);
-  transition: box-shadow 0.3s ease;
-}
-
-footer input[type="email"]:focus {
-  outline: none;
-  box-shadow: 0 0 12px #22d3ee;
-}
-
-
-footer button {
-  background-color: #e23939;
-  color: #111827;
-  border: none;
-  padding: 12px 28px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 700;
-  font-size: 16px;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  user-select: none;
-  box-shadow: 0 0 10px #22d3eeaa;
-}
-
-footer button:hover {
-  background-color: red;
-  box-shadow: 0 0 14px #14b8a6cc;
-}
-
-
-footer p {
-  color: #f87171; 
-  margin: 10px 0 20px 0;
-  font-size: 15px;
-  font-weight: 600;
-  user-select: none;
->>>>>>> d2551e7e33faea1da6f0228e04a0edb936e60ada
 }
 
 
@@ -161,7 +72,6 @@ footer p {
 }
 
 
-<<<<<<< HEAD
 form {
   display: flex;
   justify-content: center;
@@ -181,8 +91,3 @@ input[type="email"] {
   border-radius: 4px;
   font-size: 1rem;
 }
-=======
-
-
-
->>>>>>> d2551e7e33faea1da6f0228e04a0edb936e60ada

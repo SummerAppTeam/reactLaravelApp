@@ -7,10 +7,10 @@ The Event App is about finding and managing local events in Finland. The website
 ___
 
 ## 👥 Team Members & Their Roles
-* Habiba – Frontend, Backend
-* Beniitta – Frontend, Backend
-* Vitalis – Frontend
-* Shihab – Frontend
+* Habiba – Frontend, Backend 👩‍💻
+* Beniitta – Frontend, Backend 📱
+* Vitalis – Frontend 🧑‍💻
+* Shihab – Frontend 🛠️
 
 
 ___
@@ -61,7 +61,7 @@ _____
 “I learned how to work as a team by dividing tasks and managing everything through GitHub so everyone could stay updated and contribute. I want to improve my skills in  management all the task in a timely manner and React related tools to work more efficiently on the frontend and backend” - Shihab 
 
 
-“ I found working with multiple branches while collaborating with others a bit tricky at first. There were quite a few merging issues and I ended up doing a fair amount of copy-pasting just to make everything work. At one point, I accidentally pushed the .env file to GitHub, which caused more trouble. Deleting it from version history was harder than I expected, and it made merging with others even more difficult afterward.
+“I found working with multiple branches while collaborating with others a bit tricky at first. There were quite a few merging issues and I ended up doing a fair amount of copy-pasting just to make everything work. At one point, I accidentally pushed the .env file to GitHub, which caused more trouble. Deleting it from version history was harder than I expected, and it made merging with others even more difficult afterward.
 
 Even though it was challenging, I learned a lot from the experience. In the future, I definitely want to explore better ways to work with Git, branches and team collaboration. It taught me how important communication and good version control practices really are” - Beniitta
 
@@ -73,12 +73,12 @@ Throughout this project, I gained valuable experience in team collaboration, ver
 
 ____
 
-🛠️ Tech Stack
-⚛️ React
-🎨 CSS
-🔙 Laravel
-🗄️ MySQL
-🌦️ OpenWeather API
+## 🛠️ Tech Stack:
+- ⚛️ React
+- 🎨 CSS
+- 🔙 Laravel
+- 🗄️ MySQL
+- 🌦️ OpenWeather API
 
 ## Links:
 - [Live figma link](https://www.figma.com/proto/qPCo1mK3aG9hwXWdOm6ABm/Finnish-Event-Planner?node-id=1-2&p=f&t=Cf3bQNAagTilugmn-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2)

@@ -214,7 +214,8 @@ img {
   color: #e74c3c;
 }
 
-<<<<<<< HEAD
+
+
 .forecast {
   margin-top: 1rem;
   background: #f0f4f8;
@@ -252,7 +253,7 @@ img {
 .forecastIcon {
   width: 50px;
   height: 50px;
-=======
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -262,7 +263,7 @@ img {
     opacity: 1;
     transform: translateY(0);
   }
->>>>>>> origin/SoniaBranchUseThisOne
+
 }
 
 /* Dark mode */

@@ -11,7 +11,6 @@
   --success-text: #4caf50;
 }
 
-
 body.darkMode {
   --form-bg: #2a2a2a;
   --text-color: #f0f0f0;
@@ -26,7 +25,6 @@ body.darkMode {
 }
 
 .addEventForm {
-
   max-width: 400px;
   margin: 2rem auto;
   padding: 1.5rem;
@@ -103,69 +101,66 @@ body.darkMode {
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     font-family: Arial, sans-serif;
-  }*/ 
-  
-  .addEventForm input {
-    width: 90%;
-    padding: 0.6rem 0.8rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-  }
-  
-  .addEventForm input:focus {
-    border-color: #4a90e2;
-    outline: none;
-  }
-  
-  .addEventForm button {
-    width: 100%;
-    padding: 0.7rem;
-    background-color: #4a90e2;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-weight: 600;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .addEventForm button:hover {
-    background-color: #357ABD;
-  }
-  .addEventForm select {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 14px;
-    width: 97%;
-    margin-bottom: 10px;
-    transition: border-color 0.3s ease;
+  }*/
 
-  }
-  
-  .addEventForm select:focus {
-    border-color: #4caf50;
-    outline: none;
-  }
-  .successMessage {
-    color: #4caf50;
-    font-weight: 600;
-    margin-top: 15px;
-    text-align: center;
-    background-color: #e6f4ea;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
-  .formHeader {
-    text-align: center;
-    margin-bottom: 1rem;
-    color: #333;
-    font-size: 1.5rem;
-  }
+.addEventForm input {
+  width: 90%;
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
 
- 
+.addEventForm input:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+.addEventForm button {
+  width: 100%;
+  padding: 0.7rem;
+  background-color: #4a90e2;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.addEventForm button:hover {
+  background-color: #357abd;
+}
+.addEventForm select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 97%;
+  margin-bottom: 10px;
+  transition: border-color 0.3s ease;
+}
+
+.addEventForm select:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+.successMessage {
+  color: #4caf50;
+  font-weight: 600;
+  margin-top: 15px;
+  text-align: center;
+  background-color: #e6f4ea;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.formHeader {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #333;
+  font-size: 1.5rem;
+}

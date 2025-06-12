@@ -12,7 +12,7 @@
   --color-button-hover-bg: #005fa3;
   --color-link: #0078d4;
   --color-link-hover: #004080;
-  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   --color-primary: #0078d4;
   --color-secondary: #555;
 }
@@ -101,7 +101,6 @@
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.5rem;
   margin-top: 1rem;
-  
 }
 
 .message {
@@ -387,22 +386,22 @@
 }
 
 .viewButton:hover {
-   background-color: #5a6268;
+  background-color: #5a6268;
 }
 
 .viewButton:active {
   background-color: #2d6ca4;
 }
 
-.categoryButtons{
+.categoryButtons {
   gap: 2rem;
 }
 
 .categoryButtons {
   display: flex;
-  flex-wrap: wrap;          /* wrap buttons if too many */
-  justify-content: center;  /* center buttons horizontally */
-  gap: 1rem;                /* space between buttons */
+  flex-wrap: wrap; /* wrap buttons if too many */
+  justify-content: center; /* center buttons horizontally */
+  gap: 1rem; /* space between buttons */
   margin-bottom: 1.5rem;
 }
 
@@ -410,13 +409,12 @@
   background-color: #2a5298;
   color: white;
   border: none;
-  padding: 1rem 2.5rem;    
-  border-radius: 50px;      
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
   box-shadow: 0 4px 12px rgba(30, 60, 114, 0.6);
   font-size: 1.1rem;
   font-weight: 600;
   transition: background-color 0.3s ease, transform 0.2s ease;
-
 }
 
 .categoryButtons button:hover {
@@ -426,15 +424,11 @@
 
 .individualImage {
   width: 90%;
-  height: 30vh; 
+  height: 30vh;
   border: #a5a5a5 solid 3px;
   border-radius: 1rem;
   object-fit: cover;
   display: flex;
   align-items: center;
   margin: 0 auto;
-
-
 }
-
-

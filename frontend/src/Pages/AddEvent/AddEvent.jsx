@@ -4,9 +4,7 @@ import "./AddEvent.css";
 import useAxios from "../../hooks/useAxios";
 import { DotLoader } from "react-spinners";
 
-
 const currentDate = new Date().toISOString().split("T", 1)[0];
-
 
 const AddEvent = ({ onEventAdded }) => {
   const { post } = useAxios();
@@ -97,7 +95,7 @@ const AddEvent = ({ onEventAdded }) => {
             type="date"
             value={form.date}
             onChange={handleChange}
-            min={currentDate} 
+            min={currentDate}
             required
           />
           <input
@@ -144,7 +142,7 @@ const AddEvent = ({ onEventAdded }) => {
             onChange={handleChange}
             placeholder="Add a longer Description"
           />
-         
+
           <input
             name="image"
             value={form.image}

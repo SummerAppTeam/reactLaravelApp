@@ -1,14 +1,9 @@
-
-
-
 import { useState, useEffect } from "react";
 import useAxios from "../../../hooks/useAxios";
 import { DotLoader } from "react-spinners";
 import EditEvent from "../EditEvent/EditEventForm";
 import "./eventList.css";
 import "../EventContainer/eventContainer.css";
-
-
 
 const EventList = ({
   id,
@@ -22,7 +17,7 @@ const EventList = ({
   image,
   eventEmoji,
   eventImage,
-  onDelete, 
+  onDelete,
 }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -128,19 +123,14 @@ const EventList = ({
       ) : (
         <div className="eventTicket">
           <img src={eventImage} className="editImage" alt="Event type icon" />
-          <img
-            src={
-              image 
-            }
-            alt="Individual event"
-            className="individualImage"
-          
-          />
+          <img src={image} alt="Individual event" className="individualImage" />
 
           <p className="eventEmoji">{eventEmoji}</p>
 
           <div className="weatherModalIcon">
-            <p onClick={toggleModal} style={{ cursor: "pointer" }}>☀️ 🌧️</p>
+            <p onClick={toggleModal} style={{ cursor: "pointer" }}>
+              ☀️ 🌧️
+            </p>
             {isModalOpen && (
               <div className="weatherModalWindow">
                 <p>Weather for {location}:</p>
@@ -214,23 +204,6 @@ const EventList = ({
 
 export default EventList;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // import { useState, useEffect } from "react";
 // import useAxios from "../../../hooks/useAxios";
 // import { DotLoader } from "react-spinners";
@@ -249,7 +222,7 @@ export default EventList;
 //   image,
 //   eventEmoji,
 //   eventImage,
-//   onDelete, 
+//   onDelete,
 //   allEvents,
 // }) => {
 //   const [isEditing, setIsEditing] = useState(false);
@@ -291,8 +264,6 @@ export default EventList;
 //     setEditedEvent({ ...editedEvent, [e.target.name]: e.target.value });
 //   };
 
-
-
 //   const handleUpdate = () => {
 //     setLoading(true);
 //     put(`api/events/${id}`, editedEvent)
@@ -318,7 +289,7 @@ export default EventList;
 //           console.error("Failed to delete event:", error);
 //         });
 //     }
-//   }; 
+//   };
 
 //   return (
 //     <>

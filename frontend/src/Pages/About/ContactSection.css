@@ -1,0 +1,258 @@
+.contact-section {
+  background-color: white;
+  padding: 60px 20px 80px;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+ 
+.contact-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+ 
+.intro-text {
+  color: #ffffff;
+  font-size: 0.9rem;
+  margin: 0 auto 15px;
+  max-width: 600px;
+  text-align: center;
+}
+ 
+.left-content,
+.right-content {
+  flex: 1;
+}
+ 
+.left-content h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+ 
+.left-content p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #555;
+  max-width: 400px;
+}
+ 
+.video-card {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  max-width: 600px;
+  min-height: 350px;
+  background: #000;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ 
+.background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  filter: brightness(0.5);
+}
+ 
+.form-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 25px 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ 
+.letstalk-btn,
+.input-group button,
+.send-section button {
+  padding: 15px 0;
+  width: 90%;
+  max-width: 600px;
+  background-color: #fafbff;
+  color: black;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-top: 10px; /* smaller margin */
+  transition: background-color 0.3s ease;
+}
+ 
+.letstalk-btn:hover,
+.input-group button:hover,
+.send-section button:hover {
+  background-color: #123365;
+}
+ 
+.input-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ 
+.input-group h3 {
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: white;
+}
+ 
+.input-group input {
+  width: 90%;
+  max-width: 600px;
+  padding: 10px 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 6px; /* less space between input and button */
+  outline: none;
+}
+ 
+.input-group input:focus {
+  outline: 2px solid #f39c12;
+}
+ 
+.confirmation-message h3 {
+  color: #f39c12;
+}
+ 
+.right-content {
+  color: #444;
+  font-size: 1rem;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+ 
+.contact-info-block h3 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #222;
+}
+ 
+.contact-info-block p {
+  margin: 0;
+  line-height: 1.4;
+  color: #555;
+}
+ 
+@media (max-width: 1024px) {
+  .left-content h2 {
+    font-size: 1.7rem;
+  }
+ 
+  .left-content p {
+    font-size: 1rem;
+  }
+ 
+  .intro-text {
+    font-size: 0.85rem;
+  }
+ 
+  .right-content {
+    font-size: 0.9rem;
+  }
+}
+/* DARK MODE OVERRIDES */
+body.darkMode .contact-section {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+ 
+body.darkMode .intro-text {
+  color: #bbbbbb;
+}
+ 
+body.darkMode .left-content h2 {
+  color: #f0f0f0;
+}
+ 
+body.darkMode .left-content p {
+  color: #cccccc;
+}
+ 
+body.darkMode .video-card {
+  background: #1e1e1e;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+}
+ 
+body.darkMode .form-container {
+  color: #ffffff;
+}
+ 
+body.darkMode .letstalk-btn,
+body.darkMode .input-group button,
+body.darkMode .send-section button {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+ 
+body.darkMode .letstalk-btn:hover,
+body.darkMode .input-group button:hover,
+body.darkMode .send-section button:hover {
+  background-color: #446dff;
+}
+ 
+body.darkMode .input-group h3 {
+  color: #ffffff;
+}
+ 
+body.darkMode .input-group input {
+  background-color: #2c2c2c;
+  color: #ffffff;
+  border: none;
+}
+ 
+body.darkMode .input-group input:focus {
+  outline: 2px solid #f39c12;
+}
+ 
+body.darkMode .confirmation-message h3 {
+  color: #f39c12;
+}
+ 
+body.darkMode .right-content {
+  color: #cccccc;
+}
+ 
+body.darkMode .contact-info-block h3 {
+  color: #f0f0f0;
+}
+ 
+body.darkMode .contact-info-block p {
+  color: #bbbbbb;
+}
+ 
+ 
+@media (max-width: 768px) {
+  .left-content h2 {
+    font-size: 1.4rem;
+  }
+ 
+  .left-content p {
+    font-size: 0.9rem;
+  }
+ 
+  .intro-text {
+    font-size: 0.8rem;
+  }
+ 
+  .right-content {
+    font-size: 0.85rem;
+  }
+}
+ 

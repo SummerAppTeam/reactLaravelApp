@@ -1,17 +1,20 @@
 import { useState } from "react";
 import { NavLink } from "react-router";
 import "./header.css";
+import DarkModeToggle from "./DarkModeToggle";
 
+//mobile and desktop menu
 
 function Header(props) {
   const [menuOpen, setMenuOpen] = useState(!1);
   return (
     <header className="header">
-
       <NavLink to="/">
-       
-        <h2>Logo</h2>
+        {" "}
+        {/*'Logo takes back to frontpage*/}
+        <h2>Events</h2>
       </NavLink>
+      <DarkModeToggle />
       {!menuOpen && (
         <button
           id="menuToggle"
@@ -39,25 +42,25 @@ function Header(props) {
         )}
         <div className="mobileNav">
           <ul>
-                 <li>
-            <NavLink to="/">Frontpage</NavLink>
-          </li>
-          <li>
-            <NavLink to="/About">About us</NavLink>
-          </li>
-          <li>
-            <NavLink to="/AddEvent">Add Event</NavLink>
-          </li>
-           <li>
-            <NavLink to="/EventList">Events</NavLink>
-          </li>
+            <li>
+              <NavLink to="/">Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="/About">About us</NavLink>
+            </li>
+            <li>
+              <NavLink to="/AddEvent">Add Event</NavLink>
+            </li>
+            <li>
+              <NavLink to="/events">Events</NavLink>
+            </li>
           </ul>
         </div>
       </nav>
       <nav className="desktopMenu">
         <ul>
-             <li>
-            <NavLink to="/">Frontpage</NavLink>
+          <li>
+            <NavLink to="/">Home</NavLink>
           </li>
           <li>
             <NavLink to="/About">About us</NavLink>
@@ -65,8 +68,8 @@ function Header(props) {
           <li>
             <NavLink to="/AddEvent">Add Event</NavLink>
           </li>
-           <li>
-            <NavLink to="/EventList">Events</NavLink>
+          <li>
+            <NavLink to="/events">Events</NavLink>
           </li>
         </ul>
       </nav>

@@ -74,6 +74,7 @@ On the backend, I worked on input validation for both forms and APIs, implemente
 
 Throughout this project, I gained valuable experience in team collaboration, version control with Git, and keeping the codebase up to date. I faced and overcame challenges such as connecting the frontend with the backend and resolving merge conflicts on GitHub—with support from my teammate Beniitta and by seeking solutions online. These experiences significantly contributed to my growth as a developer.” - Sonia
 
+"Through my work with APIs, backend systems, and group collaboration, I’ve learned how to build full-stack features, connect frontend and backend logic, handle real data and errors, and work effectively as a team — sharing responsibilities, resolving merge issues, and integrating different parts of a project smoothly." - Vitalis
 ____
 
 ## 🛠️ Tech Stack:

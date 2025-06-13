@@ -76,6 +76,10 @@ Throughout this project, I gained valuable experience in team collaboration, ver
 
 ____
 
+"Through my work with APIs, backend systems, and group collaboration, I’ve learned how to build full-stack features, connect frontend and backend logic, handle real data and errors, and work effectively as a team — sharing responsibilities, resolving merge issues, and integrating different parts of a project smoothly." - Vitalis
+
+
+
 ## 🛠️ Tech Stack:
 - ⚛️ React
 - 🎨 CSS
